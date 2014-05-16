@@ -26,7 +26,28 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
+  <style type="text/css">
+#workwrap {	
+	background: url(assets/img/talparo.jpg) no-repeat center top;
+	margin-top: -70px;
+	padding-top: 250px;
+	text-align:center;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 650px;
+	width: 100%;
+	
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}  
+  </style>
   <body>
 
     <!-- Static navbar -->
@@ -43,52 +64,43 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="#projects">Projects</a></li>
+            <li class="active"><a href="#projects">Projects</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>
 
 
-	<div id="headerwrap">
+	<div id="workwrap">
 	    <div class="container">
 			<div class="row">
 				<div class="col-lg-6 col-lg-offset-3">
-					<h4>HELLO ALL, MY NAME IS</h4>
-					<h1>CHRISTOPHER OTTLEY</h1>
-					<h4>DEVELOPER (WEB/APP/SERVER/JAVA), SOFTWARE ARCHITECT & BEACH ADDICT</h4>
+					<h4>TALPARO MAPPROXY</h4>
+					<h1>FOR WMS TILE CACHING</h1>
+					<h4>ROLE: UNOFFICIAL MSI PACKAGER</h4>
 				</div>
 			</div><! --/row -->
 	    </div> <!-- /container -->
-	</div><! --/headerwrap -->
+	</div><! --/workwrap -->
 	
 	<section id="projects"></section>
 	<div class="container">
 		<div class="row centered mt mb">
-			<h1>My Open Source Projects</h1>
-			
-			<div class="col-lg-4 col-md-4 col-sm-4 gallery">
-				<a href="maf.html"><img src="assets/img/portfolio/folio01.png" class="img-responsive"></a>
+			<div class="col-lg-8 col-lg-offset-2">
+				<h4>ABOUT THE PROJECT</h4>
+				<p><a href="http://mapproxy.org/">MapProxy</a> is an open source geospatial data proxy. While it works on Windows and Linux, setting it up as a service on Windows takes some doing. Installing MapProxy on a Linux machine is relatively easy (with the repository setups and such), but after following the Windows installation steps, I was left scratching my head as to why certain things were not working.</p>
+				<p><a href="http://talparo.sourceforge.net/">Talparo MapProxy</a> is an unofficial distribution of of MapProxy that lets you easily setup a local MapProxy installation. It solves some of the setup problems I encountered when trying to setup MapProxy for Windows by including Portable Python (so Python installations do not conflict on the machine) and registering the MapProxy as a Windows service.</p>
+				<p>I've also included a number of configurations for popular tile based map servers so anyone can use them as a WMS source for GIS based visualization.</p>
+				<p>This project had minimal programming involved however there was quite a bit of figuring out how to integrate pieces of MapProxy and its dependencies together. While this may not be so difficult, the real challenge was designing the final product so the end user has the smoothest, easiest time with installing the application. I also wanted to make it an MSI because I prefer a setup database (like and MSI) over an executable installer that is doing who knows what to your machine.</p>
 			</div>
-			<div class="col-lg-4 col-md-4 col-sm-4 gallery">
-				<a href="bunnyx.html"><img src="assets/img/portfolio/folio02.png" class="img-responsive"></a>
+			<div class="col-lg-10 col-lg-offset-1 mt">
+				<!-- img class="img-responsive" src="assets/img/pr01.jpg">
+				<br>
+				<img class="img-responsive" src="assets/img/pr02.jpg" -->
 			</div>
-			<div class="col-lg-4 col-md-4 col-sm-4 gallery">
-				<a href="talparo.html"><img src="assets/img/portfolio/folio03.png" class="img-responsive"></a>
-			</div>
-			<!--
-			<div class="col-lg-4 col-md-4 col-sm-4 gallery">
-				<a href="#"><img src="assets/img/portfolio/folio04.png" class="img-responsive"></a>
-			</div>
-			<div class="col-lg-4 col-md-4 col-sm-4 gallery">
-				<a href="#"><img src="assets/img/portfolio/folio05.png" class="img-responsive"></a>
-			</div>
-			<div class="col-lg-4 col-md-4 col-sm-4 gallery">
-				<a href="#"><img src="assets/img/portfolio/folio06.png" class="img-responsive"></a>
-			</div>
-			-->
+
 		</div><! --/row -->
 	</div><! --/container -->
 	
@@ -100,7 +112,7 @@
 				</div>
 				<div class="col-lg-2">
 					<a href="#"><i class="fa fa-facebook"></i></a>
-				</div>
+				</div >
 				<div class="col-lg-2">
 					<a href="#"><i class="fa fa-twitter"></i></a>
 				</div -->

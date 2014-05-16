@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+
+    <title>Christopher Ottley</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <style type="text/css">
+#workwrap {	
+	background: url(assets/img/bunnyx.jpg) no-repeat center top;
+	margin-top: -70px;
+	padding-top: 250px;
+	text-align:center;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 650px;
+	width: 100%;
+	
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}  
+  </style>
+  <body>
+
+    <!-- Static navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- a class="navbar-brand" href="index.html">INSTANT</a -->
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="active"><a href="index.html#projects">Projects</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+
+	<div id="workwrap">
+	    <div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-lg-offset-3">
+					<h4>BUNNYX CONTENT MODIFICATION PROXY SERVER</h4>
+					<h1>FOR WEB APP INTEGRATION</h1>
+					<h4>ROLE: SOFTWARE ARCHITECT AND DEVELOPER</h4>
+				</div>
+			</div><! --/row -->
+	    </div> <!-- /container -->
+	</div><! --/workwrap -->
+	
+	<section id="projects"></section>
+	<div class="container">
+		<div class="row centered mt mb">
+			<div class="col-lg-8 col-lg-offset-2">
+				<h4>ABOUT THE PROJECT</h4>
+				<p><a href="http://bunnyx.sourceforge.net/get.php?page=home">BunnyX</a> (and later <a href="http://bunnyxplus.sourceforge.net/">BunnyXPlus</a>) started out as an experiment. I've always been fascinated by content modification proxies. While many of these proxies provided services such as ad blocking or image conversion, I thought it would be interesting to create a proxy that dynamically changed the format of the main content the user was requesting. The feasibility and usefulness of this became the genus of my Master's project - <a href="http://uwispace.sta.uwi.edu/dspace/handle/2139/3443">"Dynamic Conversion of Legacy Web-based Data for Real Time XML-based Programming"</a>.</p>
+				<p>At the time, the Web was pretty mainstream and everyone was wondering what was next. Supposedly the answer had something to do with XML, a cousin to HTML. Not to much earlier we had gone through the whole Y2K legacy apps scare and it got me thinking about all these web applications that eventually no-one would maintain, but still use because they work. What if you wanted to integrate, extend or change something, but you didn't have access to the code, how would you do it? It sounded like a content modification proxy was just the thing. I tested BunnyX on various websites, incorporating a number of different libraries and tests to determine extent of load, response time and general usefulness. One of my first applications converted the websites of the local newspapers to an XML based mish-mash of news from all of them at the same time. Unfortunately I never released that app after I showed a number of people and they told me at the time I would have been violating each site's copyright by releasing the tool.</p>
+				<p>BunnyX was so named because the only content modification proxy I found online which seemed halfway decent was named <a href="http://rabbit-proxy.sourceforge.net/">RabbIT</a> and so I named my project BunnyX as a sort of homage.</p>
+				<p>I was still using the Internet via dial up in 2003 and 2004 and my ISP at the time (TSTT) decided that giving people packages based on time and then overcharging them when they went over was the best business plan they could come up with (ah monopolies). I used my fancy smancy BunnyX proxy to scrape the web app they threw up that told you how much time you had spent and how much you had left. This web app by the way didn't count for you, so you needed to refresh the page to make sure you didn't go over your limit. I parsed the time and created a little counter with some statistics on how much I used for the day, the average I could use, how many hours (and minutes) I had left and I always stayed under my limit.</p>
+				<p>Sometime later I encountered a horribly ancient web application at my workplace (ASP code craziness) which I had to use, but whose interface was stuck in the 1990's. I thought it would be great to have a mobile interface for the web app so I could check and update data on my phone. Unfortunately the guys maintaining the web app didn't really have time for converting the app to be mobile friendly so I wondered what I could do to make my life easier. I recalled my BunnyX project (to which I have lost all access to update because I lost access to the recovery email address) and fired it up. It crashed spectacularly, but I designed the code in a fairly modular fashion and with some work and replacing components I had written myself some time ago with open source ones people had developed (I remember when non-blocking IO servers where just getting talked about) I managed to get BunnyXPlus up and running.</p>
+				<p>One of the key things about BunnyXPlus is that it adds the ability to generate JSON files from your content and using this new functionality I created a mobile website that requested the data through the proxy and displayed the JSON result to the user.</p>
+				<p><img src="http://bunnyxplus.sourceforge.net/images/bunnyxplusworkflow.png" /></p>
+				<p>For the app to work, I needed a way to request the URL I needed through a proxy without having to connect to the proxy directly. The solution to this was a small PHP proxy I named <a href="https://github.com/cottley/jsonpcurlproxy">jsonpcurlproxy</a> which does exactly as it's named. It allows cross domain JSON requests (JSONP) and grabs the result via <a href="http://curl.haxx.se/">CURL</a> configuring the CURL request to go through the BunnyXPlus proxy.</p>
+				<p>The mobile based website I created (using <a href="https://angularjs.org/">AngularJS</a> to get it going quickly) worked well, but alas I think my content modification proxy is cursed as, when I asked for feedback from the users in the company, they were enthusiastic until I was quite nicely asked by my headquarters' management to shut the server down.</p>
+				<p>Content modification proxies are fantastic tools if you know how you can fit them into your architecture to solve problems you are encountering. BunnyX and BunnyXPlus are good tools to create content based apps based on HTML based data sources you don't have access to.</p>
+			</div>
+			<div class="col-lg-10 col-lg-offset-1 mt">
+				<!-- img class="img-responsive" src="assets/img/pr01.jpg">
+				<br>
+				<img class="img-responsive" src="assets/img/pr02.jpg" -->
+			</div>
+
+		</div><! --/row -->
+	</div><! --/container -->
+	
+	<div id="social">
+		<div class="container">
+			<div class="row centered">
+				<!-- div class="col-lg-2">
+					<a href="#"><i class="fa fa-dribbble"></i></a>
+				</div>
+				<div class="col-lg-2">
+					<a href="#"><i class="fa fa-facebook"></i></a>
+				</div >
+				<div class="col-lg-2">
+					<a href="#"><i class="fa fa-twitter"></i></a>
+				</div -->
+				<div class="col-lg-2">
+					<a href="http://lnkd.in/b4dgPeq"><i class="fa fa-linkedin"></i></a>
+				</div>
+				<!-- div class="col-lg-2">
+					<a href="#"><i class="fa fa-instagram"></i></a>
+				</div>
+				<div class="col-lg-2">
+					<a href="#"><i class="fa fa-tumblr"></i></a>
+				</div -->
+			
+			</div><! --/row -->
+		</div><! --/container -->
+	</div><! --/social -->
+
+	<div id="footerwrap">
+		<div class="container">
+			<div class="row centered">
+				<div class="col-lg-4">
+					<p><b>DEVELOPER, SOFTWARE ARCHITECT & BEACH ADDICT</b></p>
+				</div>
+			
+				<div class="col-lg-4">
+					<p>Living in Trinidad and Tobago.</p>
+				</div>
+				<div class="col-lg-4">
+					<p>Email me at GMail - My username is cottley</p>
+				</div>
+			</div>
+		</div>
+	</div><! --/footerwrap -->
+	
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+  </body>
+</html>
