@@ -26,7 +26,28 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
+  <style type="text/css">
+#workwrap {	
+	background: url(assets/img/spsimplefileupload.jpg) no-repeat center top;
+	margin-top: -70px;
+	padding-top: 250px;
+	text-align:center;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 650px;
+	width: 100%;
+	
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}  
+  </style>
   <body>
 
     <!-- Static navbar -->
@@ -43,52 +64,40 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="#projects">Projects</a></li>
+            <li class="active"><a href="index.html#projects">Projects</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>
 
 
-	<div id="headerwrap">
+	<div id="workwrap">
 	    <div class="container">
 			<div class="row">
 				<div class="col-lg-6 col-lg-offset-3">
-					<h4>HELLO ALL, MY NAME IS</h4>
-					<h1>CHRISTOPHER OTTLEY</h1>
-					<h4>DEVELOPER (WEB/APP/SERVER/JAVA), SOFTWARE ARCHITECT & BEACH ADDICT</h4>
+					<h4>SPSIMPLEFILEUPLOAD</h4>
+					<h1>FOR SIMPLE SHAREPOINT UPLOADS</h1>
+					<h4>ROLE: DEVELOPER</h4>
 				</div>
 			</div><! --/row -->
 	    </div> <!-- /container -->
-	</div><! --/headerwrap -->
+	</div><! --/workwrap -->
 	
 	<section id="projects"></section>
 	<div class="container">
 		<div class="row centered mt mb">
-			<h1>My Open Source Projects</h1>
-			
-			<div class="col-lg-4 col-md-4 col-sm-4 gallery">
-				<a href="maf.html"><img src="assets/img/portfolio/folio01.png" class="img-responsive"></a>
+			<div class="col-lg-8 col-lg-offset-2">
+				<h4>ABOUT THE PROJECT</h4>
+				<p>Once upon a time I needed to generate an Excel report out of another system and make it available to certain people. Automating the creation of the report was a bit of a challenge, but once I got that done, I also had to decide how I could share the report. As the company had a Sharepoint 2010 setup, I figured it would be good to point the users to a specific URL and they could see what they wanted to in Sharepoint. This is where the unimaginatively named spsimplefileupload utility came in. Most of the tools I found online were complicated to setup or were overkill for what I needed to do. As I managed to write the automation I needed via a batch file (yeah, I know) I decided a simple command line utility was all I needed, so that's what I did. I've tested it with Sharepoint 2010 and it works pretty well. There is not much error checking, but usually it just works. You can <a href="https://github.com/cottley/spsimplefileupload/blob/master/README.md">see the command line options</a>, download the <a href="https://github.com/cottley/spsimplefileupload">source code and project</a> from github or <a href="https://github.com/cottley/spsimplefileupload/releases/download/0.1.2.0/spsfileupload.exe">the utility itself</a> from github's <a href="https://github.com/cottley/spsimplefileupload/releases">release page</a>.</p>
 			</div>
-			<div class="col-lg-4 col-md-4 col-sm-4 gallery">
-				<a href="bunnyx.html"><img src="assets/img/portfolio/folio02.png" class="img-responsive"></a>
+			<div class="col-lg-10 col-lg-offset-1 mt">
+				<!-- img class="img-responsive" src="assets/img/pr01.jpg">
+				<br>
+				<img class="img-responsive" src="assets/img/pr02.jpg" -->
 			</div>
-			<div class="col-lg-4 col-md-4 col-sm-4 gallery">
-				<a href="talparo.html"><img src="assets/img/portfolio/folio03.png" class="img-responsive"></a>
-			</div>
-			<div class="col-lg-4 col-md-4 col-sm-4 gallery">
-				<a href="spsimplefileupload.html"><img src="assets/img/portfolio/folio04.png" class="img-responsive"></a>
-			</div>
-			<!--
-			<div class="col-lg-4 col-md-4 col-sm-4 gallery">
-				<a href="#"><img src="assets/img/portfolio/folio05.png" class="img-responsive"></a>
-			</div>
-			<div class="col-lg-4 col-md-4 col-sm-4 gallery">
-				<a href="#"><img src="assets/img/portfolio/folio06.png" class="img-responsive"></a>
-			</div>
-			-->
+
 		</div><! --/row -->
 	</div><! --/container -->
 	
@@ -100,7 +109,7 @@
 				</div>
 				<div class="col-lg-2">
 					<a href="#"><i class="fa fa-facebook"></i></a>
-				</div>
+				</div >
 				<div class="col-lg-2">
 					<a href="#"><i class="fa fa-twitter"></i></a>
 				</div -->
