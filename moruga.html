@@ -26,7 +26,28 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
+  <style type="text/css">
+#workwrap {	
+	background: url(assets/img/moruga.jpg) no-repeat center top;
+	margin-top: -70px;
+	padding-top: 250px;
+	text-align:center;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 650px;
+	width: 100%;
+	
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}  
+  </style>
   <body>
 
     <!-- Static navbar -->
@@ -43,50 +64,40 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="#projects">Projects</a></li>
+            <li class="active"><a href="index.html#projects">Projects</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>
 
 
-	<div id="headerwrap">
+	<div id="workwrap">
 	    <div class="container">
 			<div class="row">
 				<div class="col-lg-6 col-lg-offset-3">
-					<h4>HELLO ALL, MY NAME IS</h4>
-					<h1>CHRISTOPHER OTTLEY</h1>
-					<h4>DEVELOPER (WEB/APP/SERVER/JAVA), SOFTWARE ARCHITECT & BEACH ADDICT</h4>
+					<h4>MORUGA</h4>
+					<h1>SIMPLE PYTHON TEXT MANIPULATION</h1>
+					<h4>ROLE: DEVELOPER</h4>
 				</div>
 			</div><! --/row -->
 	    </div> <!-- /container -->
-	</div><! --/headerwrap -->
+	</div><! --/workwrap -->
 	
 	<section id="projects"></section>
 	<div class="container">
 		<div class="row centered mt mb">
-			<h1>Some of My Open Source Projects</h1>
-			
-			<div class="col-lg-4 col-md-4 col-sm-4 gallery">
-				<a href="maf.html"><img src="assets/img/portfolio/folio01.png" class="img-responsive"></a>
+			<div class="col-lg-8 col-lg-offset-2">
+				<h4>ABOUT THE PROJECT</h4>
+				<p>Most software that provides some sort of input or output process can generate ASCII text files. Sometimes the text files are in a format that is unusable by another application that can use the output as input. Occasionally I encounter this situation and so I created a small framework that will let me convert text files using a specified algorithm via a command line. I named the framework Moruga. It is easy to extend by implementing custom Python functions and then calling the script via a command line switch. You can have a look at the <a href="https://github.com/cottley/moruga">source code</a> and start saving time when converting text file formats in Python.</p>
 			</div>
-			<div class="col-lg-4 col-md-4 col-sm-4 gallery">
-				<a href="bunnyx.html"><img src="assets/img/portfolio/folio02.png" class="img-responsive"></a>
+			<div class="col-lg-10 col-lg-offset-1 mt">
+				<!-- img class="img-responsive" src="assets/img/pr01.jpg">
+				<br>
+				<img class="img-responsive" src="assets/img/pr02.jpg" -->
 			</div>
-			<div class="col-lg-4 col-md-4 col-sm-4 gallery">
-				<a href="talparo.html"><img src="assets/img/portfolio/folio03.png" class="img-responsive"></a>
-			</div>
-			<div class="col-lg-4 col-md-4 col-sm-4 gallery">
-				<a href="spsimplefileupload.html"><img src="assets/img/portfolio/folio04.png" class="img-responsive"></a>
-			</div>
-			<div class="col-lg-4 col-md-4 col-sm-4 gallery">
-				<a href="softwaredownloadcatalog.html"><img src="assets/img/portfolio/folio05.png" class="img-responsive"></a>
-			</div>
-			<div class="col-lg-4 col-md-4 col-sm-4 gallery">
-				<a href="moruga.html"><img src="assets/img/portfolio/folio06.png" class="img-responsive"></a>
-			</div>
+
 		</div><! --/row -->
 	</div><! --/container -->
 	
@@ -98,7 +109,7 @@
 				</div>
 				<div class="col-lg-2">
 					<a href="#"><i class="fa fa-facebook"></i></a>
-				</div>
+				</div >
 				<div class="col-lg-2">
 					<a href="#"><i class="fa fa-twitter"></i></a>
 				</div -->
