@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
+  <link href="http://cottley.github.io/tag/bunnyx/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://cottley.github.io/" rel="alternate" type="text/html" />
+  <updated>2018-09-28T14:25:19-04:00</updated>
+  <id>http://cottley.github.io/tag/bunnyx/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">Christopher Ottley | </title>
+  
+
+  
+    <subtitle>Efforts and Courage are not enough without Purpose and Direction - John F. Kennedy</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">BunnyX Content Modification Proxy Server</title>
+      <link href="http://cottley.github.io/bunnyx" rel="alternate" type="text/html" title="BunnyX Content Modification Proxy Server" />
+      <published>2018-09-25T14:00:00-04:00</published>
+      <updated>2018-09-25T14:00:00-04:00</updated>
+      <id>http://cottley.github.io/bunnyx</id>
+      <content type="html" xml:base="http://cottley.github.io/bunnyx">&lt;p&gt;For BunnyX I am the creator, software architect and the sole developer.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://bunnyx.sourceforge.net/get.php?page=home&quot;&gt;BunnyX&lt;/a&gt; is designed to facilitate web app integration from legacy web apps to provide a more modern API without code changes. &lt;a href=&quot;http://bunnyx.sourceforge.net/get.php?page=home&quot;&gt;BunnyX&lt;/a&gt; started out as an experiment. I’ve always been fascinated by content modification proxies (yes, yes, I know). While many of these proxies provided services such as ad blocking or image conversion, I thought it would be interesting to create a proxy that dynamically changed the format of the main content the user was requesting. The feasibility and usefulness of this became the genus of my Master’s project - &lt;a href=&quot;http://uwispace.sta.uwi.edu/dspace/handle/2139/3443&quot;&gt;“Dynamic Conversion of Legacy Web-based Data for Real Time XML-based Programming”&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;At the time, the Web was pretty mainstream and everyone was wondering what was next. Supposedly the answer had something to do with XML, a cousin to HTML. Not to much earlier we had gone through the whole Y2K legacy apps scare and it got me thinking about all these web applications that eventually no-one would maintain, but still use because they work. What if you wanted to integrate, extend or change something, but you didn’t have access to the code, how would you do it? It sounded like a content modification proxy was just the thing. I tested BunnyX on various websites, incorporating a number of different libraries and tests to determine extent of load, response time and general usefulness. One of my first applications converted the websites of the local newspapers to an XML based mish-mash of news from all of them at the same time. Unfortunately I never released that app after I showed a number of people and they told me at the time I would have been violating each site’s copyright by releasing the tool.&lt;/p&gt;
+
+&lt;p&gt;BunnyX was so named because the only content modification proxy I found online which seemed halfway decent was named &lt;a href=&quot;http://rabbit-proxy.sourceforge.net/&quot;&gt;RabbIT&lt;/a&gt; and so I named my project BunnyX as a sort of homage.&lt;/p&gt;
+
+&lt;p&gt;I was still using the Internet via dial up in 2003 and 2004 and my ISP at the time (TSTT) decided that giving people packages based on time and then overcharging them when they went over was the best business plan they could come up with (ah monopolies). I used my fancy smancy BunnyX proxy to scrape the web app they threw up that told you how much time you had spent and how much you had left. This web app by the way didn’t count for you, so you needed to refresh the page to make sure you didn’t go over your limit. I parsed the time and created a little counter with some statistics on how much I used for the day, the average I could use, how many hours (and minutes) I had left and I always stayed under my limit.&lt;/p&gt;
+
+&lt;p&gt;Sometime later I encountered a horribly ancient web application at my workplace (ASP code craziness) which I had to use, but whose interface was stuck in the 1990’s. I thought it would be great to have a mobile interface for the web app so I could check and update data on my phone. Unfortunately the guys maintaining the web app didn’t really have time for converting the app to be mobile friendly so I wondered what I could do to make my life easier. I recalled my BunnyX project (to which I have lost all access to update because I lost access to the recovery email address) and fired it up. It crashed spectacularly, but I designed the code in a fairly modular fashion and with some work and replacing components I had written myself some time ago with open source ones people had developed (I remember when non-blocking IO servers where just getting talked about) I managed to get BunnyX up and running again.&lt;/p&gt;
+
+&lt;p&gt;One of the key things about BunnyX is that it adds the ability to generate JSON files from your content and using this new functionality I created a mobile website that requested the data through the proxy and displayed the JSON result to the user.&lt;/p&gt;
+
+&lt;p&gt;For the app to work, I needed a way to request the URL I needed through a proxy without having to connect to the proxy directly. The solution to this was a small PHP proxy I named &lt;a href=&quot;https://github.com/cottley/jsonpcurlproxy&quot;&gt;jsonpcurlproxy&lt;/a&gt; which does exactly as it’s named. It allows cross domain JSON requests (JSONP) and grabs the result via CURL configuring the &lt;a href=&quot;http://curl.haxx.se/&quot;&gt;CURL&lt;/a&gt; request to go through the BunnyX proxy.&lt;/p&gt;
+
+&lt;p&gt;The mobile based website I created (using &lt;a href=&quot;https://angularjs.org/&quot;&gt;AngularJS&lt;/a&gt; to get it going quickly) worked well, but alas I think my content modification proxy is cursed as, when I asked for feedback from the users in the company, they were enthusiastic until I was quite nicely asked by my headquarters’ management to shut the server down.&lt;/p&gt;
+
+&lt;p&gt;Content modification proxies are fantastic tools if you know how you can fit them into your architecture to solve problems you are encountering. BunnyX and BunnyXPlus are good tools to create content based apps based on HTML based data sources you don’t have access to.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Christopher Ottley</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Projects" />
+      
+        <category term="BunnyX" />
+      
+
+      
+        <summary type="html">For BunnyX I am the creator, software architect and the sole developer.</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>

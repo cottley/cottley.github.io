@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
+  <link href="http://cottley.github.io/tag/talparo/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://cottley.github.io/" rel="alternate" type="text/html" />
+  <updated>2018-09-28T14:25:19-04:00</updated>
+  <id>http://cottley.github.io/tag/talparo/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">Christopher Ottley | </title>
+  
+
+  
+    <subtitle>Efforts and Courage are not enough without Purpose and Direction - John F. Kennedy</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">Talparo for WMS tile caching</title>
+      <link href="http://cottley.github.io/talparo" rel="alternate" type="text/html" title="Talparo for WMS tile caching" />
+      <published>2018-09-25T14:00:00-04:00</published>
+      <updated>2018-09-25T14:00:00-04:00</updated>
+      <id>http://cottley.github.io/talparo</id>
+      <content type="html" xml:base="http://cottley.github.io/talparo">&lt;p&gt;For Talparo I am the unofficial MSI packager.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://mapproxy.org/&quot;&gt;MapProxy&lt;/a&gt; is an open source geospatial data proxy. While it works on Windows and Linux, setting it up as a service on Windows takes some doing. Installing MapProxy on a Linux machine is relatively easy (with the repository setups and such), but after following the Windows installation steps, I was left scratching my head as to why certain things were not working.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://talparo.sourceforge.net/&quot;&gt;Talparo MapProxy&lt;/a&gt; is an unofficial distribution of of MapProxy that lets you easily setup a local MapProxy installation. It solves some of the setup problems I encountered when trying to setup MapProxy for Windows by including Portable Python (so Python installations do not conflict on the machine) and registering the MapProxy as a Windows service.&lt;/p&gt;
+
+&lt;p&gt;I’ve also included a number of configurations for popular tile based map servers so anyone can use them as a WMS source for GIS based visualization.&lt;/p&gt;
+
+&lt;p&gt;This project had minimal programming involved however there was quite a bit of figuring out how to integrate pieces of MapProxy and its dependencies together. While this may not be so difficult, the real challenge was designing the final product so the end user has the smoothest, easiest time with installing the application. I also wanted to make it an MSI because I prefer a setup database (like a MSI) over an executable installer that is doing who knows what to your machine.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Christopher Ottley</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Projects" />
+      
+        <category term="Talparo" />
+      
+
+      
+        <summary type="html">For Talparo I am the unofficial MSI packager.</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>

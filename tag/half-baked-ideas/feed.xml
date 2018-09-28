@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
+  <link href="http://cottley.github.io/tag/half-baked-ideas/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://cottley.github.io/" rel="alternate" type="text/html" />
+  <updated>2018-09-28T14:25:19-04:00</updated>
+  <id>http://cottley.github.io/tag/half-baked-ideas/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">Christopher Ottley | </title>
+  
+
+  
+    <subtitle>Efforts and Courage are not enough without Purpose and Direction - John F. Kennedy</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">Alexa and Youtube music videos</title>
+      <link href="http://cottley.github.io/alexa-youtube-music-videos" rel="alternate" type="text/html" title="Alexa and Youtube music videos" />
+      <published>2018-09-28T04:00:00-04:00</published>
+      <updated>2018-09-28T04:00:00-04:00</updated>
+      <id>http://cottley.github.io/alexa-youtube-music-videos</id>
+      <content type="html" xml:base="http://cottley.github.io/alexa-youtube-music-videos">&lt;p&gt;One day, maybe, far into the future, tech giants would work together to provide the best set of services for everyone. Or maybe we’ll have to hack together that future ourselves. Between &lt;a href=&quot;https://www.scmp.com/news/world/article/2123052/clash-tech-titans-google-bans-youtube-amazon-devices-escalating-dispute&quot;&gt;Google banning Youtube from some Amazon devices&lt;/a&gt; and &lt;a href=&quot;https://www.androidpolice.com/2018/03/02/amazon-still-isnt-selling-chromecast-nearly-three-months-initial-announcement/&quot;&gt;Amazon banning Chromecast&lt;/a&gt; from its store-of-everything (which should now be renamed store-of-everything-except-chromecast) there is probably no way anyone is going to provide a nice music service app for Alexa which has a playlist of popular youtube music from trending music videos.&lt;/p&gt;
+
+&lt;p&gt;I’m 99% sure this is against Youtube’s terms of service, but it would be an interesting workflow to try to implement. We would need to:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Get a list of the &lt;a href=&quot;https://www.youtube.com/feed/trending&quot;&gt;trending videos&lt;/a&gt; on Youtube parsed into some sort of feed that would give titles and URLs&lt;/li&gt;
+  &lt;li&gt;Filter the videos to search for anything that has the words “Official Video”, “Official Music” or “Music Video” somewhere in the title&lt;/li&gt;
+  &lt;li&gt;Get the URLs for that filter and check it against a database of videos already processed so we don’t reprocess any old ones&lt;/li&gt;
+  &lt;li&gt;Grab the video (and extract audio?) using something like &lt;a href=&quot;http://rg3.github.io/youtube-dl/&quot;&gt;youtube-dl&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Convert / extract audio to be playable via Alexa via &lt;a href=&quot;https://developer.amazon.com/docs/custom-skills/speech-synthesis-markup-language-ssml-reference.html#h3_converting_mp3&quot;&gt;ffmpeg&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Store the extracted audio somewhere where we have an Internet facing https server
+    &lt;ol&gt;
+      &lt;li&gt;Do not use S3, don’t want any account bans&lt;/li&gt;
+      &lt;li&gt;A little linux server (maybe rpi based) that has apache and some storage should do the trick&lt;/li&gt;
+      &lt;li&gt;A nice &lt;a href=&quot;https://letsencrypt.org/&quot;&gt;Letsencrypt&lt;/a&gt; certificate with a dynamic dns hostname would be needed as well&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Write a script that dynamically selects from the extracted audio files (maybe served from the audio server, maybe not)&lt;/li&gt;
+  &lt;li&gt;Implement a skill with the &lt;a href=&quot;https://developer.amazon.com/docs/custom-skills/audioplayer-interface-reference.html&quot;&gt;audioplayer interface&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Finally, yell at Alexa to ask youtube to play trending music and we should actually get some music piping back at us. We could even go further and implement some functionality to ask youtube what’s playing and it would recite the title of the video back at us.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Christopher Ottley</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Half-baked ideas" />
+      
+        <category term="Alexa" />
+      
+
+      
+        <summary type="html">One day, maybe, far into the future, tech giants would work together to provide the best set of services for everyone. Or maybe we’ll have to hack together that future ourselves. Between Google banning Youtube from some Amazon devices and Amazon banning Chromecast from its store-of-everything (which should now be renamed store-of-everything-except-chromecast) there is probably no way anyone is going to provide a nice music service app for Alexa which has a playlist of popular youtube music from trending music videos.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Something Something Food</title>
+      <link href="http://cottley.github.io/something-something-food" rel="alternate" type="text/html" title="Something Something Food" />
+      <published>2018-09-27T05:00:00-04:00</published>
+      <updated>2018-09-27T05:00:00-04:00</updated>
+      <id>http://cottley.github.io/something-something-food</id>
+      <content type="html" xml:base="http://cottley.github.io/something-something-food">&lt;p&gt;Food. When you’re hungry, there’s nothing like it, but when you’re not you want to save it for later. Given how many people in the world don’t know where their next meal is coming from, I consider myself immeasurably lucky to state that I’ve never worried about that. Ok, when I get wifey upset about something enough it can get a bit dicey, but generally food is there and not something to be wasted. As a general rule we like to keep food in the fridge or freezer but sometimes (more than I’d like) food gets pushed to the back of the fridge in some forgotten about container and is only discovered after some deep rummaging around. Unfortunately with all the other things people are busy with these days, keeping track of the food in the fridge, when the food was put in, what should be eaten first and how much of it is left is difficult.&lt;/p&gt;
+
+&lt;p&gt;So, how about an Alexa skill which reduces/eliminates food wastage. Essentially an online, voice interface to inventory management for food in the fridge. We could even extend it to the freezer, add multiple fridges/freezers and even set re-order levels for certain items. We could know what’s in the fridge without having to open the door, saving electricity as the temperature would not raise with the door being kept open while we rummage around, unsure as to what we want to get out of it.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Christopher Ottley</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Half-baked ideas" />
+      
+        <category term="Alexa" />
+      
+
+      
+        <summary type="html">Food. When you’re hungry, there’s nothing like it, but when you’re not you want to save it for later. Given how many people in the world don’t know where their next meal is coming from, I consider myself immeasurably lucky to state that I’ve never worried about that. Ok, when I get wifey upset about something enough it can get a bit dicey, but generally food is there and not something to be wasted. As a general rule we like to keep food in the fridge or freezer but sometimes (more than I’d like) food gets pushed to the back of the fridge in some forgotten about container and is only discovered after some deep rummaging around. Unfortunately with all the other things people are busy with these days, keeping track of the food in the fridge, when the food was put in, what should be eaten first and how much of it is left is difficult.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Read my mind Alexa</title>
+      <link href="http://cottley.github.io/read-my-mind-alexa" rel="alternate" type="text/html" title="Read my mind Alexa" />
+      <published>2018-09-27T04:00:00-04:00</published>
+      <updated>2018-09-27T04:00:00-04:00</updated>
+      <id>http://cottley.github.io/read-my-mind-alexa</id>
+      <content type="html" xml:base="http://cottley.github.io/read-my-mind-alexa">&lt;p&gt;I’ve tricked out the house with Alexa compatible gadgets, a bunch of plugs, a whole set of bulbs and three echo dots in three different rooms. I was watching &lt;a href=&quot;https://en.wikipedia.org/wiki/The_First_(TV_series)&quot;&gt;The First&lt;/a&gt; and there are lots of sci-fi type things in the show, which is primarily actually a drama with sci-fi things occassionally going wrong. So they have the standard sci-fi-ish stuff with one of the main characters living in a smart house and another one in a smarter house. Typical future expectation like you walk into a room and lights come on and fireplace starts etc. I saw one of the characters ask for the TV to turn on by saying “screen on” or something similar into the ether and the TV screen turned on with the channel showing what he wanted to see. That got me thinking, I’m pretty sure I should be able to do that with Alexa and &lt;a href=&quot;https://www.digitaltrends.com/home/what-is-amazon-alexa-routines/&quot;&gt;Routines&lt;/a&gt; and the only real difference is that I would have to say the wakeword, Alexa, first.&lt;/p&gt;
+
+&lt;p&gt;So I tried it and it works well enough as I have the TV plugged into a smart plug and the TV is an older LED one that returns to its on/off state whenever power is turned off and back on. As long as I don’t use the remote to turn off the TV, it works. Here is where it starts to get complicated, I have, &lt;em&gt;gasp&lt;/em&gt; two TVs. There’s one in the living room and one in the bedroom (which also is on a smart plug and has an echo dot nearby). If I want my new fancy routine to work with the TV in the living toom and the TV in the bedroom I’d need to say &lt;em&gt;which&lt;/em&gt; screen. I’d need to say “living screen on” or “bedroom screen on” and while that would work, it’s not as nice as it should be.&lt;/p&gt;
+
+&lt;p&gt;I want to be able to say “screen on” near the echo dot in the living room and it turns on the living room TV and say “screen on” near the echo dot in the bedroom and it turns on the bedroom TV. The problem with this is that Alexa doesn’t care where it hears the command, it executes without additional context. Now that I’ve discussed the problem, here’s my idea for a solution.&lt;/p&gt;
+
+&lt;p&gt;It seems that the Alexa API now lets you request additional location information for your skill, inclusive of a &lt;a href=&quot;https://developer.amazon.com/docs/custom-skills/device-address-api.html#get-the-api-access-token-and-device-id&quot;&gt;Device ID&lt;/a&gt;. To get the routine to work though, I would need to create a proxy &lt;a href=&quot;https://developer.amazon.com/docs/smarthome/understand-the-smart-home-skill-api.html&quot;&gt;smart home skill&lt;/a&gt; that would hopefully have the device id in the request JSON somewhere. Once I can get that, I’d need to find the devices associated with the device id, which I would have to setup externally and then change the devices to suit. Seeing as there is no API for me to automate Alexa itself (why Amazon, whyyyyy?), it looks like I’ll have to figure out the API to control the devices outside of the Alexa ecosystem.&lt;/p&gt;
+
+&lt;p&gt;It turns out I was a bit lucky and bought a set of TP Link based bulbs and plugs and it turns out that someone already has a &lt;a href=&quot;https://github.com/konsumer/tplink-lightbulb&quot;&gt;command line app&lt;/a&gt; (nodejs based) that I should be able to use to turn my bulbs and plugs on and off. It looks like I should only need to learn one API and command line the rest of it based on the plug and bulb ids.&lt;/p&gt;
+
+&lt;p&gt;Thinking about it a bit more, I shouldn’t even have to say “Alexa, screen on”, I should just have to say “Alexa, screen” and the skill will know the state of the plug. If it’s on it turns it off and if it’s off it turns it on. This should be able to extend to lights as well, “Alexa, lights” should be able to toggle the lights near the device on and off.&lt;/p&gt;
+
+&lt;p&gt;Let’s see if I can get any traction on this when I get my time machine working. :).&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Christopher Ottley</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Half-baked ideas" />
+      
+        <category term="Alexa" />
+      
+
+      
+        <summary type="html">I’ve tricked out the house with Alexa compatible gadgets, a bunch of plugs, a whole set of bulbs and three echo dots in three different rooms. I was watching The First and there are lots of sci-fi type things in the show, which is primarily actually a drama with sci-fi things occassionally going wrong. So they have the standard sci-fi-ish stuff with one of the main characters living in a smart house and another one in a smarter house. Typical future expectation like you walk into a room and lights come on and fireplace starts etc. I saw one of the characters ask for the TV to turn on by saying “screen on” or something similar into the ether and the TV screen turned on with the channel showing what he wanted to see. That got me thinking, I’m pretty sure I should be able to do that with Alexa and Routines and the only real difference is that I would have to say the wakeword, Alexa, first.</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title> - Articles</title>
+    <description>Efforts and Courage are not enough without Purpose and Direction - John F. Kennedy</description>
+    <link>
+    http://cottley.github.io</link>
+    
+      
+      <item>
+        <title>Alexa and Youtube music videos</title>
+        
+          <description>&lt;p&gt;One day, maybe, far into the future, tech giants would work together to provide the best set of services for everyone. Or maybe we’ll have to hack together that future ourselves. Between &lt;a href=&quot;https://www.scmp.com/news/world/article/2123052/clash-tech-titans-google-bans-youtube-amazon-devices-escalating-dispute&quot;&gt;Google banning Youtube from some Amazon devices&lt;/a&gt; and &lt;a href=&quot;https://www.androidpolice.com/2018/03/02/amazon-still-isnt-selling-chromecast-nearly-three-months-initial-announcement/&quot;&gt;Amazon banning Chromecast&lt;/a&gt; from its store-of-everything (which should now be renamed store-of-everything-except-chromecast) there is probably no way anyone is going to provide a nice music service app for Alexa which has a playlist of popular youtube music from trending music videos.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 28 Sep 2018 04:00:00 -0400</pubDate>
+        <link>
+        http://cottley.github.io/alexa-youtube-music-videos</link>
+        <guid isPermaLink="true">http://cottley.github.io/alexa-youtube-music-videos</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Something Something Food</title>
+        
+          <description>&lt;p&gt;Food. When you’re hungry, there’s nothing like it, but when you’re not you want to save it for later. Given how many people in the world don’t know where their next meal is coming from, I consider myself immeasurably lucky to state that I’ve never worried about that. Ok, when I get wifey upset about something enough it can get a bit dicey, but generally food is there and not something to be wasted. As a general rule we like to keep food in the fridge or freezer but sometimes (more than I’d like) food gets pushed to the back of the fridge in some forgotten about container and is only discovered after some deep rummaging around. Unfortunately with all the other things people are busy with these days, keeping track of the food in the fridge, when the food was put in, what should be eaten first and how much of it is left is difficult.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Thu, 27 Sep 2018 05:00:00 -0400</pubDate>
+        <link>
+        http://cottley.github.io/something-something-food</link>
+        <guid isPermaLink="true">http://cottley.github.io/something-something-food</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Read my mind Alexa</title>
+        
+          <description>&lt;p&gt;I’ve tricked out the house with Alexa compatible gadgets, a bunch of plugs, a whole set of bulbs and three echo dots in three different rooms. I was watching &lt;a href=&quot;https://en.wikipedia.org/wiki/The_First_(TV_series)&quot;&gt;The First&lt;/a&gt; and there are lots of sci-fi type things in the show, which is primarily actually a drama with sci-fi things occassionally going wrong. So they have the standard sci-fi-ish stuff with one of the main characters living in a smart house and another one in a smarter house. Typical future expectation like you walk into a room and lights come on and fireplace starts etc. I saw one of the characters ask for the TV to turn on by saying “screen on” or something similar into the ether and the TV screen turned on with the channel showing what he wanted to see. That got me thinking, I’m pretty sure I should be able to do that with Alexa and &lt;a href=&quot;https://www.digitaltrends.com/home/what-is-amazon-alexa-routines/&quot;&gt;Routines&lt;/a&gt; and the only real difference is that I would have to say the wakeword, Alexa, first.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Thu, 27 Sep 2018 04:00:00 -0400</pubDate>
+        <link>
+        http://cottley.github.io/read-my-mind-alexa</link>
+        <guid isPermaLink="true">http://cottley.github.io/read-my-mind-alexa</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Website Redesign</title>
+        
+          <description>&lt;p&gt;I’ve had a number of websites over the years in one form or the other. Usually the websites were project websites that happened to have a small about section where I wrote something short and unmemorable about myself. Unfortunately I got busy and maintaining those websites got de-prioritized, finally existing in some internet archive somewhere and disappearing from active use. The world has changed a bit since then and I got curious as to the advancements of static site generators like &lt;a href=&quot;https://forrest.apache.org/&quot;&gt;Apache Forest&lt;/a&gt;. A static site generator uses dynamic logic to create static websites that load faster and would be easier to maintain for someone working part-time on site maintenace, like me.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Wed, 26 Sep 2018 10:15:00 -0400</pubDate>
+        <link>
+        http://cottley.github.io/website-redesign</link>
+        <guid isPermaLink="true">http://cottley.github.io/website-redesign</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Moruga for simple python text manipulation</title>
+        
+          <description>&lt;p&gt;For Moruga I am the sole developer.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 25 Sep 2018 14:45:00 -0400</pubDate>
+        <link>
+        http://cottley.github.io/moruga</link>
+        <guid isPermaLink="true">http://cottley.github.io/moruga</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Software Download Catalog for a more user friendly download list</title>
+        
+          <description>&lt;p&gt;For softwaredownloadcatalog I am the sole developer.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 25 Sep 2018 14:30:00 -0400</pubDate>
+        <link>
+        http://cottley.github.io/softwaredownloadcatalog</link>
+        <guid isPermaLink="true">http://cottley.github.io/softwaredownloadcatalog</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Spsimplefileupload for simple sharepoint uploads</title>
+        
+          <description>&lt;p&gt;For spsimplefileupload I am the sole developer.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 25 Sep 2018 14:15:00 -0400</pubDate>
+        <link>
+        http://cottley.github.io/spsimplefileupload</link>
+        <guid isPermaLink="true">http://cottley.github.io/spsimplefileupload</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Talparo for WMS tile caching</title>
+        
+          <description>&lt;p&gt;For Talparo I am the unofficial MSI packager.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 25 Sep 2018 14:00:00 -0400</pubDate>
+        <link>
+        http://cottley.github.io/talparo</link>
+        <guid isPermaLink="true">http://cottley.github.io/talparo</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>BunnyX Content Modification Proxy Server</title>
+        
+          <description>&lt;p&gt;For BunnyX I am the creator, software architect and the sole developer.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 25 Sep 2018 14:00:00 -0400</pubDate>
+        <link>
+        http://cottley.github.io/bunnyx</link>
+        <guid isPermaLink="true">http://cottley.github.io/bunnyx</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Firefox MAF</title>
+        
+          <description>&lt;p&gt;For MAF I am the creator and initially the sole developer. Now MAF is maintained by Paolo Amadini.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 25 Sep 2018 13:00:00 -0400</pubDate>
+        <link>
+        http://cottley.github.io/firefox-maf</link>
+        <guid isPermaLink="true">http://cottley.github.io/firefox-maf</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Welcome to my little corner</title>
+        
+          <description>&lt;p&gt;Hey! Welcome to my little corner of the Internet. I’m glad you can stop by :)&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 25 Sep 2018 12:00:00 -0400</pubDate>
+        <link>
+        http://cottley.github.io/welcome</link>
+        <guid isPermaLink="true">http://cottley.github.io/welcome</guid>
+      </item>
+      
+    
+  </channel>
+</rss>

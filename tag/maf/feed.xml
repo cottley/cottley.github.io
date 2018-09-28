@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
+  <link href="http://cottley.github.io/tag/maf/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://cottley.github.io/" rel="alternate" type="text/html" />
+  <updated>2018-09-28T14:25:19-04:00</updated>
+  <id>http://cottley.github.io/tag/maf/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">Christopher Ottley | </title>
+  
+
+  
+    <subtitle>Efforts and Courage are not enough without Purpose and Direction - John F. Kennedy</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">Firefox MAF</title>
+      <link href="http://cottley.github.io/firefox-maf" rel="alternate" type="text/html" title="Firefox MAF" />
+      <published>2018-09-25T13:00:00-04:00</published>
+      <updated>2018-09-25T13:00:00-04:00</updated>
+      <id>http://cottley.github.io/firefox-maf</id>
+      <content type="html" xml:base="http://cottley.github.io/firefox-maf">&lt;p&gt;For MAF I am the creator and initially the sole developer. Now MAF is maintained by Paolo Amadini.&lt;/p&gt;
+
+&lt;p&gt;I created the &lt;a href=&quot;http://maf.mozdev.org/&quot;&gt;Mozilla Archive Format extension&lt;/a&gt; while I was doing research for my Master’s project at the University of the West Indies, St. Augustine campus. I had quite a number of topics I wanted to research and unfortunately I only had rather slow Internet dial up access at home at the time. I was afforded a limited amount of time in the postgraduate computer lab that had very speedy Internet access. The computers I used in the postgraduate lab ran Windows, but at home I ran Linux (SUSE at the time). I didn’t think this would be an issue until I saved quite a bit of work as MHTs (Microsoft’s Web Archive format) and was unable to open them at home. This was quite frustrating as would be expected as none of the MHT extraction / conversion tools I found at the time were up to snuff.&lt;/p&gt;
+
+&lt;p&gt;Around this time Netscape was being re-worked as an open source project and Firefox (originally Firebird from what I recall) was not even at version 0.2. I had a look at the code base and saw Firefox’s potential, especially as they were using the rendering engine to render the whole interface. This meant that being able to extend the interface became a matter of some strategically placed Javascript, CSS and XML. Firefox’s development progressed rapidly and as I got more familiar with the code I started developing extensions to see what I could do; change a menu entry here, add an icon to the toolbar there, run a batch file etc.&lt;/p&gt;
+
+&lt;p&gt;At this time I realised I could create something that could read the hundreds of MHTs I was using for research, so I read the &lt;a href=&quot;http://tools.ietf.org/html/rfc2557&quot;&gt;MHTML specification (RFC2557)&lt;/a&gt; and decided I would try to implement it in Javascript. After a few false starts I was able to decode MHTs created with Internet Explorer, place them in a temporary directory and direct Firefox to open them. After reading through the RFC however, I realised two things:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;There were things that you could realistically (and easily) ignore that were errors in MHT decoding that Internet Explorer couldn’t handle and&lt;/li&gt;
+  &lt;li&gt;MHT files were huge compared to the actual size of the content because all the attachments were MIME encoded.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;As a side effect of implementing the MHT decoding in javascript and being liberal with the error handling, I was able to open MHT files that even Internet Explorer couldn’t open (despite being the source for saving them)&lt;/p&gt;
+
+&lt;p&gt;The size increase of MHT archives inspired me to find some other way of storing the HTML file and associated attachments. The best way I could figure was to create a format based on some sort of standard. After some consideration I thought that a ZIP archive would be the best base to use, except Firefox did not have any facility to create zip files. There was a JAR file handler (which was essentially ZIP) that let you read zip files, but no zip file creation. I designed the format with the zip standard in mind, giving options wherever I could to use external zip programs to create the archives on both Windows and Linux. Eventually I created an XPCOM zip library based on some C zip code I found, but it was a bit flaky (I blame the XPCOM interfaces I had to program to expose the interface to Javascript). Eventually an official zip service was created and none of my custom zip code, script or configuration was necessary again. Around this time tabs started getting popular (ah Opera) and there were some implementations in Firefox which were pretty useful. With my desire to automate everything still pretty strong, I then wrote code to iterate through the tabs and save all of them in a MAF archive. I also looked at the meta data I could store which were especially important to my thesis write up - the URL and the date the URL was retrieved.&lt;/p&gt;
+
+&lt;p&gt;Over ten years later, my project is still going strong. As time progressed and I left the university life, I was unable to dedicate the time and resources MAF needed. It was difficult to let go, but after some time and I handed the project over to a willing and extremely able colleague - Paolo Amadini. He carries on maintaining the project and its code to this day. While the code has changed quite a bit over the years, the format remains the same.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Christopher Ottley</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Projects" />
+      
+        <category term="Firefox" />
+      
+        <category term="MAF" />
+      
+
+      
+        <summary type="html">For MAF I am the creator and initially the sole developer. Now MAF is maintained by Paolo Amadini.</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>

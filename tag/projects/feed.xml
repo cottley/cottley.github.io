@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
+  <link href="http://cottley.github.io/tag/projects/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://cottley.github.io/" rel="alternate" type="text/html" />
+  <updated>2018-09-28T14:25:19-04:00</updated>
+  <id>http://cottley.github.io/tag/projects/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">Christopher Ottley | </title>
+  
+
+  
+    <subtitle>Efforts and Courage are not enough without Purpose and Direction - John F. Kennedy</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">Website Redesign</title>
+      <link href="http://cottley.github.io/website-redesign" rel="alternate" type="text/html" title="Website Redesign" />
+      <published>2018-09-26T10:15:00-04:00</published>
+      <updated>2018-09-26T10:15:00-04:00</updated>
+      <id>http://cottley.github.io/website-redesign</id>
+      <content type="html" xml:base="http://cottley.github.io/website-redesign">&lt;p&gt;I’ve had a number of websites over the years in one form or the other. Usually the websites were project websites that happened to have a small about section where I wrote something short and unmemorable about myself. Unfortunately I got busy and maintaining those websites got de-prioritized, finally existing in some internet archive somewhere and disappearing from active use. The world has changed a bit since then and I got curious as to the advancements of static site generators like &lt;a href=&quot;https://forrest.apache.org/&quot;&gt;Apache Forest&lt;/a&gt;. A static site generator uses dynamic logic to create static websites that load faster and would be easier to maintain for someone working part-time on site maintenace, like me.&lt;/p&gt;
+
+&lt;p&gt;While I generally like &lt;a href=&quot;http://www.apache.org/&quot;&gt;Apache&lt;/a&gt; products, &lt;a href=&quot;https://forrest.apache.org/&quot;&gt;Apache Forest&lt;/a&gt; doesn’t seem to have been updated for a while and I aimed to find the most popular static site generator in use. In open source, high usage usually means that it’s reasonably maintained and fits some minimal use cases very well. After some research I happened upon &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I don’t know Ruby, but the installation seemed pretty straight forward and seeing as GitHub seems to use it for their GitHub pages service, I figured I couldn’t go too wrong. One of the nice things about &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; is that there are lots of tutorials and instructions all over the Internet on how to make all sorts of websites with it. GitHub has some good instructions as well, but I decided to see if I could find some instructions that were more generic which would allow me to move my site to anywhere without worrying about any kind of GitHub specific pages config (not that I really saw any, but you never know).&lt;/p&gt;
+
+&lt;p&gt;Seeing as a I like to keep things seperated, I fired up a brand spanking new &lt;a href=&quot;https://www.ubuntu.com/&quot;&gt;Ubuntu&lt;/a&gt; 18.04 Desktop VM, did a minimal install, updated everything, installed ssh and I was ready to start.&lt;/p&gt;
+
+&lt;p&gt;At a bash prompt, a quick…&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install ruby ruby-dev build-essential
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;…and I was ready to install Jekyll.&lt;/p&gt;
+
+&lt;p&gt;Following the instructions from the &lt;a href=&quot;https://jekyllrb.com/docs/installation/ubuntu/&quot;&gt;website&lt;/a&gt; and executing at a bash prompt again…&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;echo '# Install Ruby Gems to ~/gems' &amp;gt;&amp;gt; ~/.bashrc
+echo 'export GEM_HOME=$HOME/gems' &amp;gt;&amp;gt; ~/.bashrc
+echo 'export PATH=$HOME/gems/bin:$PATH' &amp;gt;&amp;gt; ~/.bashrc
+source ~/.bashrc
+gem install jekyll bundler
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;…and now Jekyll is installed. It really was painless.&lt;/p&gt;
+
+&lt;p&gt;Time to serve up a site for development…&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jekyll new cottley-site
+cd cottley-site/
+bundle exec jekyll serve
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;…And here we go.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/website-redesign-figure1.png&quot; alt=&quot;website-redesign-figure1&quot; title=&quot;First run with default website&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ugh! I mean &lt;em&gt;yay&lt;/em&gt; (obviously), but also, Ugh!&lt;/p&gt;
+
+&lt;p&gt;Granted, this was about 5 minutes of work (including network downloads), but goshdarnit, first impressions matter. I understand the bare minimalism so you can customize what you want, but, ugh. This was supposed to make my website life easier, not look so, plain. I know I know, there are links to some themes at &lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;Jekyll Themes.org&lt;/a&gt; and &lt;a href=&quot;https://jekyllthemes.io/&quot;&gt;Jekyll Themes.io&lt;/a&gt; are on the website under the resources, but if you at least give me a link to one of them on the very first site I throw up I’ll be more likely to think that even the minimal effort was worth it because changing the theme is easy and possible.&lt;/p&gt;
+
+&lt;p&gt;I found a super nice theme called &lt;a href=&quot;http://jekyllthemes.org/themes/jasper2/&quot;&gt;Jasper2&lt;/a&gt; and spent a few minutes trying to figure out how to get it installed.&lt;/p&gt;
+
+&lt;p&gt;…And you don’t install it, the theme &lt;em&gt;IS&lt;/em&gt; the site and you need to config the site and put the posts in it. Ok, fine. Let’s do a serve in an extracted Jasper2 folder… and it doesn’t work. Of course. At least it tells me I have to install some gems and to run:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;All seems to be working well until it can’t install nokogiri, whatever that is and suggests that I&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem install nokogiri -v '1.8.4' --source
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;which doesn’t work and so I try&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem install nokogiri -v '1.8.4' --source 'https://rubygems.org/'
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;which still doesn’t work.&lt;/p&gt;
+
+&lt;p&gt;Looking at the error, it can’t find zlib for some reason so I go looking to install some ruby zlib library. I find one and…&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install ruby-zip
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Still doesn’t work. Installing a theme shouldn’t be this hard man! Looking at the error further it seems that Jekyll / Ruby invokes gcc to compile some code and it can’t find the zlib header library. I do a&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install libz-dev
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;and manage to install nokogiri ok now.&lt;/p&gt;
+
+&lt;p&gt;A final&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle install
+bundle exec jekyll serve
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;in the terminal and I finally, FINALLY have the theme site up and running.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/website-redesign-figure2.png&quot; alt=&quot;website-redesign-figure2&quot; title=&quot;First run with Jasper2 theme&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I play with some config settings, replace some images, start putting in posts and boom, new website.&lt;/p&gt;
+
+&lt;p&gt;The only thing Jasper2 doesn’t seem to do is generate a nice xml sitemap for me, so I grabbed a &lt;a href=&quot;https://github.com/jekyll/jekyll-sitemap&quot;&gt;Jekyll Sitemap Generator Plugin&lt;/a&gt; and installed it (which is much easier than the theme crazy).&lt;/p&gt;
+
+&lt;p&gt;That’s it, I’m going to try continue consolidating my tech rantings here so if at least, dear reader, you don’t find me entertaining, you at least find me informative.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Christopher Ottley</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Stuff" />
+      
+        <category term="Projects" />
+      
+
+      
+        <summary type="html">I’ve had a number of websites over the years in one form or the other. Usually the websites were project websites that happened to have a small about section where I wrote something short and unmemorable about myself. Unfortunately I got busy and maintaining those websites got de-prioritized, finally existing in some internet archive somewhere and disappearing from active use. The world has changed a bit since then and I got curious as to the advancements of static site generators like Apache Forest. A static site generator uses dynamic logic to create static websites that load faster and would be easier to maintain for someone working part-time on site maintenace, like me.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Moruga for simple python text manipulation</title>
+      <link href="http://cottley.github.io/moruga" rel="alternate" type="text/html" title="Moruga for simple python text manipulation" />
+      <published>2018-09-25T14:45:00-04:00</published>
+      <updated>2018-09-25T14:45:00-04:00</updated>
+      <id>http://cottley.github.io/moruga</id>
+      <content type="html" xml:base="http://cottley.github.io/moruga">&lt;p&gt;For Moruga I am the sole developer.&lt;/p&gt;
+
+&lt;p&gt;Most software that provides some sort of input or output process can generate ASCII text files. Sometimes the text files are in a format that is unusable by another application that can use the output as input. Occasionally I encounter this situation and so I created a small framework that will let me convert text files using a specified algorithm via a command line. I named the framework Moruga. It is easy to extend by implementing custom Python functions and then calling the script via a command line switch. You can have a look at the &lt;a href=&quot;https://github.com/cottley/moruga&quot;&gt;source code&lt;/a&gt; and start saving time when converting text file formats in Python.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Christopher Ottley</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Projects" />
+      
+        <category term="moruga" />
+      
+
+      
+        <summary type="html">For Moruga I am the sole developer.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Software Download Catalog for a more user friendly download list</title>
+      <link href="http://cottley.github.io/softwaredownloadcatalog" rel="alternate" type="text/html" title="Software Download Catalog for a more user friendly download list" />
+      <published>2018-09-25T14:30:00-04:00</published>
+      <updated>2018-09-25T14:30:00-04:00</updated>
+      <id>http://cottley.github.io/softwaredownloadcatalog</id>
+      <content type="html" xml:base="http://cottley.github.io/softwaredownloadcatalog">&lt;p&gt;For softwaredownloadcatalog I am the sole developer.&lt;/p&gt;
+
+&lt;p&gt;In my day to day work I use quite a bit of software. The software is delivered in many different forms, from MSI installers, to executables to ISOs. After some time I realised that I had software stewn all over my computer that was not the easiest thing to keep track of. When I realised this I was also experimenting with a javascript UI library called &lt;a href=&quot;http://w2ui.com/web/&quot;&gt;W2UI&lt;/a&gt;. A few keystrokes later and I created a software download catalog that uses a JSON file for the entries displayed with links to download the software (well, less of a link and more of a double click on a grid entry record). Using W2UI I was able to create an easily searchable, sortable and somewhat attractive user interface for the software archive I was maintaining. You can &lt;a href=&quot;https://github.com/cottley/sdcmirror&quot;&gt;download a copy&lt;/a&gt; for your own private (or Intranet) use at or have a look at &lt;a href=&quot;http://cottley.github.io/sdcmirror/&quot;&gt;a live demo&lt;/a&gt; (fyi - none of the software download links work in the demo).&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Christopher Ottley</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Projects" />
+      
+        <category term="softwaredownloadcatalog" />
+      
+
+      
+        <summary type="html">For softwaredownloadcatalog I am the sole developer.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Spsimplefileupload for simple sharepoint uploads</title>
+      <link href="http://cottley.github.io/spsimplefileupload" rel="alternate" type="text/html" title="Spsimplefileupload for simple sharepoint uploads" />
+      <published>2018-09-25T14:15:00-04:00</published>
+      <updated>2018-09-25T14:15:00-04:00</updated>
+      <id>http://cottley.github.io/spsimplefileupload</id>
+      <content type="html" xml:base="http://cottley.github.io/spsimplefileupload">&lt;p&gt;For spsimplefileupload I am the sole developer.&lt;/p&gt;
+
+&lt;p&gt;Once upon a time I needed to generate an Excel report out of another system and make it available to certain people. Automating the creation of the report was a bit of a challenge, but once I got that done, I also had to decide how I could share the report. As the company had a Sharepoint 2010 setup, I figured it would be good to point the users to a specific URL and they could see what they wanted to in Sharepoint. This is where the unimaginatively named spsimplefileupload utility came in. Most of the tools I found online were complicated to setup or were overkill for what I needed to do. As I managed to write the automation I needed via a batch file (yeah, I know) I decided a simple command line utility was all I needed, so that’s what I did. I’ve tested it with Sharepoint 2010 and it works pretty well. There is not much error checking, but usually it just works. You can &lt;a href=&quot;https://github.com/cottley/spsimplefileupload/blob/master/README.md&quot;&gt;see the command line options&lt;/a&gt;, download the &lt;a href=&quot;https://github.com/cottley/spsimplefileupload&quot;&gt;source code and project&lt;/a&gt; from github or &lt;a href=&quot;https://github.com/cottley/spsimplefileupload/releases/download/0.1.2.0/spsfileupload.exe&quot;&gt;the utility itself&lt;/a&gt; from github’s &lt;a href=&quot;https://github.com/cottley/spsimplefileupload/releases&quot;&gt;release page&lt;/a&gt;.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Christopher Ottley</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Projects" />
+      
+        <category term="Spsimplefileupload" />
+      
+
+      
+        <summary type="html">For spsimplefileupload I am the sole developer.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Talparo for WMS tile caching</title>
+      <link href="http://cottley.github.io/talparo" rel="alternate" type="text/html" title="Talparo for WMS tile caching" />
+      <published>2018-09-25T14:00:00-04:00</published>
+      <updated>2018-09-25T14:00:00-04:00</updated>
+      <id>http://cottley.github.io/talparo</id>
+      <content type="html" xml:base="http://cottley.github.io/talparo">&lt;p&gt;For Talparo I am the unofficial MSI packager.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://mapproxy.org/&quot;&gt;MapProxy&lt;/a&gt; is an open source geospatial data proxy. While it works on Windows and Linux, setting it up as a service on Windows takes some doing. Installing MapProxy on a Linux machine is relatively easy (with the repository setups and such), but after following the Windows installation steps, I was left scratching my head as to why certain things were not working.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://talparo.sourceforge.net/&quot;&gt;Talparo MapProxy&lt;/a&gt; is an unofficial distribution of of MapProxy that lets you easily setup a local MapProxy installation. It solves some of the setup problems I encountered when trying to setup MapProxy for Windows by including Portable Python (so Python installations do not conflict on the machine) and registering the MapProxy as a Windows service.&lt;/p&gt;
+
+&lt;p&gt;I’ve also included a number of configurations for popular tile based map servers so anyone can use them as a WMS source for GIS based visualization.&lt;/p&gt;
+
+&lt;p&gt;This project had minimal programming involved however there was quite a bit of figuring out how to integrate pieces of MapProxy and its dependencies together. While this may not be so difficult, the real challenge was designing the final product so the end user has the smoothest, easiest time with installing the application. I also wanted to make it an MSI because I prefer a setup database (like a MSI) over an executable installer that is doing who knows what to your machine.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Christopher Ottley</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Projects" />
+      
+        <category term="Talparo" />
+      
+
+      
+        <summary type="html">For Talparo I am the unofficial MSI packager.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">BunnyX Content Modification Proxy Server</title>
+      <link href="http://cottley.github.io/bunnyx" rel="alternate" type="text/html" title="BunnyX Content Modification Proxy Server" />
+      <published>2018-09-25T14:00:00-04:00</published>
+      <updated>2018-09-25T14:00:00-04:00</updated>
+      <id>http://cottley.github.io/bunnyx</id>
+      <content type="html" xml:base="http://cottley.github.io/bunnyx">&lt;p&gt;For BunnyX I am the creator, software architect and the sole developer.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://bunnyx.sourceforge.net/get.php?page=home&quot;&gt;BunnyX&lt;/a&gt; is designed to facilitate web app integration from legacy web apps to provide a more modern API without code changes. &lt;a href=&quot;http://bunnyx.sourceforge.net/get.php?page=home&quot;&gt;BunnyX&lt;/a&gt; started out as an experiment. I’ve always been fascinated by content modification proxies (yes, yes, I know). While many of these proxies provided services such as ad blocking or image conversion, I thought it would be interesting to create a proxy that dynamically changed the format of the main content the user was requesting. The feasibility and usefulness of this became the genus of my Master’s project - &lt;a href=&quot;http://uwispace.sta.uwi.edu/dspace/handle/2139/3443&quot;&gt;“Dynamic Conversion of Legacy Web-based Data for Real Time XML-based Programming”&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;At the time, the Web was pretty mainstream and everyone was wondering what was next. Supposedly the answer had something to do with XML, a cousin to HTML. Not to much earlier we had gone through the whole Y2K legacy apps scare and it got me thinking about all these web applications that eventually no-one would maintain, but still use because they work. What if you wanted to integrate, extend or change something, but you didn’t have access to the code, how would you do it? It sounded like a content modification proxy was just the thing. I tested BunnyX on various websites, incorporating a number of different libraries and tests to determine extent of load, response time and general usefulness. One of my first applications converted the websites of the local newspapers to an XML based mish-mash of news from all of them at the same time. Unfortunately I never released that app after I showed a number of people and they told me at the time I would have been violating each site’s copyright by releasing the tool.&lt;/p&gt;
+
+&lt;p&gt;BunnyX was so named because the only content modification proxy I found online which seemed halfway decent was named &lt;a href=&quot;http://rabbit-proxy.sourceforge.net/&quot;&gt;RabbIT&lt;/a&gt; and so I named my project BunnyX as a sort of homage.&lt;/p&gt;
+
+&lt;p&gt;I was still using the Internet via dial up in 2003 and 2004 and my ISP at the time (TSTT) decided that giving people packages based on time and then overcharging them when they went over was the best business plan they could come up with (ah monopolies). I used my fancy smancy BunnyX proxy to scrape the web app they threw up that told you how much time you had spent and how much you had left. This web app by the way didn’t count for you, so you needed to refresh the page to make sure you didn’t go over your limit. I parsed the time and created a little counter with some statistics on how much I used for the day, the average I could use, how many hours (and minutes) I had left and I always stayed under my limit.&lt;/p&gt;
+
+&lt;p&gt;Sometime later I encountered a horribly ancient web application at my workplace (ASP code craziness) which I had to use, but whose interface was stuck in the 1990’s. I thought it would be great to have a mobile interface for the web app so I could check and update data on my phone. Unfortunately the guys maintaining the web app didn’t really have time for converting the app to be mobile friendly so I wondered what I could do to make my life easier. I recalled my BunnyX project (to which I have lost all access to update because I lost access to the recovery email address) and fired it up. It crashed spectacularly, but I designed the code in a fairly modular fashion and with some work and replacing components I had written myself some time ago with open source ones people had developed (I remember when non-blocking IO servers where just getting talked about) I managed to get BunnyX up and running again.&lt;/p&gt;
+
+&lt;p&gt;One of the key things about BunnyX is that it adds the ability to generate JSON files from your content and using this new functionality I created a mobile website that requested the data through the proxy and displayed the JSON result to the user.&lt;/p&gt;
+
+&lt;p&gt;For the app to work, I needed a way to request the URL I needed through a proxy without having to connect to the proxy directly. The solution to this was a small PHP proxy I named &lt;a href=&quot;https://github.com/cottley/jsonpcurlproxy&quot;&gt;jsonpcurlproxy&lt;/a&gt; which does exactly as it’s named. It allows cross domain JSON requests (JSONP) and grabs the result via CURL configuring the &lt;a href=&quot;http://curl.haxx.se/&quot;&gt;CURL&lt;/a&gt; request to go through the BunnyX proxy.&lt;/p&gt;
+
+&lt;p&gt;The mobile based website I created (using &lt;a href=&quot;https://angularjs.org/&quot;&gt;AngularJS&lt;/a&gt; to get it going quickly) worked well, but alas I think my content modification proxy is cursed as, when I asked for feedback from the users in the company, they were enthusiastic until I was quite nicely asked by my headquarters’ management to shut the server down.&lt;/p&gt;
+
+&lt;p&gt;Content modification proxies are fantastic tools if you know how you can fit them into your architecture to solve problems you are encountering. BunnyX and BunnyXPlus are good tools to create content based apps based on HTML based data sources you don’t have access to.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Christopher Ottley</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Projects" />
+      
+        <category term="BunnyX" />
+      
+
+      
+        <summary type="html">For BunnyX I am the creator, software architect and the sole developer.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Firefox MAF</title>
+      <link href="http://cottley.github.io/firefox-maf" rel="alternate" type="text/html" title="Firefox MAF" />
+      <published>2018-09-25T13:00:00-04:00</published>
+      <updated>2018-09-25T13:00:00-04:00</updated>
+      <id>http://cottley.github.io/firefox-maf</id>
+      <content type="html" xml:base="http://cottley.github.io/firefox-maf">&lt;p&gt;For MAF I am the creator and initially the sole developer. Now MAF is maintained by Paolo Amadini.&lt;/p&gt;
+
+&lt;p&gt;I created the &lt;a href=&quot;http://maf.mozdev.org/&quot;&gt;Mozilla Archive Format extension&lt;/a&gt; while I was doing research for my Master’s project at the University of the West Indies, St. Augustine campus. I had quite a number of topics I wanted to research and unfortunately I only had rather slow Internet dial up access at home at the time. I was afforded a limited amount of time in the postgraduate computer lab that had very speedy Internet access. The computers I used in the postgraduate lab ran Windows, but at home I ran Linux (SUSE at the time). I didn’t think this would be an issue until I saved quite a bit of work as MHTs (Microsoft’s Web Archive format) and was unable to open them at home. This was quite frustrating as would be expected as none of the MHT extraction / conversion tools I found at the time were up to snuff.&lt;/p&gt;
+
+&lt;p&gt;Around this time Netscape was being re-worked as an open source project and Firefox (originally Firebird from what I recall) was not even at version 0.2. I had a look at the code base and saw Firefox’s potential, especially as they were using the rendering engine to render the whole interface. This meant that being able to extend the interface became a matter of some strategically placed Javascript, CSS and XML. Firefox’s development progressed rapidly and as I got more familiar with the code I started developing extensions to see what I could do; change a menu entry here, add an icon to the toolbar there, run a batch file etc.&lt;/p&gt;
+
+&lt;p&gt;At this time I realised I could create something that could read the hundreds of MHTs I was using for research, so I read the &lt;a href=&quot;http://tools.ietf.org/html/rfc2557&quot;&gt;MHTML specification (RFC2557)&lt;/a&gt; and decided I would try to implement it in Javascript. After a few false starts I was able to decode MHTs created with Internet Explorer, place them in a temporary directory and direct Firefox to open them. After reading through the RFC however, I realised two things:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;There were things that you could realistically (and easily) ignore that were errors in MHT decoding that Internet Explorer couldn’t handle and&lt;/li&gt;
+  &lt;li&gt;MHT files were huge compared to the actual size of the content because all the attachments were MIME encoded.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;As a side effect of implementing the MHT decoding in javascript and being liberal with the error handling, I was able to open MHT files that even Internet Explorer couldn’t open (despite being the source for saving them)&lt;/p&gt;
+
+&lt;p&gt;The size increase of MHT archives inspired me to find some other way of storing the HTML file and associated attachments. The best way I could figure was to create a format based on some sort of standard. After some consideration I thought that a ZIP archive would be the best base to use, except Firefox did not have any facility to create zip files. There was a JAR file handler (which was essentially ZIP) that let you read zip files, but no zip file creation. I designed the format with the zip standard in mind, giving options wherever I could to use external zip programs to create the archives on both Windows and Linux. Eventually I created an XPCOM zip library based on some C zip code I found, but it was a bit flaky (I blame the XPCOM interfaces I had to program to expose the interface to Javascript). Eventually an official zip service was created and none of my custom zip code, script or configuration was necessary again. Around this time tabs started getting popular (ah Opera) and there were some implementations in Firefox which were pretty useful. With my desire to automate everything still pretty strong, I then wrote code to iterate through the tabs and save all of them in a MAF archive. I also looked at the meta data I could store which were especially important to my thesis write up - the URL and the date the URL was retrieved.&lt;/p&gt;
+
+&lt;p&gt;Over ten years later, my project is still going strong. As time progressed and I left the university life, I was unable to dedicate the time and resources MAF needed. It was difficult to let go, but after some time and I handed the project over to a willing and extremely able colleague - Paolo Amadini. He carries on maintaining the project and its code to this day. While the code has changed quite a bit over the years, the format remains the same.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Christopher Ottley</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Projects" />
+      
+        <category term="Firefox" />
+      
+        <category term="MAF" />
+      
+
+      
+        <summary type="html">For MAF I am the creator and initially the sole developer. Now MAF is maintained by Paolo Amadini.</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>
