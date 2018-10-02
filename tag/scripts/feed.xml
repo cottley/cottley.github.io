@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="http://cottley.github.io/tag/stuff/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://cottley.github.io/tag/scripts/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://cottley.github.io/" rel="alternate" type="text/html" />
   <updated>2018-10-02T14:19:25-04:00</updated>
-  <id>http://cottley.github.io/tag/stuff/feed.xml</id>
+  <id>http://cottley.github.io/tag/scripts/feed.xml</id>
 
   
   
@@ -196,128 +196,6 @@ crontab: installing new crontab
 
       
         <summary type="html">Oracle. Love it or hate it, it’s all over the place and the basis of many enterprise solutions. While there may be commerical system monitoring and analysis solutions, sometimes (due to cost, speed or simplicity) you just need a quick and dirty solution to make sure you know what’s going on in your database. In this post I am going to discuss how to use a script that I’ve written that lets you monitor the session metric in Oracle’s v$sysmetric view and sends an email if the session metric is over some prescribed limit.</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Website Redesign</title>
-      <link href="http://cottley.github.io/website-redesign" rel="alternate" type="text/html" title="Website Redesign" />
-      <published>2018-09-26T10:15:00-04:00</published>
-      <updated>2018-09-26T10:15:00-04:00</updated>
-      <id>http://cottley.github.io/website-redesign</id>
-      <content type="html" xml:base="http://cottley.github.io/website-redesign">&lt;p&gt;I’ve had a number of websites over the years in one form or the other. Usually the websites were project websites that happened to have a small about section where I wrote something short and unmemorable about myself. Unfortunately I got busy and maintaining those websites got de-prioritized, finally existing in some internet archive somewhere and disappearing from active use. The world has changed a bit since then and I got curious as to the advancements of static site generators like &lt;a href=&quot;https://forrest.apache.org/&quot;&gt;Apache Forest&lt;/a&gt;. A static site generator uses dynamic logic to create static websites that load faster and would be easier to maintain for someone working part-time on site maintenace, like me.&lt;/p&gt;
-
-&lt;p&gt;While I generally like &lt;a href=&quot;http://www.apache.org/&quot;&gt;Apache&lt;/a&gt; products, &lt;a href=&quot;https://forrest.apache.org/&quot;&gt;Apache Forest&lt;/a&gt; doesn’t seem to have been updated for a while and I aimed to find the most popular static site generator in use. In open source, high usage usually means that it’s reasonably maintained and fits some minimal use cases very well. After some research I happened upon &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;I don’t know Ruby, but the installation seemed pretty straight forward and seeing as GitHub seems to use it for their GitHub pages service, I figured I couldn’t go too wrong. One of the nice things about &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; is that there are lots of tutorials and instructions all over the Internet on how to make all sorts of websites with it. GitHub has some good instructions as well, but I decided to see if I could find some instructions that were more generic which would allow me to move my site to anywhere without worrying about any kind of GitHub specific pages config (not that I really saw any, but you never know).&lt;/p&gt;
-
-&lt;p&gt;Seeing as a I like to keep things seperated, I fired up a brand spanking new &lt;a href=&quot;https://www.ubuntu.com/&quot;&gt;Ubuntu&lt;/a&gt; 18.04 Desktop VM, did a minimal install, updated everything, installed ssh and I was ready to start.&lt;/p&gt;
-
-&lt;p&gt;At a bash prompt, a quick…&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install ruby ruby-dev build-essential
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;…and I was ready to install Jekyll.&lt;/p&gt;
-
-&lt;p&gt;Following the instructions from the &lt;a href=&quot;https://jekyllrb.com/docs/installation/ubuntu/&quot;&gt;website&lt;/a&gt; and executing at a bash prompt again…&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;echo '# Install Ruby Gems to ~/gems' &amp;gt;&amp;gt; ~/.bashrc
-echo 'export GEM_HOME=$HOME/gems' &amp;gt;&amp;gt; ~/.bashrc
-echo 'export PATH=$HOME/gems/bin:$PATH' &amp;gt;&amp;gt; ~/.bashrc
-source ~/.bashrc
-gem install jekyll bundler
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;…and now Jekyll is installed. It really was painless.&lt;/p&gt;
-
-&lt;p&gt;Time to serve up a site for development…&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jekyll new cottley-site
-cd cottley-site/
-bundle exec jekyll serve
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;…And here we go.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/images/website-redesign-figure1.png&quot; alt=&quot;website-redesign-figure1&quot; title=&quot;First run with default website&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Ugh! I mean &lt;em&gt;yay&lt;/em&gt; (obviously), but also, Ugh!&lt;/p&gt;
-
-&lt;p&gt;Granted, this was about 5 minutes of work (including network downloads), but goshdarnit, first impressions matter. I understand the bare minimalism so you can customize what you want, but, ugh. This was supposed to make my website life easier, not look so, plain. I know I know, there are links to some themes at &lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;Jekyll Themes.org&lt;/a&gt; and &lt;a href=&quot;https://jekyllthemes.io/&quot;&gt;Jekyll Themes.io&lt;/a&gt; are on the website under the resources, but if you at least give me a link to one of them on the very first site I throw up I’ll be more likely to think that even the minimal effort was worth it because changing the theme is easy and possible.&lt;/p&gt;
-
-&lt;p&gt;I found a super nice theme called &lt;a href=&quot;http://jekyllthemes.org/themes/jasper2/&quot;&gt;Jasper2&lt;/a&gt; and spent a few minutes trying to figure out how to get it installed.&lt;/p&gt;
-
-&lt;p&gt;…And you don’t install it, the theme &lt;em&gt;IS&lt;/em&gt; the site and you need to config the site and put the posts in it. Ok, fine. Let’s do a serve in an extracted Jasper2 folder… and it doesn’t work. Of course. At least it tells me I have to install some gems and to run:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle install
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;All seems to be working well until it can’t install nokogiri, whatever that is and suggests that I&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem install nokogiri -v '1.8.4' --source
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;which doesn’t work and so I try&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem install nokogiri -v '1.8.4' --source 'https://rubygems.org/'
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;which still doesn’t work.&lt;/p&gt;
-
-&lt;p&gt;Looking at the error, it can’t find zlib for some reason so I go looking to install some ruby zlib library. I find one and…&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install ruby-zip
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Still doesn’t work. Installing a theme shouldn’t be this hard man! Looking at the error further it seems that Jekyll / Ruby invokes gcc to compile some code and it can’t find the zlib header library. I do a&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install libz-dev
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;and manage to install nokogiri ok now.&lt;/p&gt;
-
-&lt;p&gt;A final&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle install
-bundle exec jekyll serve
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;in the terminal and I finally, FINALLY have the theme site up and running.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/images/website-redesign-figure2.png&quot; alt=&quot;website-redesign-figure2&quot; title=&quot;First run with Jasper2 theme&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I play with some config settings, replace some images, start putting in posts and boom, new website.&lt;/p&gt;
-
-&lt;p&gt;The only thing Jasper2 doesn’t seem to do is generate a nice xml sitemap for me, so I grabbed a &lt;a href=&quot;https://github.com/jekyll/jekyll-sitemap&quot;&gt;Jekyll Sitemap Generator Plugin&lt;/a&gt; and installed it (which is much easier than the theme crazy).&lt;/p&gt;
-
-&lt;p&gt;That’s it, I’m going to try continue consolidating my tech rantings here so if at least, dear reader, you don’t find me entertaining, you at least find me informative.&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>Christopher Ottley</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="Stuff" />
-      
-        <category term="Projects" />
-      
-
-      
-        <summary type="html">I’ve had a number of websites over the years in one form or the other. Usually the websites were project websites that happened to have a small about section where I wrote something short and unmemorable about myself. Unfortunately I got busy and maintaining those websites got de-prioritized, finally existing in some internet archive somewhere and disappearing from active use. The world has changed a bit since then and I got curious as to the advancements of static site generators like Apache Forest. A static site generator uses dynamic logic to create static websites that load faster and would be easier to maintain for someone working part-time on site maintenace, like me.</summary>
       
 
       

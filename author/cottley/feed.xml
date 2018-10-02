@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="http://cottley.github.io/author/cottley/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://cottley.github.io/" rel="alternate" type="text/html" />
-  <updated>2018-09-28T19:20:00-04:00</updated>
+  <updated>2018-10-02T14:19:25-04:00</updated>
   <id>http://cottley.github.io/author/cottley/feed.xml</id>
 
   
@@ -30,6 +30,177 @@
   
   
 
+  
+    <entry>
+      <title type="html">Oh, Oracle session, let me know</title>
+      <link href="http://cottley.github.io/oh-oracle-session-let-me-know" rel="alternate" type="text/html" title="Oh, Oracle session, let me know" />
+      <published>2018-10-02T04:00:00-04:00</published>
+      <updated>2018-10-02T04:00:00-04:00</updated>
+      <id>http://cottley.github.io/oh-oracle-session-let-me-know</id>
+      <content type="html" xml:base="http://cottley.github.io/oh-oracle-session-let-me-know">&lt;p&gt;Oracle. Love it or hate it, it’s all over the place and the basis of many enterprise solutions. While there may be commerical system monitoring and analysis solutions, sometimes (due to cost, speed or simplicity) you just need a quick and dirty solution to make sure you know what’s going on in your database. In this post I am going to discuss how to use a script that I’ve written that lets you monitor the session metric in Oracle’s v$sysmetric view and sends an email if the session metric is over some prescribed limit.&lt;/p&gt;
+
+&lt;p&gt;For this to work we need a few things:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Root access to the database server to setup the cron job (well we could set it up using another account, like the oracle server account, but who wants to try to find random crontabs all over the place in a few years when we inevitably forget about this?)&lt;/li&gt;
+  &lt;li&gt;Local database system access to get access to the v$sysmetric database view&lt;/li&gt;
+  &lt;li&gt;Access to the sqlplus command at a bash prompt&lt;/li&gt;
+  &lt;li&gt;The mail client &lt;a href=&quot;https://linux.die.net/man/1/mailx&quot;&gt;mailx&lt;/a&gt; installed and accessible at a command prompt&lt;/li&gt;
+  &lt;li&gt;An open SMTP server (ok this is not necessary as mailx supports lots of secure mail services, but I’m assuming you have some internal accessible only SMTP server available)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;First, let us download the &lt;a href=&quot;https://raw.githubusercontent.com/cottley/script_stuff/master/check_oracle_session/check_oracle_session.sh&quot;&gt;check_oracle_session.sh script&lt;/a&gt; from my github script_stuff repository.&lt;/p&gt;
+
+&lt;p&gt;In my test environment I have a user, oracle with a home folder in /home/oracle/.&lt;/p&gt;
+
+&lt;p&gt;Next we place the downloaded check_oracle_session.sh script in the /home/oracle/ folder and make it executable for the oracle user. We can make it executable (and leave it read-only) for everyone by executing:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;chmod 555 check_oracle_session.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If all is setup properly you can run the script and see the script options by executing:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./check_oracle_session.sh -h
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Below are the options that the script accepts to execute.&lt;/p&gt;
+
+&lt;pre&gt;
+NAME:
+  check_oracle_session.sh - Automatic Oracle Database Instance Session Checker v1.0
+
+SYNOPSIS:
+  check_oracle_session.sh [options]
+  Run automated check for the number of sessions for a oracle database instance.
+  The script will execute a notification once the number of sessions exceeds
+  a specified limit.
+
+OPTIONS:
+  -h, --help
+    Show this message
+  -l, --limit integerlimit
+    Specify the session limit you would like to use so that notifications go
+    out when the number of sessions meet or exceed this number. E.g. -l 100
+  -s, --smtpserver smtpserver
+    Specify the smtp server to use when sending notifications
+    E.g. -s mail.mycompany.com
+  -f, --from fromemailaddress
+    Specify the email address the email will appear to come from when there
+    are notifications as a result of the limit being met or exceeded
+    E.g. -f noreply@mycompany.com
+  -t, --to toemailaddress
+    Specify the email address to email when limit has been met or exeeded
+    E.g. -t me@mycompany.com
+  -v, --verbose
+    Verbose output. Note: This will send an email even if the limit has not
+    been met or exceeded
+&lt;/pre&gt;
+
+&lt;p&gt;An example invocation that is checking if the session limit has met or exceeded 50 sessions, using the SMTP server mail.mycompany.com, with the email coming from noreply@mycompany.com and the email being sent to me@mycompany.com:&lt;/p&gt;
+&lt;pre&gt;
+./check_oracle_session.sh -l 50 -s mail.mycompany.com -f noreply@mycompany.com -t me@mycompany.com
+&lt;/pre&gt;
+
+&lt;p&gt;This script assumes that the oracle environment has been setup so that you can use sqlplus at a command prompt and connect as the system DBA.&lt;/p&gt;
+
+&lt;p&gt;In my environment, I also have a seperate oracle.bash file that I source to set the ORACLE_SID, the TNS_ADMIN home etc. You may or may not have a similar configuration, however whatever steps you need to get sqlplus working at a command prompt, that’s what you need to do to test sqlplus.&lt;/p&gt;
+
+&lt;pre&gt;
+[oracle@mydatabase ~]$ sqlplus / as sysdba
+
+SQL*Plus: Release 12.1.0.2.0 Production on Tue Oct 2 10:52:36 2018
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
+
+SQL&amp;gt;
+&lt;/pre&gt;
+
+&lt;p&gt;We can easily test our script to ensure the notifications work by asking it to send an email with a low limit, like 0.&lt;/p&gt;
+
+&lt;pre&gt;
+./check_oracle_session.sh -l 0 -s mail.mycompany.com -f noreply@mycompany.com -t me@mycompany.com
+&lt;/pre&gt;
+
+&lt;p&gt;Once that works, we can now schedule the script to run every 5 minutes via cron.&lt;/p&gt;
+
+&lt;p&gt;In the crontab we change to the oracle user (su - oracle) and execute the command (-c) in double quotes.&lt;/p&gt;
+
+&lt;p&gt;In my test environment I source the oracle.bash to set the environment variables and then run the script with the parameters tested earlier.&lt;/p&gt;
+
+&lt;pre&gt;
+*/5 * * * * su - oracle -c &quot;source /home/oracle/oracle.bash &amp;gt; /dev/null &amp;amp;&amp;amp; /home/oracle/check_oracle_session.sh -l 50 -s mail.mycompany.com -f noreply@mycompany.com -t me@mycompany.com&quot;
+&lt;/pre&gt;
+
+&lt;p&gt;If your oracle user has the environment variables set already and you don’t need to source any configuration scripts you can use the below crontab entry instead.&lt;/p&gt;
+
+&lt;pre&gt;
+*/5 * * * * su - oracle -c &quot;/home/oracle/check_oracle_session.sh -l 50 -s mail.mycompany.com -f noreply@mycompany.com -t me@mycompany.com&quot;
+&lt;/pre&gt;
+
+&lt;p&gt;Once complete you should get confirmation that the crontab has been saved and installed.&lt;/p&gt;
+
+&lt;pre&gt;
+[root@mydatabase ~]# crontab -e
+no crontab for root - using an empty one
+crontab: installing new crontab
+[root@mydatabase ~]#
+&lt;/pre&gt;
+
+&lt;p&gt;And Voila! The script will run every 5 minutes and notify you via email if the session limit has been exceeded.&lt;/p&gt;
+
+&lt;p&gt;You can also track the individual runs of the script by looking at the /var/log/check_oracle_session.log.&lt;/p&gt;
+
+&lt;pre&gt;
+[root@mydatabase ~]# tail -f /var/log/check_oracle_session.log
+2018-10-02T12:05:01-0500 Limit is: 50 and No. Of Sessions is: 48
+2018-10-02T12:10:01-0500 Limit is: 50 and No. Of Sessions is: 50
+2018-10-02T12:15:01-0500 Limit is: 50 and No. Of Sessions is: 50
+2018-10-02T12:20:01-0500 Limit is: 50 and No. Of Sessions is: 49
+2018-10-02T12:25:01-0500 Limit is: 50 and No. Of Sessions is: 48
+2018-10-02T12:30:01-0500 Limit is: 50 and No. Of Sessions is: 48
+2018-10-02T12:35:01-0500 Limit is: 50 and No. Of Sessions is: 48
+2018-10-02T12:40:02-0500 Limit is: 50 and No. Of Sessions is: 48
+2018-10-02T12:45:01-0500 Limit is: 50 and No. Of Sessions is: 48
+2018-10-02T12:50:01-0500 Limit is: 50 and No. Of Sessions is: 48
+&lt;/pre&gt;
+
+&lt;p&gt;You can now extend this script if desired and make modifications to monitor multiple metrics, possibly add logic to check the average value of the metric (using v$sysmetric_summary) and only give an alert if the new value for the metric is, say, 10% over the average instead of a hard coded value. You can also add more notification options, such as notifications to a slack channel or even a text message when you are out of wireless (but not cell network) range depending on the API interfaces you have available.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Christopher Ottley</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Stuff" />
+      
+        <category term="Howto" />
+      
+        <category term="Scripts" />
+      
+        <category term="Oracle" />
+      
+        <category term="Bash" />
+      
+
+      
+        <summary type="html">Oracle. Love it or hate it, it’s all over the place and the basis of many enterprise solutions. While there may be commerical system monitoring and analysis solutions, sometimes (due to cost, speed or simplicity) you just need a quick and dirty solution to make sure you know what’s going on in your database. In this post I am going to discuss how to use a script that I’ve written that lets you monitor the session metric in Oracle’s v$sysmetric view and sends an email if the session metric is over some prescribed limit.</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">Alexa and Youtube music videos</title>
@@ -501,61 +672,6 @@ bundle exec jekyll serve
 
       
         <summary type="html">For Talparo I am the unofficial MSI packager.</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Firefox MAF</title>
-      <link href="http://cottley.github.io/firefox-maf" rel="alternate" type="text/html" title="Firefox MAF" />
-      <published>2018-09-25T13:00:00-04:00</published>
-      <updated>2018-09-25T13:00:00-04:00</updated>
-      <id>http://cottley.github.io/firefox-maf</id>
-      <content type="html" xml:base="http://cottley.github.io/firefox-maf">&lt;p&gt;For MAF I am the creator and initially the sole developer. Now MAF is maintained by Paolo Amadini.&lt;/p&gt;
-
-&lt;p&gt;I created the &lt;a href=&quot;http://maf.mozdev.org/&quot;&gt;Mozilla Archive Format extension&lt;/a&gt; while I was doing research for my Master’s project at the University of the West Indies, St. Augustine campus. I had quite a number of topics I wanted to research and unfortunately I only had rather slow Internet dial up access at home at the time. I was afforded a limited amount of time in the postgraduate computer lab that had very speedy Internet access. The computers I used in the postgraduate lab ran Windows, but at home I ran Linux (SUSE at the time). I didn’t think this would be an issue until I saved quite a bit of work as MHTs (Microsoft’s Web Archive format) and was unable to open them at home. This was quite frustrating as would be expected as none of the MHT extraction / conversion tools I found at the time were up to snuff.&lt;/p&gt;
-
-&lt;p&gt;Around this time Netscape was being re-worked as an open source project and Firefox (originally Firebird from what I recall) was not even at version 0.2. I had a look at the code base and saw Firefox’s potential, especially as they were using the rendering engine to render the whole interface. This meant that being able to extend the interface became a matter of some strategically placed Javascript, CSS and XML. Firefox’s development progressed rapidly and as I got more familiar with the code I started developing extensions to see what I could do; change a menu entry here, add an icon to the toolbar there, run a batch file etc.&lt;/p&gt;
-
-&lt;p&gt;At this time I realised I could create something that could read the hundreds of MHTs I was using for research, so I read the &lt;a href=&quot;http://tools.ietf.org/html/rfc2557&quot;&gt;MHTML specification (RFC2557)&lt;/a&gt; and decided I would try to implement it in Javascript. After a few false starts I was able to decode MHTs created with Internet Explorer, place them in a temporary directory and direct Firefox to open them. After reading through the RFC however, I realised two things:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;There were things that you could realistically (and easily) ignore that were errors in MHT decoding that Internet Explorer couldn’t handle and&lt;/li&gt;
-  &lt;li&gt;MHT files were huge compared to the actual size of the content because all the attachments were MIME encoded.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;As a side effect of implementing the MHT decoding in javascript and being liberal with the error handling, I was able to open MHT files that even Internet Explorer couldn’t open (despite being the source for saving them)&lt;/p&gt;
-
-&lt;p&gt;The size increase of MHT archives inspired me to find some other way of storing the HTML file and associated attachments. The best way I could figure was to create a format based on some sort of standard. After some consideration I thought that a ZIP archive would be the best base to use, except Firefox did not have any facility to create zip files. There was a JAR file handler (which was essentially ZIP) that let you read zip files, but no zip file creation. I designed the format with the zip standard in mind, giving options wherever I could to use external zip programs to create the archives on both Windows and Linux. Eventually I created an XPCOM zip library based on some C zip code I found, but it was a bit flaky (I blame the XPCOM interfaces I had to program to expose the interface to Javascript). Eventually an official zip service was created and none of my custom zip code, script or configuration was necessary again. Around this time tabs started getting popular (ah Opera) and there were some implementations in Firefox which were pretty useful. With my desire to automate everything still pretty strong, I then wrote code to iterate through the tabs and save all of them in a MAF archive. I also looked at the meta data I could store which were especially important to my thesis write up - the URL and the date the URL was retrieved.&lt;/p&gt;
-
-&lt;p&gt;Over ten years later, my project is still going strong. As time progressed and I left the university life, I was unable to dedicate the time and resources MAF needed. It was difficult to let go, but after some time and I handed the project over to a willing and extremely able colleague - Paolo Amadini. He carries on maintaining the project and its code to this day. While the code has changed quite a bit over the years, the format remains the same.&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>Christopher Ottley</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="Projects" />
-      
-        <category term="Firefox" />
-      
-        <category term="MAF" />
-      
-
-      
-        <summary type="html">For MAF I am the creator and initially the sole developer. Now MAF is maintained by Paolo Amadini.</summary>
       
 
       

@@ -8,6 +8,21 @@
     
       
       <item>
+        <title>Oh, Oracle session, let me know</title>
+        
+          <description>&lt;p&gt;Oracle. Love it or hate it, it’s all over the place and the basis of many enterprise solutions. While there may be commerical system monitoring and analysis solutions, sometimes (due to cost, speed or simplicity) you just need a quick and dirty solution to make sure you know what’s going on in your database. In this post I am going to discuss how to use a script that I’ve written that lets you monitor the session metric in Oracle’s v$sysmetric view and sends an email if the session metric is over some prescribed limit.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 02 Oct 2018 04:00:00 -0400</pubDate>
+        <link>
+        http://cottley.github.io/oh-oracle-session-let-me-know</link>
+        <guid isPermaLink="true">http://cottley.github.io/oh-oracle-session-let-me-know</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Alexa and Youtube music videos</title>
         
           <description>&lt;p&gt;One day, maybe, far into the future, tech giants would work together to provide the best set of services for everyone. Or maybe we’ll have to hack together that future ourselves. Between &lt;a href=&quot;https://www.scmp.com/news/world/article/2123052/clash-tech-titans-google-bans-youtube-amazon-devices-escalating-dispute&quot;&gt;Google banning Youtube from some Amazon devices&lt;/a&gt; and &lt;a href=&quot;https://www.androidpolice.com/2018/03/02/amazon-still-isnt-selling-chromecast-nearly-three-months-initial-announcement/&quot;&gt;Amazon banning Chromecast&lt;/a&gt; from its store-of-everything (which should now be renamed store-of-everything-except-chromecast) there is probably no way anyone is going to provide a nice music service app for Alexa which has a playlist of popular youtube music from trending music videos.&lt;/p&gt;
