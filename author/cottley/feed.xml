@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="http://cottley.github.io/author/cottley/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://cottley.github.io/" rel="alternate" type="text/html" />
-  <updated>2018-10-02T14:19:25-04:00</updated>
+  <updated>2018-10-03T10:07:02-04:00</updated>
   <id>http://cottley.github.io/author/cottley/feed.xml</id>
 
   
@@ -196,6 +196,54 @@ crontab: installing new crontab
 
       
         <summary type="html">Oracle. Love it or hate it, it’s all over the place and the basis of many enterprise solutions. While there may be commerical system monitoring and analysis solutions, sometimes (due to cost, speed or simplicity) you just need a quick and dirty solution to make sure you know what’s going on in your database. In this post I am going to discuss how to use a script that I’ve written that lets you monitor the session metric in Oracle’s v$sysmetric view and sends an email if the session metric is over some prescribed limit.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Can you carry me back?</title>
+      <link href="http://cottley.github.io/can-you-carry-me-back" rel="alternate" type="text/html" title="Can you carry me back?" />
+      <published>2018-09-29T04:00:00-04:00</published>
+      <updated>2018-09-29T04:00:00-04:00</updated>
+      <id>http://cottley.github.io/can-you-carry-me-back</id>
+      <content type="html" xml:base="http://cottley.github.io/can-you-carry-me-back">&lt;p&gt;There are certain apps I use every day, and, not surprisingly, most of them are from google. While google has its google maps and navigation software, from my experience &lt;a href=&quot;https://www.waze.com/&quot;&gt;Waze&lt;/a&gt; is the better app and service. As much as I like Waze, I have a small peve about how it works, more specifically, how the favorites feature of it works. Waze can figure out where you live and work based on how many times you keep going and returning to those places and it does a pretty good job when you are looking for companies or businesses by name or even addresses.&lt;/p&gt;
+
+&lt;p&gt;What about all the other places that you might visit regularly (or semi-regularly)? How about locations of your co-workers in case you need to pick them up for some event? What about favorite activities for the kid(s)? Prefered hospitals, doctor’s offices? Favorite restaurants? If you have clients, client offices? What about your friend’s houses? Or family?&lt;/p&gt;
+
+&lt;p&gt;It would be great if there was an app that lets you store your geographic favorites in categories for easy access and then launch Waze in context to navigate to those locations. This way, pretty much anywhere I’m going, once I’ve at least been there before, or have the latitude and longitude of the location, I can have Waze find the fastest route.&lt;/p&gt;
+
+&lt;p&gt;Investigating APIs it seems that Waze has a &lt;a href=&quot;https://www.waze.com/sdk&quot;&gt;SDK&lt;/a&gt;, but that seems overkill for what we would like to do. Google has a couple more &lt;a href=&quot;https://developers.google.com/waze/&quot;&gt;developer tools&lt;/a&gt; available for Waze but one of them, the &lt;a href=&quot;https://developers.google.com/waze/deeplinks/&quot;&gt;Waze deep links&lt;/a&gt; looks like just the ticket.&lt;/p&gt;
+
+&lt;p&gt;So, now it’s to pick an app development platform. I’ve been looking at &lt;a href=&quot;https://unity3d.com&quot;&gt;Unity&lt;/a&gt; and using their &lt;a href=&quot;https://unity3d.com/learn/tutorials/topics/cloud-build/introduction-unity-cloud-build&quot;&gt;cloud build&lt;/a&gt; for some RAD. This might be a nice simple enough app to cut my teeth on.&lt;/p&gt;
+
+&lt;p&gt;Finally, while I have been playing with &lt;a href=&quot;https://aws.amazon.com/dynamodb/&quot;&gt;Amazon’s dynamodb&lt;/a&gt; for some Alexa based apps, I’d like to see how &lt;a href=&quot;https://firebase.google.com/&quot;&gt;firebase&lt;/a&gt; works with Unity. I doubt I’ll hit past their free tier for this project, even if I complete it and put it out on the google app store.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Christopher Ottley</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Half-baked ideas" />
+      
+        <category term="Android" />
+      
+        <category term="Waze" />
+      
+
+      
+        <summary type="html">There are certain apps I use every day, and, not surprisingly, most of them are from google. While google has its google maps and navigation software, from my experience Waze is the better app and service. As much as I like Waze, I have a small peve about how it works, more specifically, how the favorites feature of it works. Waze can figure out where you live and work based on how many times you keep going and returning to those places and it does a pretty good job when you are looking for companies or businesses by name or even addresses.</summary>
       
 
       
@@ -628,50 +676,6 @@ bundle exec jekyll serve
 
       
         <summary type="html">For BunnyX I am the creator, software architect and the sole developer.</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Talparo for WMS tile caching</title>
-      <link href="http://cottley.github.io/talparo" rel="alternate" type="text/html" title="Talparo for WMS tile caching" />
-      <published>2018-09-25T14:00:00-04:00</published>
-      <updated>2018-09-25T14:00:00-04:00</updated>
-      <id>http://cottley.github.io/talparo</id>
-      <content type="html" xml:base="http://cottley.github.io/talparo">&lt;p&gt;For Talparo I am the unofficial MSI packager.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://mapproxy.org/&quot;&gt;MapProxy&lt;/a&gt; is an open source geospatial data proxy. While it works on Windows and Linux, setting it up as a service on Windows takes some doing. Installing MapProxy on a Linux machine is relatively easy (with the repository setups and such), but after following the Windows installation steps, I was left scratching my head as to why certain things were not working.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://talparo.sourceforge.net/&quot;&gt;Talparo MapProxy&lt;/a&gt; is an unofficial distribution of of MapProxy that lets you easily setup a local MapProxy installation. It solves some of the setup problems I encountered when trying to setup MapProxy for Windows by including Portable Python (so Python installations do not conflict on the machine) and registering the MapProxy as a Windows service.&lt;/p&gt;
-
-&lt;p&gt;I’ve also included a number of configurations for popular tile based map servers so anyone can use them as a WMS source for GIS based visualization.&lt;/p&gt;
-
-&lt;p&gt;This project had minimal programming involved however there was quite a bit of figuring out how to integrate pieces of MapProxy and its dependencies together. While this may not be so difficult, the real challenge was designing the final product so the end user has the smoothest, easiest time with installing the application. I also wanted to make it an MSI because I prefer a setup database (like a MSI) over an executable installer that is doing who knows what to your machine.&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>Christopher Ottley</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="Projects" />
-      
-        <category term="Talparo" />
-      
-
-      
-        <summary type="html">For Talparo I am the unofficial MSI packager.</summary>
       
 
       
