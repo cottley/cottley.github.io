@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="http://cottley.github.io/tag/alexa/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://cottley.github.io/" rel="alternate" type="text/html" />
-  <updated>2018-10-03T10:07:02-04:00</updated>
+  <updated>2018-10-03T11:56:47-04:00</updated>
   <id>http://cottley.github.io/tag/alexa/feed.xml</id>
 
   
@@ -30,6 +30,46 @@
   
   
 
+  
+    <entry>
+      <title type="html">Sometimes I forget</title>
+      <link href="http://cottley.github.io/sometimes-i-forget" rel="alternate" type="text/html" title="Sometimes I forget" />
+      <published>2018-09-30T04:00:00-04:00</published>
+      <updated>2018-09-30T04:00:00-04:00</updated>
+      <id>http://cottley.github.io/sometimes-i-forget</id>
+      <content type="html" xml:base="http://cottley.github.io/sometimes-i-forget">&lt;p&gt;The nice thing about having lots of smart plugs and bulbs connected to Alexa is the convenience of yelling at your devices to turn on and off. While you can schedule devices to turn on and off at specific times, I have to admit that from time to time I get caught up in doing something else and forget the device on. This happens especially with rooms that I don’t frequent every day, like the storage room in the back of the house or where the washer and dryer are. In general I might be in one of those places for maybe 10 minutes so if I forget to turn off the lights (which can happen because there is a door right behind there and I habitually close it) it would be good if something turned the lights off for me, say, after 20 minutes. It might be usefull for the garage as well as after those lights are turned on and we move what we need to from the car into the house, the garage lights might stay on by accident as well.&lt;/p&gt;
+
+&lt;p&gt;As nice as that would be, it can also get a bit evil. In the bathroom for more than 30 minutes? Light turns off. Showering for more than 10 minutes? Water turns off. Watching TV for more than an hour? TV turns off.&lt;/p&gt;
+
+&lt;p&gt;Using the same &lt;a href=&quot;https://github.com/konsumer/tplink-lightbulb&quot;&gt;command line application&lt;/a&gt; from my previous half-baked idea post on &lt;a href=&quot;/read-my-mind-alexa&quot;&gt;alex reading my mind&lt;/a&gt; I should be able to hack together something that would work with cron and track when certain devices have been turned on and turn them off after a specified period of time if they are still on.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Christopher Ottley</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Half-baked ideas" />
+      
+        <category term="Alexa" />
+      
+
+      
+        <summary type="html">The nice thing about having lots of smart plugs and bulbs connected to Alexa is the convenience of yelling at your devices to turn on and off. While you can schedule devices to turn on and off at specific times, I have to admit that from time to time I get caught up in doing something else and forget the device on. This happens especially with rooms that I don’t frequent every day, like the storage room in the back of the house or where the washer and dryer are. In general I might be in one of those places for maybe 10 minutes so if I forget to turn off the lights (which can happen because there is a door right behind there and I habitually close it) it would be good if something turned the lights off for me, say, after 20 minutes. It might be usefull for the garage as well as after those lights are turned on and we move what we need to from the car into the house, the garage lights might stay on by accident as well.</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">Alexa and Youtube music videos</title>
