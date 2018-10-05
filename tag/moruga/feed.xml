@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="http://cottley.github.io/tag/moruga/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://cottley.github.io/" rel="alternate" type="text/html" />
-  <updated>2018-10-03T11:56:47-04:00</updated>
-  <id>http://cottley.github.io/tag/moruga/feed.xml</id>
+  <link href="https://cottley.github.io/tag/moruga/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://cottley.github.io/" rel="alternate" type="text/html" />
+  <updated>2018-10-05T15:14:28-04:00</updated>
+  <id>https://cottley.github.io/tag/moruga/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Moruga for simple python text manipulation</title>
-      <link href="http://cottley.github.io/moruga" rel="alternate" type="text/html" title="Moruga for simple python text manipulation" />
+      <link href="https://cottley.github.io/moruga" rel="alternate" type="text/html" title="Moruga for simple python text manipulation" />
       <published>2018-09-25T14:45:00-04:00</published>
       <updated>2018-09-25T14:45:00-04:00</updated>
-      <id>http://cottley.github.io/moruga</id>
-      <content type="html" xml:base="http://cottley.github.io/moruga">&lt;p&gt;For Moruga I am the sole developer.&lt;/p&gt;
+      <id>https://cottley.github.io/moruga</id>
+      <content type="html" xml:base="https://cottley.github.io/moruga">&lt;p&gt;For Moruga I am the sole developer.&lt;/p&gt;
 
 &lt;p&gt;Most software that provides some sort of input or output process can generate ASCII text files. Sometimes the text files are in a format that is unusable by another application that can use the output as input. Occasionally I encounter this situation and so I created a small framework that will let me convert text files using a specified algorithm via a command line. I named the framework Moruga. It is easy to extend by implementing custom Python functions and then calling the script via a command line switch. You can have a look at the &lt;a href=&quot;https://github.com/cottley/moruga&quot;&gt;source code&lt;/a&gt; and start saving time when converting text file formats in Python.&lt;/p&gt;</content>
 

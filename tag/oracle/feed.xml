@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="http://cottley.github.io/tag/oracle/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://cottley.github.io/" rel="alternate" type="text/html" />
-  <updated>2018-10-03T11:56:47-04:00</updated>
-  <id>http://cottley.github.io/tag/oracle/feed.xml</id>
+  <link href="https://cottley.github.io/tag/oracle/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://cottley.github.io/" rel="alternate" type="text/html" />
+  <updated>2018-10-05T15:14:28-04:00</updated>
+  <id>https://cottley.github.io/tag/oracle/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Oh, Oracle session, let me know</title>
-      <link href="http://cottley.github.io/oh-oracle-session-let-me-know" rel="alternate" type="text/html" title="Oh, Oracle session, let me know" />
+      <link href="https://cottley.github.io/oh-oracle-session-let-me-know" rel="alternate" type="text/html" title="Oh, Oracle session, let me know" />
       <published>2018-10-02T04:00:00-04:00</published>
       <updated>2018-10-02T04:00:00-04:00</updated>
-      <id>http://cottley.github.io/oh-oracle-session-let-me-know</id>
-      <content type="html" xml:base="http://cottley.github.io/oh-oracle-session-let-me-know">&lt;p&gt;Oracle. Love it or hate it, it’s all over the place and the basis of many enterprise solutions. While there may be commerical system monitoring and analysis solutions, sometimes (due to cost, speed or simplicity) you just need a quick and dirty solution to make sure you know what’s going on in your database. In this post I am going to discuss how to use a script that I’ve written that lets you monitor the session metric in Oracle’s v$sysmetric view and sends an email if the session metric is over some prescribed limit.&lt;/p&gt;
+      <id>https://cottley.github.io/oh-oracle-session-let-me-know</id>
+      <content type="html" xml:base="https://cottley.github.io/oh-oracle-session-let-me-know">&lt;p&gt;Oracle. Love it or hate it, it’s all over the place and the basis of many enterprise solutions. While there may be commerical system monitoring and analysis solutions, sometimes (due to cost, speed or simplicity) you just need a quick and dirty solution to make sure you know what’s going on in your database. In this post I am going to discuss how to use a script that I’ve written that lets you monitor the session metric in Oracle’s v$sysmetric view and sends an email if the session metric is over some prescribed limit.&lt;/p&gt;
 
 &lt;p&gt;For this to work we need a few things:&lt;/p&gt;
 &lt;ol&gt;

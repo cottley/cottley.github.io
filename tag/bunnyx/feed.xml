@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="http://cottley.github.io/tag/bunnyx/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://cottley.github.io/" rel="alternate" type="text/html" />
-  <updated>2018-10-03T11:56:47-04:00</updated>
-  <id>http://cottley.github.io/tag/bunnyx/feed.xml</id>
+  <link href="https://cottley.github.io/tag/bunnyx/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://cottley.github.io/" rel="alternate" type="text/html" />
+  <updated>2018-10-05T15:14:28-04:00</updated>
+  <id>https://cottley.github.io/tag/bunnyx/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">BunnyX Content Modification Proxy Server</title>
-      <link href="http://cottley.github.io/bunnyx" rel="alternate" type="text/html" title="BunnyX Content Modification Proxy Server" />
+      <link href="https://cottley.github.io/bunnyx" rel="alternate" type="text/html" title="BunnyX Content Modification Proxy Server" />
       <published>2018-09-25T14:00:00-04:00</published>
       <updated>2018-09-25T14:00:00-04:00</updated>
-      <id>http://cottley.github.io/bunnyx</id>
-      <content type="html" xml:base="http://cottley.github.io/bunnyx">&lt;p&gt;For BunnyX I am the creator, software architect and the sole developer.&lt;/p&gt;
+      <id>https://cottley.github.io/bunnyx</id>
+      <content type="html" xml:base="https://cottley.github.io/bunnyx">&lt;p&gt;For BunnyX I am the creator, software architect and the sole developer.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://bunnyx.sourceforge.net/get.php?page=home&quot;&gt;BunnyX&lt;/a&gt; is designed to facilitate web app integration from legacy web apps to provide a more modern API without code changes. &lt;a href=&quot;http://bunnyx.sourceforge.net/get.php?page=home&quot;&gt;BunnyX&lt;/a&gt; started out as an experiment. I’ve always been fascinated by content modification proxies (yes, yes, I know). While many of these proxies provided services such as ad blocking or image conversion, I thought it would be interesting to create a proxy that dynamically changed the format of the main content the user was requesting. The feasibility and usefulness of this became the genus of my Master’s project - &lt;a href=&quot;http://uwispace.sta.uwi.edu/dspace/handle/2139/3443&quot;&gt;“Dynamic Conversion of Legacy Web-based Data for Real Time XML-based Programming”&lt;/a&gt;.&lt;/p&gt;
 

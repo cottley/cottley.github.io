@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="http://cottley.github.io/tag/spsimplefileupload/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://cottley.github.io/" rel="alternate" type="text/html" />
-  <updated>2018-10-03T11:56:47-04:00</updated>
-  <id>http://cottley.github.io/tag/spsimplefileupload/feed.xml</id>
+  <link href="https://cottley.github.io/tag/spsimplefileupload/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://cottley.github.io/" rel="alternate" type="text/html" />
+  <updated>2018-10-05T15:14:28-04:00</updated>
+  <id>https://cottley.github.io/tag/spsimplefileupload/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Spsimplefileupload for simple sharepoint uploads</title>
-      <link href="http://cottley.github.io/spsimplefileupload" rel="alternate" type="text/html" title="Spsimplefileupload for simple sharepoint uploads" />
+      <link href="https://cottley.github.io/spsimplefileupload" rel="alternate" type="text/html" title="Spsimplefileupload for simple sharepoint uploads" />
       <published>2018-09-25T14:15:00-04:00</published>
       <updated>2018-09-25T14:15:00-04:00</updated>
-      <id>http://cottley.github.io/spsimplefileupload</id>
-      <content type="html" xml:base="http://cottley.github.io/spsimplefileupload">&lt;p&gt;For spsimplefileupload I am the sole developer.&lt;/p&gt;
+      <id>https://cottley.github.io/spsimplefileupload</id>
+      <content type="html" xml:base="https://cottley.github.io/spsimplefileupload">&lt;p&gt;For spsimplefileupload I am the sole developer.&lt;/p&gt;
 
 &lt;p&gt;Once upon a time I needed to generate an Excel report out of another system and make it available to certain people. Automating the creation of the report was a bit of a challenge, but once I got that done, I also had to decide how I could share the report. As the company had a Sharepoint 2010 setup, I figured it would be good to point the users to a specific URL and they could see what they wanted to in Sharepoint. This is where the unimaginatively named spsimplefileupload utility came in. Most of the tools I found online were complicated to setup or were overkill for what I needed to do. As I managed to write the automation I needed via a batch file (yeah, I know) I decided a simple command line utility was all I needed, so that’s what I did. I’ve tested it with Sharepoint 2010 and it works pretty well. There is not much error checking, but usually it just works. You can &lt;a href=&quot;https://github.com/cottley/spsimplefileupload/blob/master/README.md&quot;&gt;see the command line options&lt;/a&gt;, download the &lt;a href=&quot;https://github.com/cottley/spsimplefileupload&quot;&gt;source code and project&lt;/a&gt; from github or &lt;a href=&quot;https://github.com/cottley/spsimplefileupload/releases/download/0.1.2.0/spsfileupload.exe&quot;&gt;the utility itself&lt;/a&gt; from github’s &lt;a href=&quot;https://github.com/cottley/spsimplefileupload/releases&quot;&gt;release page&lt;/a&gt;.&lt;/p&gt;</content>
 

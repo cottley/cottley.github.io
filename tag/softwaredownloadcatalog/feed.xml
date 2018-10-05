@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="http://cottley.github.io/tag/softwaredownloadcatalog/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://cottley.github.io/" rel="alternate" type="text/html" />
-  <updated>2018-10-03T11:56:47-04:00</updated>
-  <id>http://cottley.github.io/tag/softwaredownloadcatalog/feed.xml</id>
+  <link href="https://cottley.github.io/tag/softwaredownloadcatalog/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://cottley.github.io/" rel="alternate" type="text/html" />
+  <updated>2018-10-05T15:14:28-04:00</updated>
+  <id>https://cottley.github.io/tag/softwaredownloadcatalog/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Software Download Catalog for a more user friendly download list</title>
-      <link href="http://cottley.github.io/softwaredownloadcatalog" rel="alternate" type="text/html" title="Software Download Catalog for a more user friendly download list" />
+      <link href="https://cottley.github.io/softwaredownloadcatalog" rel="alternate" type="text/html" title="Software Download Catalog for a more user friendly download list" />
       <published>2018-09-25T14:30:00-04:00</published>
       <updated>2018-09-25T14:30:00-04:00</updated>
-      <id>http://cottley.github.io/softwaredownloadcatalog</id>
-      <content type="html" xml:base="http://cottley.github.io/softwaredownloadcatalog">&lt;p&gt;For softwaredownloadcatalog I am the sole developer.&lt;/p&gt;
+      <id>https://cottley.github.io/softwaredownloadcatalog</id>
+      <content type="html" xml:base="https://cottley.github.io/softwaredownloadcatalog">&lt;p&gt;For softwaredownloadcatalog I am the sole developer.&lt;/p&gt;
 
 &lt;p&gt;In my day to day work I use quite a bit of software. The software is delivered in many different forms, from MSI installers, to executables to ISOs. After some time I realised that I had software stewn all over my computer that was not the easiest thing to keep track of. When I realised this I was also experimenting with a javascript UI library called &lt;a href=&quot;http://w2ui.com/web/&quot;&gt;W2UI&lt;/a&gt;. A few keystrokes later and I created a software download catalog that uses a JSON file for the entries displayed with links to download the software (well, less of a link and more of a double click on a grid entry record). Using W2UI I was able to create an easily searchable, sortable and somewhat attractive user interface for the software archive I was maintaining. You can &lt;a href=&quot;https://github.com/cottley/sdcmirror&quot;&gt;download a copy&lt;/a&gt; for your own private (or Intranet) use at or have a look at &lt;a href=&quot;http://cottley.github.io/sdcmirror/&quot;&gt;a live demo&lt;/a&gt; (fyi - none of the software download links work in the demo).&lt;/p&gt;</content>
 

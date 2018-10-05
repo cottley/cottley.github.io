@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="http://cottley.github.io/tag/alexa/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://cottley.github.io/" rel="alternate" type="text/html" />
-  <updated>2018-10-03T11:56:47-04:00</updated>
-  <id>http://cottley.github.io/tag/alexa/feed.xml</id>
+  <link href="https://cottley.github.io/tag/alexa/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://cottley.github.io/" rel="alternate" type="text/html" />
+  <updated>2018-10-05T15:14:28-04:00</updated>
+  <id>https://cottley.github.io/tag/alexa/feed.xml</id>
 
   
   
@@ -32,12 +32,267 @@
 
   
     <entry>
+      <title type="html">So many frameworks, oh my!</title>
+      <link href="https://cottley.github.io/So-many-frameworks-oh-my" rel="alternate" type="text/html" title="So many frameworks, oh my!" />
+      <published>2018-10-05T04:00:00-04:00</published>
+      <updated>2018-10-05T04:00:00-04:00</updated>
+      <id>https://cottley.github.io/So-many-frameworks-oh-my</id>
+      <content type="html" xml:base="https://cottley.github.io/So-many-frameworks-oh-my">&lt;p&gt;With all the Alexa work I have planned, I decided to create a project called Argyle, named from Tobago’s &lt;a href=&quot;https://www.destinationtnt.com/argyle-waterfall/&quot;&gt;largest waterfall&lt;/a&gt;. I had looked at &lt;a href=&quot;https://laravel.com/&quot;&gt;Laravel&lt;/a&gt; and &lt;a href=&quot;https://phalconphp.com/en/&quot;&gt;Phalcon&lt;/a&gt; but I got the white-screen-of-nothing and no packages to install respectively after trying to install these frameworks. So, I decided to take a step back and worry about the front end and whole framework thing later. Instead I would focus on creating a nice JSON based API that I can use for whatever front end (web, android app, alexa etc.) I decided to use.&lt;/p&gt;
+
+&lt;p&gt;This led me to a nice slim php framework named, you guessed it, &lt;a href=&quot;https://www.slimframework.com/&quot;&gt;Slim&lt;/a&gt;! I had managed to install &lt;a href=&quot;https://getcomposer.org/&quot;&gt;Composer&lt;/a&gt; while trying to get the other frameworks to work, so, following the instructions on the home page, I created argyle-api using the slim-skeleton.&lt;/p&gt;
+
+&lt;pre&gt;
+workstation@workstation-upstairs:/var/www/html$ composer create-project slim/slim-skeleton argyle-api
+
+Installing slim/slim-skeleton (3.1.6)
+  - Installing slim/slim-skeleton (3.1.6): Downloading (100%)
+Created project in argyll-api
+Loading composer repositories with package information
+Updating dependencies (including require-dev)
+Package operations: 35 installs, 0 updates, 0 removals
+  - Installing psr/container (1.0.0): Loading from cache
+  - Installing container-interop/container-interop (1.2.0): Downloading (100%)
+  - Installing nikic/fast-route (v1.3.0): Downloading (100%)
+  - Installing psr/http-message (1.0.1): Downloading (100%)
+  - Installing pimple/pimple (v3.2.3): Downloading (100%)
+  - Installing slim/slim (3.11.0): Downloading (100%)
+  - Installing slim/php-view (2.2.0): Downloading (100%)
+  - Installing psr/log (1.0.2): Loading from cache
+  - Installing monolog/monolog (1.23.0): Loading from cache
+  - Installing symfony/polyfill-ctype (v1.9.0): Loading from cache
+  - Installing symfony/yaml (v4.1.6): Downloading (100%)
+  - Installing sebastian/version (2.0.1): Loading from cache
+  - Installing sebastian/resource-operations (1.0.0): Loading from cache
+  - Installing sebastian/recursion-context (2.0.0): Downloading (100%)
+  - Installing sebastian/object-enumerator (2.0.1): Downloading (100%)
+  - Installing sebastian/global-state (1.1.1): Downloading (100%)
+  - Installing sebastian/exporter (2.0.0): Downloading (100%)
+  - Installing sebastian/environment (2.0.0): Downloading (100%)
+  - Installing sebastian/diff (1.4.3): Downloading (100%)
+  - Installing sebastian/comparator (1.2.4): Downloading (100%)
+  - Installing doctrine/instantiator (1.1.0): Loading from cache
+  - Installing phpunit/php-text-template (1.2.1): Loading from cache
+  - Installing phpunit/phpunit-mock-objects (3.4.4): Downloading (100%)
+  - Installing phpunit/php-timer (1.0.9): Downloading (100%)
+  - Installing phpunit/php-file-iterator (1.4.5): Downloading (100%)
+  - Installing sebastian/code-unit-reverse-lookup (1.0.1): Loading from cache
+  - Installing phpunit/php-token-stream (2.0.2): Downloading (100%)
+  - Installing phpunit/php-code-coverage (4.0.8): Downloading (100%)
+  - Installing webmozart/assert (1.3.0): Loading from cache
+  - Installing phpdocumentor/reflection-common (1.0.1): Loading from cache
+  - Installing phpdocumentor/type-resolver (0.4.0): Loading from cache
+  - Installing phpdocumentor/reflection-docblock (4.3.0): Loading from cache
+  - Installing phpspec/prophecy (1.8.0): Loading from cache
+  - Installing myclabs/deep-copy (1.8.1): Loading from cache
+  - Installing phpunit/phpunit (5.7.27): Downloading (100%)
+monolog/monolog suggests installing aws/aws-sdk-php (Allow sending log messages to AWS services like DynamoDB)
+monolog/monolog suggests installing doctrine/couchdb (Allow sending log messages to a CouchDB server)
+monolog/monolog suggests installing ext-amqp (Allow sending log messages to an AMQP server (1.0+ required))
+monolog/monolog suggests installing ext-mongo (Allow sending log messages to a MongoDB server)
+monolog/monolog suggests installing graylog2/gelf-php (Allow sending log messages to a GrayLog2 server)
+monolog/monolog suggests installing mongodb/mongodb (Allow sending log messages to a MongoDB server via PHP Driver)
+monolog/monolog suggests installing php-amqplib/php-amqplib (Allow sending log messages to an AMQP server using php-amqplib)
+monolog/monolog suggests installing php-console/php-console (Allow sending log messages to Google Chrome)
+monolog/monolog suggests installing rollbar/rollbar (Allow sending log messages to Rollbar)
+monolog/monolog suggests installing ruflin/elastica (Allow sending log messages to an Elastic Search server)
+monolog/monolog suggests installing sentry/sentry (Allow sending log messages to a Sentry server)
+symfony/yaml suggests installing symfony/console (For validating YAML files using the lint command)
+sebastian/global-state suggests installing ext-uopz (*)
+phpunit/phpunit-mock-objects suggests installing ext-soap (*)
+phpunit/php-code-coverage suggests installing ext-xdebug (^2.5.1)
+phpunit/phpunit suggests installing phpunit/php-invoker (~1.1)
+phpunit/phpunit suggests installing ext-xdebug (*)
+Writing lock file
+Generating autoload files
+workstation@workstation-upstairs:/var/www/html$
+&lt;/pre&gt;
+
+&lt;p&gt;Nice! I refuse to use PHP’s webserver (as seen on the Slim Framework website) as I want to make sure that what I’m writing can work with Apache. A quick visit to the website and all seems well. I can see a slim page and a nice link to try the framework.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/20181005-fig1.png&quot; alt=&quot;Slim Framework Default Index Page&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So it turns out that the project is created in argyle-api, but the actual web part is in the public folder. This is understandable as you don’t necessarily want all your files in the webserver directory, due to permissions etc. This makes for a horrible URL though, as I don’t want to have to type in the /public/ part to get to my API and web service. Luckily(?) I’m running Apache and there’s a conf file for that. Specifically I can create a conf file named argyle-api.conf with the contents below in /etc/apache2/conf-available:&lt;/p&gt;
+
+&lt;pre&gt;
+Alias /argyle-api /var/www/html/argyle-api/public
+
+&amp;lt;Directory /var/www/html/argyle-api/public&amp;gt;
+    Options FollowSymLinks
+    DirectoryIndex index.php
+&amp;lt;/Directory&amp;gt;
+&lt;/pre&gt;
+
+&lt;p&gt;What this conf file is telling apache is that when someone goes to the /argyle-api URL, serve them content from the /var/www/html/argyle-api/public folder (that’s the alias part). Then we want to make sure we set the directory options for the folder so we can control how it behaves (to follow any symbolic links in the folder and if no file is specified, serve up index.php).&lt;/p&gt;
+
+&lt;p&gt;Putting the file in the /etc/apache2/conf-available folder does not automagically make it work. To get it working we need to enable it using a2enconf (a command meaning Apache 2 enable configuration).&lt;/p&gt;
+
+&lt;pre&gt;
+workstation@workstation-upstairs:/etc/apache2/conf-available$ sudo a2enconf argyle-api
+Enabling conf argyle-api.
+To activate the new configuration, you need to run:
+  service apache2 reload
+workstation@workstation-upstairs:/etc/apache2/conf-available$ sudo service apache2 reload
+workstation@workstation-upstairs:/etc/apache2/conf-available$
+&lt;/pre&gt;
+
+&lt;p&gt;Great, now we can get to our public index.php page without using the /public/ URL.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/20181005-fig2.png&quot; alt=&quot;Slim Framework with alias URL&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If something went wrong we could always disable our configuration using a2disconf. Using this alias and conf technique we can store the whole project outside the apache www folder if we wanted to and still serve content (noting that the public folder must be at least readable by the apache user depending on what you are doing).&lt;/p&gt;
+
+&lt;p&gt;So now that we have that working, lets try modifying the routes so we can do some custom stuff. I use a small hello world example from the &lt;a href=&quot;https://www.slimframework.com/&quot;&gt;Slim Framework Homepage&lt;/a&gt;.&lt;/p&gt;
+
+&lt;pre&gt;
+$app-&amp;gt;get('/hello/{name}', function (Request $request, Response $response, array $args) {
+    $name = $args['name'];
+    $response-&amp;gt;getBody()-&amp;gt;write(&quot;Hello, $name&quot;);
+
+    return $response;
+});
+&lt;/pre&gt;
+
+&lt;p&gt;I find the routes.php file in the argyle-api/src folder and modify it to say hello with the name being an optional parameter.&lt;/p&gt;
+
+&lt;pre&gt;
+&amp;lt;?php
+
+use Slim\Http\Request;
+use Slim\Http\Response;
+
+// Routes
+
+$app-&amp;gt;get('/[{name}]', function (Request $request, Response $response, array $args) {
+    // Sample log message
+    $this-&amp;gt;logger-&amp;gt;info(&quot;Slim-Skeleton '/' route&quot;);
+
+    // Render index view
+    return $this-&amp;gt;renderer-&amp;gt;render($response, 'index.phtml', $args);
+});
+
+$app-&amp;gt;get('/hello/[{name}]', function (Request $request, Response $response, array $args) {
+    $name = $args['name'];
+    $response-&amp;gt;getBody()-&amp;gt;write(&quot;Hello, $name&quot;);
+
+    return $response;
+});
+&lt;/pre&gt;
+
+&lt;p&gt;One quick browse to my new argyle-api/hello/world URL and… 404. Hmmm.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/20181005-fig3.png&quot; alt=&quot;404&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Given that the paths are essentially rewritten aliases going through index.php to generate the responses, to get this to work with apache, we would need mod_rewrite enabled, otherwise the URLs would be expected to be existing directories. We can enable mod_rewrite using a2enmod.&lt;/p&gt;
+
+&lt;pre&gt;
+workstation@workstation-upstairs:~$ sudo a2enmod rewrite
+Enabling module rewrite.
+To activate the new configuration, you need to run:
+  service apache2 restart
+workstation@workstation-upstairs:~$ sudo service apache2 restart
+workstation@workstation-upstairs:~$
+&lt;/pre&gt;
+
+&lt;p&gt;A quick &lt;a href=&quot;http://php.net/manual/en/function.phpinfo.php&quot;&gt;phpinfo()&lt;/a&gt; check later and we can confirm that mod_rewrite is enabled.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/20181005-fig4.png&quot; alt=&quot;Found mod_rewite&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We try the hello world url again and… Internal server error. &lt;em&gt;sigh&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/20181005-fig5.png&quot; alt=&quot;Internal server error&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ok, well at least mod_rewite is working (if it wasn’t, we would probably need to add &lt;strong&gt;AllowOverride All&lt;/strong&gt; to the argyle-api.conf right before &lt;strong&gt;Options FollowSymLinks&lt;/strong&gt; so the .htaccess would be processed). Anyway, let’s have a look at what’s in the .htaccess for the public folder as part of this skeleton app.&lt;/p&gt;
+
+&lt;pre&gt;
+&lt;IfModule mod_rewrite.c=&quot;&quot;&gt;
+  RewriteEngine On
+
+  # Some hosts may require you to use the `RewriteBase` directive.
+  # Determine the RewriteBase automatically and set it as environment variable.
+  # If you are using Apache aliases to do mass virtual hosting or installed the
+  # project in a subdirectory, the base path will be prepended to allow proper
+  # resolution of the index.php file and to redirect to the correct URI. It will
+  # work in environments without path prefix as well, providing a safe, one-size
+  # fits all solution. But as you do not need it in this case, you can comment
+  # the following 2 lines to eliminate the overhead.
+  RewriteCond %{REQUEST_URI}::$1 ^(/.+)/(.*)::\2$
+  RewriteRule ^(.*) - [E=BASE:%1]
+
+  # If the above doesn't work you might need to set the `RewriteBase` directive manually, it should be the
+  # absolute physical path to the directory that contains this htaccess file.
+  # RewriteBase /
+
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^ index.php [QSA,L]
+&lt;/IfModule&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;Looks like they were trying to do something fancy .htaccess stuff when installed in a subdirectory or using an alias (both of which I am doing), but it clearly isn’t working for my environment. Let’s simplify and try again.&lt;/p&gt;
+
+&lt;pre&gt;
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [QSA,L]
+&lt;/pre&gt;
+
+&lt;p&gt;Still internal server error. Looks like we may need to set that RewriteBase directive manually. The comment from the previous version of the .htaccess from the skeleton project says to set it to the absolute physical path to the directory, but it makes more sense to me to set it to the root relative directory for the alias.&lt;/p&gt;
+
+&lt;pre&gt;
+RewriteEngine On
+RewriteBase /argyle-api/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [QSA,L]
+&lt;/pre&gt;
+
+&lt;p&gt;And there we go, hello world!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/20181005-fig6.png&quot; alt=&quot;Hello world&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In this post I have covered:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;How to setup the Slim Framework and create a project from the skeleton code&lt;/li&gt;
+  &lt;li&gt;Get the Slim Framework to work using an Apache alias&lt;/li&gt;
+  &lt;li&gt;Check that mod_rewite is enabled (and enable it if it isn’t)&lt;/li&gt;
+  &lt;li&gt;Get additional routes to work by modifying the .htaccess to include the RewriteBase directive&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;That’s quite a bit for one post so I think I’ll cover the creation of the JSON API in a subsequent posting. Thanks for reading, see you next time!&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Christopher Ottley</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Stuff" />
+      
+        <category term="Alexa" />
+      
+
+      
+        <summary type="html">With all the Alexa work I have planned, I decided to create a project called Argyle, named from Tobago’s largest waterfall. I had looked at Laravel and Phalcon but I got the white-screen-of-nothing and no packages to install respectively after trying to install these frameworks. So, I decided to take a step back and worry about the front end and whole framework thing later. Instead I would focus on creating a nice JSON based API that I can use for whatever front end (web, android app, alexa etc.) I decided to use.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">Sometimes I forget</title>
-      <link href="http://cottley.github.io/sometimes-i-forget" rel="alternate" type="text/html" title="Sometimes I forget" />
+      <link href="https://cottley.github.io/sometimes-i-forget" rel="alternate" type="text/html" title="Sometimes I forget" />
       <published>2018-09-30T04:00:00-04:00</published>
       <updated>2018-09-30T04:00:00-04:00</updated>
-      <id>http://cottley.github.io/sometimes-i-forget</id>
-      <content type="html" xml:base="http://cottley.github.io/sometimes-i-forget">&lt;p&gt;The nice thing about having lots of smart plugs and bulbs connected to Alexa is the convenience of yelling at your devices to turn on and off. While you can schedule devices to turn on and off at specific times, I have to admit that from time to time I get caught up in doing something else and forget the device on. This happens especially with rooms that I don’t frequent every day, like the storage room in the back of the house or where the washer and dryer are. In general I might be in one of those places for maybe 10 minutes so if I forget to turn off the lights (which can happen because there is a door right behind there and I habitually close it) it would be good if something turned the lights off for me, say, after 20 minutes. It might be usefull for the garage as well as after those lights are turned on and we move what we need to from the car into the house, the garage lights might stay on by accident as well.&lt;/p&gt;
+      <id>https://cottley.github.io/sometimes-i-forget</id>
+      <content type="html" xml:base="https://cottley.github.io/sometimes-i-forget">&lt;p&gt;The nice thing about having lots of smart plugs and bulbs connected to Alexa is the convenience of yelling at your devices to turn on and off. While you can schedule devices to turn on and off at specific times, I have to admit that from time to time I get caught up in doing something else and forget the device on. This happens especially with rooms that I don’t frequent every day, like the storage room in the back of the house or where the washer and dryer are. In general I might be in one of those places for maybe 10 minutes so if I forget to turn off the lights (which can happen because there is a door right behind there and I habitually close it) it would be good if something turned the lights off for me, say, after 20 minutes. It might be usefull for the garage as well as after those lights are turned on and we move what we need to from the car into the house, the garage lights might stay on by accident as well.&lt;/p&gt;
 
 &lt;p&gt;As nice as that would be, it can also get a bit evil. In the bathroom for more than 30 minutes? Light turns off. Showering for more than 10 minutes? Water turns off. Watching TV for more than an hour? TV turns off.&lt;/p&gt;
 
@@ -73,11 +328,11 @@
   
     <entry>
       <title type="html">Alexa and Youtube music videos</title>
-      <link href="http://cottley.github.io/alexa-youtube-music-videos" rel="alternate" type="text/html" title="Alexa and Youtube music videos" />
+      <link href="https://cottley.github.io/alexa-youtube-music-videos" rel="alternate" type="text/html" title="Alexa and Youtube music videos" />
       <published>2018-09-28T04:00:00-04:00</published>
       <updated>2018-09-28T04:00:00-04:00</updated>
-      <id>http://cottley.github.io/alexa-youtube-music-videos</id>
-      <content type="html" xml:base="http://cottley.github.io/alexa-youtube-music-videos">&lt;p&gt;One day, maybe, far into the future, tech giants would work together to provide the best set of services for everyone. Or maybe we’ll have to hack together that future ourselves. Between &lt;a href=&quot;https://www.scmp.com/news/world/article/2123052/clash-tech-titans-google-bans-youtube-amazon-devices-escalating-dispute&quot;&gt;Google banning Youtube from some Amazon devices&lt;/a&gt; and &lt;a href=&quot;https://www.androidpolice.com/2018/03/02/amazon-still-isnt-selling-chromecast-nearly-three-months-initial-announcement/&quot;&gt;Amazon banning Chromecast&lt;/a&gt; from its store-of-everything (which should now be renamed store-of-everything-except-chromecast) there is probably no way anyone is going to provide a nice music service app for Alexa which has a playlist of popular youtube music from trending music videos.&lt;/p&gt;
+      <id>https://cottley.github.io/alexa-youtube-music-videos</id>
+      <content type="html" xml:base="https://cottley.github.io/alexa-youtube-music-videos">&lt;p&gt;One day, maybe, far into the future, tech giants would work together to provide the best set of services for everyone. Or maybe we’ll have to hack together that future ourselves. Between &lt;a href=&quot;https://www.scmp.com/news/world/article/2123052/clash-tech-titans-google-bans-youtube-amazon-devices-escalating-dispute&quot;&gt;Google banning Youtube from some Amazon devices&lt;/a&gt; and &lt;a href=&quot;https://www.androidpolice.com/2018/03/02/amazon-still-isnt-selling-chromecast-nearly-three-months-initial-announcement/&quot;&gt;Amazon banning Chromecast&lt;/a&gt; from its store-of-everything (which should now be renamed store-of-everything-except-chromecast) there is probably no way anyone is going to provide a nice music service app for Alexa which has a playlist of popular youtube music from trending music videos.&lt;/p&gt;
 
 &lt;p&gt;I’m 99% sure this is against Youtube’s terms of service, but it would be an interesting workflow to try to implement. We would need to:&lt;/p&gt;
 &lt;ol&gt;
@@ -129,11 +384,11 @@
   
     <entry>
       <title type="html">Something Something Food</title>
-      <link href="http://cottley.github.io/something-something-food" rel="alternate" type="text/html" title="Something Something Food" />
+      <link href="https://cottley.github.io/something-something-food" rel="alternate" type="text/html" title="Something Something Food" />
       <published>2018-09-27T05:00:00-04:00</published>
       <updated>2018-09-27T05:00:00-04:00</updated>
-      <id>http://cottley.github.io/something-something-food</id>
-      <content type="html" xml:base="http://cottley.github.io/something-something-food">&lt;p&gt;Food. When you’re hungry, there’s nothing like it, but when you’re not you want to save it for later. Given how many people in the world don’t know where their next meal is coming from, I consider myself immeasurably lucky to state that I’ve never worried about that. Ok, when I get wifey upset about something enough it can get a bit dicey, but generally food is there and not something to be wasted. As a general rule we like to keep food in the fridge or freezer but sometimes (more than I’d like) food gets pushed to the back of the fridge in some forgotten about container and is only discovered after some deep rummaging around. Unfortunately with all the other things people are busy with these days, keeping track of the food in the fridge, when the food was put in, what should be eaten first and how much of it is left is difficult.&lt;/p&gt;
+      <id>https://cottley.github.io/something-something-food</id>
+      <content type="html" xml:base="https://cottley.github.io/something-something-food">&lt;p&gt;Food. When you’re hungry, there’s nothing like it, but when you’re not you want to save it for later. Given how many people in the world don’t know where their next meal is coming from, I consider myself immeasurably lucky to state that I’ve never worried about that. Ok, when I get wifey upset about something enough it can get a bit dicey, but generally food is there and not something to be wasted. As a general rule we like to keep food in the fridge or freezer but sometimes (more than I’d like) food gets pushed to the back of the fridge in some forgotten about container and is only discovered after some deep rummaging around. Unfortunately with all the other things people are busy with these days, keeping track of the food in the fridge, when the food was put in, what should be eaten first and how much of it is left is difficult.&lt;/p&gt;
 
 &lt;p&gt;So, how about an Alexa skill which reduces/eliminates food wastage. Essentially an online, voice interface to inventory management for food in the fridge. We could even extend it to the freezer, add multiple fridges/freezers and even set re-order levels for certain items. We could know what’s in the fridge without having to open the door, saving electricity as the temperature would not raise with the door being kept open while we rummage around, unsure as to what we want to get out of it.&lt;/p&gt;</content>
 
@@ -167,11 +422,11 @@
   
     <entry>
       <title type="html">Read my mind Alexa</title>
-      <link href="http://cottley.github.io/read-my-mind-alexa" rel="alternate" type="text/html" title="Read my mind Alexa" />
+      <link href="https://cottley.github.io/read-my-mind-alexa" rel="alternate" type="text/html" title="Read my mind Alexa" />
       <published>2018-09-27T04:00:00-04:00</published>
       <updated>2018-09-27T04:00:00-04:00</updated>
-      <id>http://cottley.github.io/read-my-mind-alexa</id>
-      <content type="html" xml:base="http://cottley.github.io/read-my-mind-alexa">&lt;p&gt;I’ve tricked out the house with Alexa compatible gadgets, a bunch of plugs, a whole set of bulbs and three echo dots in three different rooms. I was watching &lt;a href=&quot;https://en.wikipedia.org/wiki/The_First_(TV_series)&quot;&gt;The First&lt;/a&gt; and there are lots of sci-fi type things in the show, which is primarily actually a drama with sci-fi things occassionally going wrong. So they have the standard sci-fi-ish stuff with one of the main characters living in a smart house and another one in a smarter house. Typical future expectation like you walk into a room and lights come on and fireplace starts etc. I saw one of the characters ask for the TV to turn on by saying “screen on” or something similar into the ether and the TV screen turned on with the channel showing what he wanted to see. That got me thinking, I’m pretty sure I should be able to do that with Alexa and &lt;a href=&quot;https://www.digitaltrends.com/home/what-is-amazon-alexa-routines/&quot;&gt;Routines&lt;/a&gt; and the only real difference is that I would have to say the wakeword, Alexa, first.&lt;/p&gt;
+      <id>https://cottley.github.io/read-my-mind-alexa</id>
+      <content type="html" xml:base="https://cottley.github.io/read-my-mind-alexa">&lt;p&gt;I’ve tricked out the house with Alexa compatible gadgets, a bunch of plugs, a whole set of bulbs and three echo dots in three different rooms. I was watching &lt;a href=&quot;https://en.wikipedia.org/wiki/The_First_(TV_series)&quot;&gt;The First&lt;/a&gt; and there are lots of sci-fi type things in the show, which is primarily actually a drama with sci-fi things occassionally going wrong. So they have the standard sci-fi-ish stuff with one of the main characters living in a smart house and another one in a smarter house. Typical future expectation like you walk into a room and lights come on and fireplace starts etc. I saw one of the characters ask for the TV to turn on by saying “screen on” or something similar into the ether and the TV screen turned on with the channel showing what he wanted to see. That got me thinking, I’m pretty sure I should be able to do that with Alexa and &lt;a href=&quot;https://www.digitaltrends.com/home/what-is-amazon-alexa-routines/&quot;&gt;Routines&lt;/a&gt; and the only real difference is that I would have to say the wakeword, Alexa, first.&lt;/p&gt;
 
 &lt;p&gt;So I tried it and it works well enough as I have the TV plugged into a smart plug and the TV is an older LED one that returns to its on/off state whenever power is turned off and back on. As long as I don’t use the remote to turn off the TV, it works. Here is where it starts to get complicated, I have, &lt;em&gt;gasp&lt;/em&gt; two TVs. There’s one in the living room and one in the bedroom (which also is on a smart plug and has an echo dot nearby). If I want my new fancy routine to work with the TV in the living toom and the TV in the bedroom I’d need to say &lt;em&gt;which&lt;/em&gt; screen. I’d need to say “living screen on” or “bedroom screen on” and while that would work, it’s not as nice as it should be.&lt;/p&gt;
 

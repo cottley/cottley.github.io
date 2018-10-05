@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="http://cottley.github.io/tag/musings/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://cottley.github.io/" rel="alternate" type="text/html" />
-  <updated>2018-10-03T11:56:47-04:00</updated>
-  <id>http://cottley.github.io/tag/musings/feed.xml</id>
+  <link href="https://cottley.github.io/tag/musings/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://cottley.github.io/" rel="alternate" type="text/html" />
+  <updated>2018-10-05T15:14:28-04:00</updated>
+  <id>https://cottley.github.io/tag/musings/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Welcome to my little corner</title>
-      <link href="http://cottley.github.io/welcome" rel="alternate" type="text/html" title="Welcome to my little corner" />
+      <link href="https://cottley.github.io/welcome" rel="alternate" type="text/html" title="Welcome to my little corner" />
       <published>2018-09-25T12:00:00-04:00</published>
       <updated>2018-09-25T12:00:00-04:00</updated>
-      <id>http://cottley.github.io/welcome</id>
-      <content type="html" xml:base="http://cottley.github.io/welcome">&lt;p&gt;Hey! Welcome to my little corner of the Internet. I’m glad you can stop by :)&lt;/p&gt;
+      <id>https://cottley.github.io/welcome</id>
+      <content type="html" xml:base="https://cottley.github.io/welcome">&lt;p&gt;Hey! Welcome to my little corner of the Internet. I’m glad you can stop by :)&lt;/p&gt;
 
 &lt;p&gt;So, I’m getting older and I can’t remember half the stuff I’d like to do nowadays. This is a place where I can put my ideas, small projects, big projects and everything inbetween so when I want to I can actually find something back about them.&lt;/p&gt;
 

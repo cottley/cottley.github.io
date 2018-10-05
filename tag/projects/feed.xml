@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="http://cottley.github.io/tag/projects/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://cottley.github.io/" rel="alternate" type="text/html" />
-  <updated>2018-10-03T11:56:47-04:00</updated>
-  <id>http://cottley.github.io/tag/projects/feed.xml</id>
+  <link href="https://cottley.github.io/tag/projects/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://cottley.github.io/" rel="alternate" type="text/html" />
+  <updated>2018-10-05T15:14:28-04:00</updated>
+  <id>https://cottley.github.io/tag/projects/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Website Redesign</title>
-      <link href="http://cottley.github.io/website-redesign" rel="alternate" type="text/html" title="Website Redesign" />
+      <link href="https://cottley.github.io/website-redesign" rel="alternate" type="text/html" title="Website Redesign" />
       <published>2018-09-26T10:15:00-04:00</published>
       <updated>2018-09-26T10:15:00-04:00</updated>
-      <id>http://cottley.github.io/website-redesign</id>
-      <content type="html" xml:base="http://cottley.github.io/website-redesign">&lt;p&gt;I’ve had a number of websites over the years in one form or the other. Usually the websites were project websites that happened to have a small about section where I wrote something short and unmemorable about myself. Unfortunately I got busy and maintaining those websites got de-prioritized, finally existing in some internet archive somewhere and disappearing from active use. The world has changed a bit since then and I got curious as to the advancements of static site generators like &lt;a href=&quot;https://forrest.apache.org/&quot;&gt;Apache Forest&lt;/a&gt;. A static site generator uses dynamic logic to create static websites that load faster and would be easier to maintain for someone working part-time on site maintenace, like me.&lt;/p&gt;
+      <id>https://cottley.github.io/website-redesign</id>
+      <content type="html" xml:base="https://cottley.github.io/website-redesign">&lt;p&gt;I’ve had a number of websites over the years in one form or the other. Usually the websites were project websites that happened to have a small about section where I wrote something short and unmemorable about myself. Unfortunately I got busy and maintaining those websites got de-prioritized, finally existing in some internet archive somewhere and disappearing from active use. The world has changed a bit since then and I got curious as to the advancements of static site generators like &lt;a href=&quot;https://forrest.apache.org/&quot;&gt;Apache Forest&lt;/a&gt;. A static site generator uses dynamic logic to create static websites that load faster and would be easier to maintain for someone working part-time on site maintenace, like me.&lt;/p&gt;
 
 &lt;p&gt;While I generally like &lt;a href=&quot;http://www.apache.org/&quot;&gt;Apache&lt;/a&gt; products, &lt;a href=&quot;https://forrest.apache.org/&quot;&gt;Apache Forest&lt;/a&gt; doesn’t seem to have been updated for a while and I aimed to find the most popular static site generator in use. In open source, high usage usually means that it’s reasonably maintained and fits some minimal use cases very well. After some research I happened upon &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;.&lt;/p&gt;
 
@@ -155,11 +155,11 @@ bundle exec jekyll serve
   
     <entry>
       <title type="html">Moruga for simple python text manipulation</title>
-      <link href="http://cottley.github.io/moruga" rel="alternate" type="text/html" title="Moruga for simple python text manipulation" />
+      <link href="https://cottley.github.io/moruga" rel="alternate" type="text/html" title="Moruga for simple python text manipulation" />
       <published>2018-09-25T14:45:00-04:00</published>
       <updated>2018-09-25T14:45:00-04:00</updated>
-      <id>http://cottley.github.io/moruga</id>
-      <content type="html" xml:base="http://cottley.github.io/moruga">&lt;p&gt;For Moruga I am the sole developer.&lt;/p&gt;
+      <id>https://cottley.github.io/moruga</id>
+      <content type="html" xml:base="https://cottley.github.io/moruga">&lt;p&gt;For Moruga I am the sole developer.&lt;/p&gt;
 
 &lt;p&gt;Most software that provides some sort of input or output process can generate ASCII text files. Sometimes the text files are in a format that is unusable by another application that can use the output as input. Occasionally I encounter this situation and so I created a small framework that will let me convert text files using a specified algorithm via a command line. I named the framework Moruga. It is easy to extend by implementing custom Python functions and then calling the script via a command line switch. You can have a look at the &lt;a href=&quot;https://github.com/cottley/moruga&quot;&gt;source code&lt;/a&gt; and start saving time when converting text file formats in Python.&lt;/p&gt;</content>
 
@@ -193,11 +193,11 @@ bundle exec jekyll serve
   
     <entry>
       <title type="html">Software Download Catalog for a more user friendly download list</title>
-      <link href="http://cottley.github.io/softwaredownloadcatalog" rel="alternate" type="text/html" title="Software Download Catalog for a more user friendly download list" />
+      <link href="https://cottley.github.io/softwaredownloadcatalog" rel="alternate" type="text/html" title="Software Download Catalog for a more user friendly download list" />
       <published>2018-09-25T14:30:00-04:00</published>
       <updated>2018-09-25T14:30:00-04:00</updated>
-      <id>http://cottley.github.io/softwaredownloadcatalog</id>
-      <content type="html" xml:base="http://cottley.github.io/softwaredownloadcatalog">&lt;p&gt;For softwaredownloadcatalog I am the sole developer.&lt;/p&gt;
+      <id>https://cottley.github.io/softwaredownloadcatalog</id>
+      <content type="html" xml:base="https://cottley.github.io/softwaredownloadcatalog">&lt;p&gt;For softwaredownloadcatalog I am the sole developer.&lt;/p&gt;
 
 &lt;p&gt;In my day to day work I use quite a bit of software. The software is delivered in many different forms, from MSI installers, to executables to ISOs. After some time I realised that I had software stewn all over my computer that was not the easiest thing to keep track of. When I realised this I was also experimenting with a javascript UI library called &lt;a href=&quot;http://w2ui.com/web/&quot;&gt;W2UI&lt;/a&gt;. A few keystrokes later and I created a software download catalog that uses a JSON file for the entries displayed with links to download the software (well, less of a link and more of a double click on a grid entry record). Using W2UI I was able to create an easily searchable, sortable and somewhat attractive user interface for the software archive I was maintaining. You can &lt;a href=&quot;https://github.com/cottley/sdcmirror&quot;&gt;download a copy&lt;/a&gt; for your own private (or Intranet) use at or have a look at &lt;a href=&quot;http://cottley.github.io/sdcmirror/&quot;&gt;a live demo&lt;/a&gt; (fyi - none of the software download links work in the demo).&lt;/p&gt;</content>
 
@@ -231,11 +231,11 @@ bundle exec jekyll serve
   
     <entry>
       <title type="html">Spsimplefileupload for simple sharepoint uploads</title>
-      <link href="http://cottley.github.io/spsimplefileupload" rel="alternate" type="text/html" title="Spsimplefileupload for simple sharepoint uploads" />
+      <link href="https://cottley.github.io/spsimplefileupload" rel="alternate" type="text/html" title="Spsimplefileupload for simple sharepoint uploads" />
       <published>2018-09-25T14:15:00-04:00</published>
       <updated>2018-09-25T14:15:00-04:00</updated>
-      <id>http://cottley.github.io/spsimplefileupload</id>
-      <content type="html" xml:base="http://cottley.github.io/spsimplefileupload">&lt;p&gt;For spsimplefileupload I am the sole developer.&lt;/p&gt;
+      <id>https://cottley.github.io/spsimplefileupload</id>
+      <content type="html" xml:base="https://cottley.github.io/spsimplefileupload">&lt;p&gt;For spsimplefileupload I am the sole developer.&lt;/p&gt;
 
 &lt;p&gt;Once upon a time I needed to generate an Excel report out of another system and make it available to certain people. Automating the creation of the report was a bit of a challenge, but once I got that done, I also had to decide how I could share the report. As the company had a Sharepoint 2010 setup, I figured it would be good to point the users to a specific URL and they could see what they wanted to in Sharepoint. This is where the unimaginatively named spsimplefileupload utility came in. Most of the tools I found online were complicated to setup or were overkill for what I needed to do. As I managed to write the automation I needed via a batch file (yeah, I know) I decided a simple command line utility was all I needed, so that’s what I did. I’ve tested it with Sharepoint 2010 and it works pretty well. There is not much error checking, but usually it just works. You can &lt;a href=&quot;https://github.com/cottley/spsimplefileupload/blob/master/README.md&quot;&gt;see the command line options&lt;/a&gt;, download the &lt;a href=&quot;https://github.com/cottley/spsimplefileupload&quot;&gt;source code and project&lt;/a&gt; from github or &lt;a href=&quot;https://github.com/cottley/spsimplefileupload/releases/download/0.1.2.0/spsfileupload.exe&quot;&gt;the utility itself&lt;/a&gt; from github’s &lt;a href=&quot;https://github.com/cottley/spsimplefileupload/releases&quot;&gt;release page&lt;/a&gt;.&lt;/p&gt;</content>
 
@@ -269,11 +269,11 @@ bundle exec jekyll serve
   
     <entry>
       <title type="html">Talparo for WMS tile caching</title>
-      <link href="http://cottley.github.io/talparo" rel="alternate" type="text/html" title="Talparo for WMS tile caching" />
+      <link href="https://cottley.github.io/talparo" rel="alternate" type="text/html" title="Talparo for WMS tile caching" />
       <published>2018-09-25T14:00:00-04:00</published>
       <updated>2018-09-25T14:00:00-04:00</updated>
-      <id>http://cottley.github.io/talparo</id>
-      <content type="html" xml:base="http://cottley.github.io/talparo">&lt;p&gt;For Talparo I am the unofficial MSI packager.&lt;/p&gt;
+      <id>https://cottley.github.io/talparo</id>
+      <content type="html" xml:base="https://cottley.github.io/talparo">&lt;p&gt;For Talparo I am the unofficial MSI packager.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://mapproxy.org/&quot;&gt;MapProxy&lt;/a&gt; is an open source geospatial data proxy. While it works on Windows and Linux, setting it up as a service on Windows takes some doing. Installing MapProxy on a Linux machine is relatively easy (with the repository setups and such), but after following the Windows installation steps, I was left scratching my head as to why certain things were not working.&lt;/p&gt;
 
@@ -313,11 +313,11 @@ bundle exec jekyll serve
   
     <entry>
       <title type="html">BunnyX Content Modification Proxy Server</title>
-      <link href="http://cottley.github.io/bunnyx" rel="alternate" type="text/html" title="BunnyX Content Modification Proxy Server" />
+      <link href="https://cottley.github.io/bunnyx" rel="alternate" type="text/html" title="BunnyX Content Modification Proxy Server" />
       <published>2018-09-25T14:00:00-04:00</published>
       <updated>2018-09-25T14:00:00-04:00</updated>
-      <id>http://cottley.github.io/bunnyx</id>
-      <content type="html" xml:base="http://cottley.github.io/bunnyx">&lt;p&gt;For BunnyX I am the creator, software architect and the sole developer.&lt;/p&gt;
+      <id>https://cottley.github.io/bunnyx</id>
+      <content type="html" xml:base="https://cottley.github.io/bunnyx">&lt;p&gt;For BunnyX I am the creator, software architect and the sole developer.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://bunnyx.sourceforge.net/get.php?page=home&quot;&gt;BunnyX&lt;/a&gt; is designed to facilitate web app integration from legacy web apps to provide a more modern API without code changes. &lt;a href=&quot;http://bunnyx.sourceforge.net/get.php?page=home&quot;&gt;BunnyX&lt;/a&gt; started out as an experiment. I’ve always been fascinated by content modification proxies (yes, yes, I know). While many of these proxies provided services such as ad blocking or image conversion, I thought it would be interesting to create a proxy that dynamically changed the format of the main content the user was requesting. The feasibility and usefulness of this became the genus of my Master’s project - &lt;a href=&quot;http://uwispace.sta.uwi.edu/dspace/handle/2139/3443&quot;&gt;“Dynamic Conversion of Legacy Web-based Data for Real Time XML-based Programming”&lt;/a&gt;.&lt;/p&gt;
 
@@ -367,11 +367,11 @@ bundle exec jekyll serve
   
     <entry>
       <title type="html">Firefox MAF</title>
-      <link href="http://cottley.github.io/firefox-maf" rel="alternate" type="text/html" title="Firefox MAF" />
+      <link href="https://cottley.github.io/firefox-maf" rel="alternate" type="text/html" title="Firefox MAF" />
       <published>2018-09-25T13:00:00-04:00</published>
       <updated>2018-09-25T13:00:00-04:00</updated>
-      <id>http://cottley.github.io/firefox-maf</id>
-      <content type="html" xml:base="http://cottley.github.io/firefox-maf">&lt;p&gt;For MAF I am the creator and initially the sole developer. Now MAF is maintained by Paolo Amadini.&lt;/p&gt;
+      <id>https://cottley.github.io/firefox-maf</id>
+      <content type="html" xml:base="https://cottley.github.io/firefox-maf">&lt;p&gt;For MAF I am the creator and initially the sole developer. Now MAF is maintained by Paolo Amadini.&lt;/p&gt;
 
 &lt;p&gt;I created the &lt;a href=&quot;http://maf.mozdev.org/&quot;&gt;Mozilla Archive Format extension&lt;/a&gt; while I was doing research for my Master’s project at the University of the West Indies, St. Augustine campus. I had quite a number of topics I wanted to research and unfortunately I only had rather slow Internet dial up access at home at the time. I was afforded a limited amount of time in the postgraduate computer lab that had very speedy Internet access. The computers I used in the postgraduate lab ran Windows, but at home I ran Linux (SUSE at the time). I didn’t think this would be an issue until I saved quite a bit of work as MHTs (Microsoft’s Web Archive format) and was unable to open them at home. This was quite frustrating as would be expected as none of the MHT extraction / conversion tools I found at the time were up to snuff.&lt;/p&gt;
 

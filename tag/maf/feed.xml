@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="http://cottley.github.io/tag/maf/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://cottley.github.io/" rel="alternate" type="text/html" />
-  <updated>2018-10-03T11:56:47-04:00</updated>
-  <id>http://cottley.github.io/tag/maf/feed.xml</id>
+  <link href="https://cottley.github.io/tag/maf/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://cottley.github.io/" rel="alternate" type="text/html" />
+  <updated>2018-10-05T15:14:28-04:00</updated>
+  <id>https://cottley.github.io/tag/maf/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Firefox MAF</title>
-      <link href="http://cottley.github.io/firefox-maf" rel="alternate" type="text/html" title="Firefox MAF" />
+      <link href="https://cottley.github.io/firefox-maf" rel="alternate" type="text/html" title="Firefox MAF" />
       <published>2018-09-25T13:00:00-04:00</published>
       <updated>2018-09-25T13:00:00-04:00</updated>
-      <id>http://cottley.github.io/firefox-maf</id>
-      <content type="html" xml:base="http://cottley.github.io/firefox-maf">&lt;p&gt;For MAF I am the creator and initially the sole developer. Now MAF is maintained by Paolo Amadini.&lt;/p&gt;
+      <id>https://cottley.github.io/firefox-maf</id>
+      <content type="html" xml:base="https://cottley.github.io/firefox-maf">&lt;p&gt;For MAF I am the creator and initially the sole developer. Now MAF is maintained by Paolo Amadini.&lt;/p&gt;
 
 &lt;p&gt;I created the &lt;a href=&quot;http://maf.mozdev.org/&quot;&gt;Mozilla Archive Format extension&lt;/a&gt; while I was doing research for my Master’s project at the University of the West Indies, St. Augustine campus. I had quite a number of topics I wanted to research and unfortunately I only had rather slow Internet dial up access at home at the time. I was afforded a limited amount of time in the postgraduate computer lab that had very speedy Internet access. The computers I used in the postgraduate lab ran Windows, but at home I ran Linux (SUSE at the time). I didn’t think this would be an issue until I saved quite a bit of work as MHTs (Microsoft’s Web Archive format) and was unable to open them at home. This was quite frustrating as would be expected as none of the MHT extraction / conversion tools I found at the time were up to snuff.&lt;/p&gt;
 

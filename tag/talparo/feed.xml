@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="http://cottley.github.io/tag/talparo/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://cottley.github.io/" rel="alternate" type="text/html" />
-  <updated>2018-10-03T11:56:47-04:00</updated>
-  <id>http://cottley.github.io/tag/talparo/feed.xml</id>
+  <link href="https://cottley.github.io/tag/talparo/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://cottley.github.io/" rel="alternate" type="text/html" />
+  <updated>2018-10-05T15:14:28-04:00</updated>
+  <id>https://cottley.github.io/tag/talparo/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Talparo for WMS tile caching</title>
-      <link href="http://cottley.github.io/talparo" rel="alternate" type="text/html" title="Talparo for WMS tile caching" />
+      <link href="https://cottley.github.io/talparo" rel="alternate" type="text/html" title="Talparo for WMS tile caching" />
       <published>2018-09-25T14:00:00-04:00</published>
       <updated>2018-09-25T14:00:00-04:00</updated>
-      <id>http://cottley.github.io/talparo</id>
-      <content type="html" xml:base="http://cottley.github.io/talparo">&lt;p&gt;For Talparo I am the unofficial MSI packager.&lt;/p&gt;
+      <id>https://cottley.github.io/talparo</id>
+      <content type="html" xml:base="https://cottley.github.io/talparo">&lt;p&gt;For Talparo I am the unofficial MSI packager.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://mapproxy.org/&quot;&gt;MapProxy&lt;/a&gt; is an open source geospatial data proxy. While it works on Windows and Linux, setting it up as a service on Windows takes some doing. Installing MapProxy on a Linux machine is relatively easy (with the repository setups and such), but after following the Windows installation steps, I was left scratching my head as to why certain things were not working.&lt;/p&gt;
 

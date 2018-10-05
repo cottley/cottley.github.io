@@ -1,1 +1,1 @@
-Sitemap: http://cottley.github.io/sitemap.xml
+Sitemap: https://cottley.github.io/sitemap.xml
