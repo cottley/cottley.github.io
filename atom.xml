@@ -8,6 +8,21 @@
     
       
       <item>
+        <title>Quindecim</title>
+        
+          <description>&lt;p&gt;Quindecim. A game idea I have for my Alexa-powered smart speakers. It’s essentially a number matching and memory game with a maximum of fifteen numbers. The aim of the game is to descramble a scrambled list of numbers in as few moves as possible.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 08 Oct 2018 04:00:00 -0400</pubDate>
+        <link>
+        https://cottley.github.io/Quindecim</link>
+        <guid isPermaLink="true">https://cottley.github.io/Quindecim</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>So many frameworks, oh my!</title>
         
           <description>&lt;p&gt;With all the Alexa work I have planned, I decided to create a project called Argyle, named from Tobago’s &lt;a href=&quot;https://www.destinationtnt.com/argyle-waterfall/&quot;&gt;largest waterfall&lt;/a&gt;. I had looked at &lt;a href=&quot;https://laravel.com/&quot;&gt;Laravel&lt;/a&gt; and &lt;a href=&quot;https://phalconphp.com/en/&quot;&gt;Phalcon&lt;/a&gt; but I got the white-screen-of-nothing and no packages to install respectively after trying to install these frameworks. So, I decided to take a step back and worry about the front end and whole framework thing later. Instead I would focus on creating a nice JSON based API that I can use for whatever front end (web, android app, alexa etc.) I decided to use.&lt;/p&gt;

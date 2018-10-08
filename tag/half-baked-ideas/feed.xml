@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://cottley.github.io/tag/half-baked-ideas/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://cottley.github.io/" rel="alternate" type="text/html" />
-  <updated>2018-10-05T15:14:28-04:00</updated>
+  <updated>2018-10-08T12:01:21-04:00</updated>
   <id>https://cottley.github.io/tag/half-baked-ideas/feed.xml</id>
 
   
@@ -32,16 +32,47 @@
 
   
     <entry>
-      <title type="html">Sometimes I forget</title>
-      <link href="https://cottley.github.io/sometimes-i-forget" rel="alternate" type="text/html" title="Sometimes I forget" />
-      <published>2018-09-30T04:00:00-04:00</published>
-      <updated>2018-09-30T04:00:00-04:00</updated>
-      <id>https://cottley.github.io/sometimes-i-forget</id>
-      <content type="html" xml:base="https://cottley.github.io/sometimes-i-forget">&lt;p&gt;The nice thing about having lots of smart plugs and bulbs connected to Alexa is the convenience of yelling at your devices to turn on and off. While you can schedule devices to turn on and off at specific times, I have to admit that from time to time I get caught up in doing something else and forget the device on. This happens especially with rooms that I don’t frequent every day, like the storage room in the back of the house or where the washer and dryer are. In general I might be in one of those places for maybe 10 minutes so if I forget to turn off the lights (which can happen because there is a door right behind there and I habitually close it) it would be good if something turned the lights off for me, say, after 20 minutes. It might be usefull for the garage as well as after those lights are turned on and we move what we need to from the car into the house, the garage lights might stay on by accident as well.&lt;/p&gt;
+      <title type="html">Quindecim</title>
+      <link href="https://cottley.github.io/Quindecim" rel="alternate" type="text/html" title="Quindecim" />
+      <published>2018-10-08T04:00:00-04:00</published>
+      <updated>2018-10-08T04:00:00-04:00</updated>
+      <id>https://cottley.github.io/Quindecim</id>
+      <content type="html" xml:base="https://cottley.github.io/Quindecim">&lt;p&gt;Quindecim. A game idea I have for my Alexa-powered smart speakers. It’s essentially a number matching and memory game with a maximum of fifteen numbers. The aim of the game is to descramble a scrambled list of numbers in as few moves as possible.&lt;/p&gt;
 
-&lt;p&gt;As nice as that would be, it can also get a bit evil. In the bathroom for more than 30 minutes? Light turns off. Showering for more than 10 minutes? Water turns off. Watching TV for more than an hour? TV turns off.&lt;/p&gt;
+&lt;p&gt;You start out with a game of a certain length, for simplicity let’s say the game is four numbers long. There are two lists, your list and Alexa’s list, both of which have the same numbers in the same (let’s say ascending) order. At this point the game looks like:&lt;/p&gt;
 
-&lt;p&gt;Using the same &lt;a href=&quot;https://github.com/konsumer/tplink-lightbulb&quot;&gt;command line application&lt;/a&gt; from my previous half-baked idea post on &lt;a href=&quot;/read-my-mind-alexa&quot;&gt;alex reading my mind&lt;/a&gt; I should be able to hack together something that would work with cron and track when certain devices have been turned on and turn them off after a specified period of time if they are still on.&lt;/p&gt;</content>
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Alexa: 1, 2, 3, 4
+You:   1, 2, 3, 4
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Alexa scrambles the positions of the numbers and keeps the scrambled list hidden from you. The new list looks like:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Alexa: ?, ?, ?, ?
+You:   1, 2, 3, 4
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;With this list, Alexa would let you know how many numbers still line up (if any).&lt;/p&gt;
+
+&lt;p&gt;Let’s say the scrambled Alexa list was:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Alexa: 4, 1, 3, 2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If you ask Alexa how many matching numbers you have, the reply would be none. You can then ask Alexa to swap two numbered positions, for example, to swap positions one and two. The new list would look like:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Alexa: 1, 4, 3, 2
+You:   1, 2, 3, 4
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;And now, when asked how many matching numbers you have, the reply would be one. You can then ask once more Alexa to swap two numbered positions, for example, to swap positions two and four. The new list would look like:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Alexa: 1, 2, 3, 4
+You:   1, 2, 3, 4
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You would have all four numbers matching and would have completed the game in two moves. In reality this would be a bit more difficult as we would not be able to know exactly which numbered positions are matching. Also, the game would get progressively more difficult the longer the lists.&lt;/p&gt;
+
+&lt;p&gt;I might put in some hints, or the ability to ask once which positions are matching per game, maybe a leaderboard so you could know how you rank in a game this length (by number of moves, time to complete or even by time period: over the last 24 hours, last week, last month, last year, all time).&lt;/p&gt;</content>
 
       
       
@@ -58,203 +89,13 @@
       
 
       
-        <category term="Half-baked ideas" />
+        <category term="Half-baked Ideas" />
       
         <category term="Alexa" />
       
 
       
-        <summary type="html">The nice thing about having lots of smart plugs and bulbs connected to Alexa is the convenience of yelling at your devices to turn on and off. While you can schedule devices to turn on and off at specific times, I have to admit that from time to time I get caught up in doing something else and forget the device on. This happens especially with rooms that I don’t frequent every day, like the storage room in the back of the house or where the washer and dryer are. In general I might be in one of those places for maybe 10 minutes so if I forget to turn off the lights (which can happen because there is a door right behind there and I habitually close it) it would be good if something turned the lights off for me, say, after 20 minutes. It might be usefull for the garage as well as after those lights are turned on and we move what we need to from the car into the house, the garage lights might stay on by accident as well.</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Can you carry me back?</title>
-      <link href="https://cottley.github.io/can-you-carry-me-back" rel="alternate" type="text/html" title="Can you carry me back?" />
-      <published>2018-09-29T04:00:00-04:00</published>
-      <updated>2018-09-29T04:00:00-04:00</updated>
-      <id>https://cottley.github.io/can-you-carry-me-back</id>
-      <content type="html" xml:base="https://cottley.github.io/can-you-carry-me-back">&lt;p&gt;There are certain apps I use every day, and, not surprisingly, most of them are from google. While google has its google maps and navigation software, from my experience &lt;a href=&quot;https://www.waze.com/&quot;&gt;Waze&lt;/a&gt; is the better app and service. As much as I like Waze, I have a small peve about how it works, more specifically, how the favorites feature of it works. Waze can figure out where you live and work based on how many times you keep going and returning to those places and it does a pretty good job when you are looking for companies or businesses by name or even addresses.&lt;/p&gt;
-
-&lt;p&gt;What about all the other places that you might visit regularly (or semi-regularly)? How about locations of your co-workers in case you need to pick them up for some event? What about favorite activities for the kid(s)? Prefered hospitals, doctor’s offices? Favorite restaurants? If you have clients, client offices? What about your friend’s houses? Or family?&lt;/p&gt;
-
-&lt;p&gt;It would be great if there was an app that lets you store your geographic favorites in categories for easy access and then launch Waze in context to navigate to those locations. This way, pretty much anywhere I’m going, once I’ve at least been there before, or have the latitude and longitude of the location, I can have Waze find the fastest route.&lt;/p&gt;
-
-&lt;p&gt;Investigating APIs it seems that Waze has a &lt;a href=&quot;https://www.waze.com/sdk&quot;&gt;SDK&lt;/a&gt;, but that seems overkill for what we would like to do. Google has a couple more &lt;a href=&quot;https://developers.google.com/waze/&quot;&gt;developer tools&lt;/a&gt; available for Waze but one of them, the &lt;a href=&quot;https://developers.google.com/waze/deeplinks/&quot;&gt;Waze deep links&lt;/a&gt; looks like just the ticket.&lt;/p&gt;
-
-&lt;p&gt;So, now it’s to pick an app development platform. I’ve been looking at &lt;a href=&quot;https://unity3d.com&quot;&gt;Unity&lt;/a&gt; and using their &lt;a href=&quot;https://unity3d.com/learn/tutorials/topics/cloud-build/introduction-unity-cloud-build&quot;&gt;cloud build&lt;/a&gt; for some RAD. This might be a nice simple enough app to cut my teeth on.&lt;/p&gt;
-
-&lt;p&gt;Finally, while I have been playing with &lt;a href=&quot;https://aws.amazon.com/dynamodb/&quot;&gt;Amazon’s dynamodb&lt;/a&gt; for some Alexa based apps, I’d like to see how &lt;a href=&quot;https://firebase.google.com/&quot;&gt;firebase&lt;/a&gt; works with Unity. I doubt I’ll hit past their free tier for this project, even if I complete it and put it out on the google app store.&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>Christopher Ottley</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="Half-baked ideas" />
-      
-        <category term="Android" />
-      
-        <category term="Waze" />
-      
-
-      
-        <summary type="html">There are certain apps I use every day, and, not surprisingly, most of them are from google. While google has its google maps and navigation software, from my experience Waze is the better app and service. As much as I like Waze, I have a small peve about how it works, more specifically, how the favorites feature of it works. Waze can figure out where you live and work based on how many times you keep going and returning to those places and it does a pretty good job when you are looking for companies or businesses by name or even addresses.</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Alexa and Youtube music videos</title>
-      <link href="https://cottley.github.io/alexa-youtube-music-videos" rel="alternate" type="text/html" title="Alexa and Youtube music videos" />
-      <published>2018-09-28T04:00:00-04:00</published>
-      <updated>2018-09-28T04:00:00-04:00</updated>
-      <id>https://cottley.github.io/alexa-youtube-music-videos</id>
-      <content type="html" xml:base="https://cottley.github.io/alexa-youtube-music-videos">&lt;p&gt;One day, maybe, far into the future, tech giants would work together to provide the best set of services for everyone. Or maybe we’ll have to hack together that future ourselves. Between &lt;a href=&quot;https://www.scmp.com/news/world/article/2123052/clash-tech-titans-google-bans-youtube-amazon-devices-escalating-dispute&quot;&gt;Google banning Youtube from some Amazon devices&lt;/a&gt; and &lt;a href=&quot;https://www.androidpolice.com/2018/03/02/amazon-still-isnt-selling-chromecast-nearly-three-months-initial-announcement/&quot;&gt;Amazon banning Chromecast&lt;/a&gt; from its store-of-everything (which should now be renamed store-of-everything-except-chromecast) there is probably no way anyone is going to provide a nice music service app for Alexa which has a playlist of popular youtube music from trending music videos.&lt;/p&gt;
-
-&lt;p&gt;I’m 99% sure this is against Youtube’s terms of service, but it would be an interesting workflow to try to implement. We would need to:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Get a list of the &lt;a href=&quot;https://www.youtube.com/feed/trending&quot;&gt;trending videos&lt;/a&gt; on Youtube parsed into some sort of feed that would give titles and URLs&lt;/li&gt;
-  &lt;li&gt;Filter the videos to search for anything that has the words “Official Video”, “Official Music” or “Music Video” somewhere in the title&lt;/li&gt;
-  &lt;li&gt;Get the URLs for that filter and check it against a database of videos already processed so we don’t reprocess any old ones&lt;/li&gt;
-  &lt;li&gt;Grab the video (and extract audio?) using something like &lt;a href=&quot;http://rg3.github.io/youtube-dl/&quot;&gt;youtube-dl&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Convert / extract audio to be playable via Alexa via &lt;a href=&quot;https://developer.amazon.com/docs/custom-skills/speech-synthesis-markup-language-ssml-reference.html#h3_converting_mp3&quot;&gt;ffmpeg&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Store the extracted audio somewhere where we have an Internet facing https server
-    &lt;ol&gt;
-      &lt;li&gt;Do not use S3, don’t want any account bans&lt;/li&gt;
-      &lt;li&gt;A little linux server (maybe rpi based) that has apache and some storage should do the trick&lt;/li&gt;
-      &lt;li&gt;A nice &lt;a href=&quot;https://letsencrypt.org/&quot;&gt;Letsencrypt&lt;/a&gt; certificate with a dynamic dns hostname would be needed as well&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Write a script that dynamically selects from the extracted audio files (maybe served from the audio server, maybe not)&lt;/li&gt;
-  &lt;li&gt;Implement a skill with the &lt;a href=&quot;https://developer.amazon.com/docs/custom-skills/audioplayer-interface-reference.html&quot;&gt;audioplayer interface&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Finally, yell at Alexa to ask youtube to play trending music and we should actually get some music piping back at us. We could even go further and implement some functionality to ask youtube what’s playing and it would recite the title of the video back at us.&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>Christopher Ottley</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="Half-baked ideas" />
-      
-        <category term="Alexa" />
-      
-
-      
-        <summary type="html">One day, maybe, far into the future, tech giants would work together to provide the best set of services for everyone. Or maybe we’ll have to hack together that future ourselves. Between Google banning Youtube from some Amazon devices and Amazon banning Chromecast from its store-of-everything (which should now be renamed store-of-everything-except-chromecast) there is probably no way anyone is going to provide a nice music service app for Alexa which has a playlist of popular youtube music from trending music videos.</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Something Something Food</title>
-      <link href="https://cottley.github.io/something-something-food" rel="alternate" type="text/html" title="Something Something Food" />
-      <published>2018-09-27T05:00:00-04:00</published>
-      <updated>2018-09-27T05:00:00-04:00</updated>
-      <id>https://cottley.github.io/something-something-food</id>
-      <content type="html" xml:base="https://cottley.github.io/something-something-food">&lt;p&gt;Food. When you’re hungry, there’s nothing like it, but when you’re not you want to save it for later. Given how many people in the world don’t know where their next meal is coming from, I consider myself immeasurably lucky to state that I’ve never worried about that. Ok, when I get wifey upset about something enough it can get a bit dicey, but generally food is there and not something to be wasted. As a general rule we like to keep food in the fridge or freezer but sometimes (more than I’d like) food gets pushed to the back of the fridge in some forgotten about container and is only discovered after some deep rummaging around. Unfortunately with all the other things people are busy with these days, keeping track of the food in the fridge, when the food was put in, what should be eaten first and how much of it is left is difficult.&lt;/p&gt;
-
-&lt;p&gt;So, how about an Alexa skill which reduces/eliminates food wastage. Essentially an online, voice interface to inventory management for food in the fridge. We could even extend it to the freezer, add multiple fridges/freezers and even set re-order levels for certain items. We could know what’s in the fridge without having to open the door, saving electricity as the temperature would not raise with the door being kept open while we rummage around, unsure as to what we want to get out of it.&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>Christopher Ottley</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="Half-baked ideas" />
-      
-        <category term="Alexa" />
-      
-
-      
-        <summary type="html">Food. When you’re hungry, there’s nothing like it, but when you’re not you want to save it for later. Given how many people in the world don’t know where their next meal is coming from, I consider myself immeasurably lucky to state that I’ve never worried about that. Ok, when I get wifey upset about something enough it can get a bit dicey, but generally food is there and not something to be wasted. As a general rule we like to keep food in the fridge or freezer but sometimes (more than I’d like) food gets pushed to the back of the fridge in some forgotten about container and is only discovered after some deep rummaging around. Unfortunately with all the other things people are busy with these days, keeping track of the food in the fridge, when the food was put in, what should be eaten first and how much of it is left is difficult.</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Read my mind Alexa</title>
-      <link href="https://cottley.github.io/read-my-mind-alexa" rel="alternate" type="text/html" title="Read my mind Alexa" />
-      <published>2018-09-27T04:00:00-04:00</published>
-      <updated>2018-09-27T04:00:00-04:00</updated>
-      <id>https://cottley.github.io/read-my-mind-alexa</id>
-      <content type="html" xml:base="https://cottley.github.io/read-my-mind-alexa">&lt;p&gt;I’ve tricked out the house with Alexa compatible gadgets, a bunch of plugs, a whole set of bulbs and three echo dots in three different rooms. I was watching &lt;a href=&quot;https://en.wikipedia.org/wiki/The_First_(TV_series)&quot;&gt;The First&lt;/a&gt; and there are lots of sci-fi type things in the show, which is primarily actually a drama with sci-fi things occassionally going wrong. So they have the standard sci-fi-ish stuff with one of the main characters living in a smart house and another one in a smarter house. Typical future expectation like you walk into a room and lights come on and fireplace starts etc. I saw one of the characters ask for the TV to turn on by saying “screen on” or something similar into the ether and the TV screen turned on with the channel showing what he wanted to see. That got me thinking, I’m pretty sure I should be able to do that with Alexa and &lt;a href=&quot;https://www.digitaltrends.com/home/what-is-amazon-alexa-routines/&quot;&gt;Routines&lt;/a&gt; and the only real difference is that I would have to say the wakeword, Alexa, first.&lt;/p&gt;
-
-&lt;p&gt;So I tried it and it works well enough as I have the TV plugged into a smart plug and the TV is an older LED one that returns to its on/off state whenever power is turned off and back on. As long as I don’t use the remote to turn off the TV, it works. Here is where it starts to get complicated, I have, &lt;em&gt;gasp&lt;/em&gt; two TVs. There’s one in the living room and one in the bedroom (which also is on a smart plug and has an echo dot nearby). If I want my new fancy routine to work with the TV in the living toom and the TV in the bedroom I’d need to say &lt;em&gt;which&lt;/em&gt; screen. I’d need to say “living screen on” or “bedroom screen on” and while that would work, it’s not as nice as it should be.&lt;/p&gt;
-
-&lt;p&gt;I want to be able to say “screen on” near the echo dot in the living room and it turns on the living room TV and say “screen on” near the echo dot in the bedroom and it turns on the bedroom TV. The problem with this is that Alexa doesn’t care where it hears the command, it executes without additional context. Now that I’ve discussed the problem, here’s my idea for a solution.&lt;/p&gt;
-
-&lt;p&gt;It seems that the Alexa API now lets you request additional location information for your skill, inclusive of a &lt;a href=&quot;https://developer.amazon.com/docs/custom-skills/device-address-api.html#get-the-api-access-token-and-device-id&quot;&gt;Device ID&lt;/a&gt;. To get the routine to work though, I would need to create a proxy &lt;a href=&quot;https://developer.amazon.com/docs/smarthome/understand-the-smart-home-skill-api.html&quot;&gt;smart home skill&lt;/a&gt; that would hopefully have the device id in the request JSON somewhere. Once I can get that, I’d need to find the devices associated with the device id, which I would have to setup externally and then change the devices to suit. Seeing as there is no API for me to automate Alexa itself (why Amazon, whyyyyy?), it looks like I’ll have to figure out the API to control the devices outside of the Alexa ecosystem.&lt;/p&gt;
-
-&lt;p&gt;It turns out I was a bit lucky and bought a set of TP Link based bulbs and plugs and it turns out that someone already has a &lt;a href=&quot;https://github.com/konsumer/tplink-lightbulb&quot;&gt;command line app&lt;/a&gt; (nodejs based) that I should be able to use to turn my bulbs and plugs on and off. It looks like I should only need to learn one API and command line the rest of it based on the plug and bulb ids.&lt;/p&gt;
-
-&lt;p&gt;Thinking about it a bit more, I shouldn’t even have to say “Alexa, screen on”, I should just have to say “Alexa, screen” and the skill will know the state of the plug. If it’s on it turns it off and if it’s off it turns it on. This should be able to extend to lights as well, “Alexa, lights” should be able to toggle the lights near the device on and off.&lt;/p&gt;
-
-&lt;p&gt;Let’s see if I can get any traction on this when I get my time machine working. :).&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>Christopher Ottley</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="Half-baked ideas" />
-      
-        <category term="Alexa" />
-      
-
-      
-        <summary type="html">I’ve tricked out the house with Alexa compatible gadgets, a bunch of plugs, a whole set of bulbs and three echo dots in three different rooms. I was watching The First and there are lots of sci-fi type things in the show, which is primarily actually a drama with sci-fi things occassionally going wrong. So they have the standard sci-fi-ish stuff with one of the main characters living in a smart house and another one in a smarter house. Typical future expectation like you walk into a room and lights come on and fireplace starts etc. I saw one of the characters ask for the TV to turn on by saying “screen on” or something similar into the ether and the TV screen turned on with the channel showing what he wanted to see. That got me thinking, I’m pretty sure I should be able to do that with Alexa and Routines and the only real difference is that I would have to say the wakeword, Alexa, first.</summary>
+        <summary type="html">Quindecim. A game idea I have for my Alexa-powered smart speakers. It’s essentially a number matching and memory game with a maximum of fifteen numbers. The aim of the game is to descramble a scrambled list of numbers in as few moves as possible.</summary>
       
 
       
