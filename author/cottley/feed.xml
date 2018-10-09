@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://cottley.github.io/author/cottley/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://cottley.github.io/" rel="alternate" type="text/html" />
-  <updated>2018-10-08T12:01:21-04:00</updated>
+  <updated>2018-10-09T10:26:33-04:00</updated>
   <id>https://cottley.github.io/author/cottley/feed.xml</id>
 
   
@@ -30,6 +30,48 @@
   
   
 
+  
+    <entry>
+      <title type="html">Alexa, show me the browser</title>
+      <link href="https://cottley.github.io/Alexa-show-me-the-browser" rel="alternate" type="text/html" title="Alexa, show me the browser" />
+      <published>2018-10-09T04:00:00-04:00</published>
+      <updated>2018-10-09T04:00:00-04:00</updated>
+      <id>https://cottley.github.io/Alexa-show-me-the-browser</id>
+      <content type="html" xml:base="https://cottley.github.io/Alexa-show-me-the-browser">&lt;p&gt;A while ago I bought a &lt;a href=&quot;https://www.amazon.com/gp/product/B01J94SCAM/ref=oh_aui_detailpage_o07_s00?ie=UTF8&amp;amp;psc=1&quot;&gt;Kindle Fire 8 Kids edition&lt;/a&gt; for my daughter and of course it had Alexa bundled in. While the Kindle Freetime didn’t really work outside of the US at the time, it really is just an Android tablet with the Amazon app store loaded up.&lt;/p&gt;
+
+&lt;p&gt;I managed to install Firefox on the tablet, as well as Chrome. While Alexa allows me to do neato home automation stuff, I was a bit disappointed that I couldn’t control the apps on the tablet using Alexa.&lt;/p&gt;
+
+&lt;p&gt;So, the idea I have is to create a customized Firefox extension or Chrome extension that will allow me to control the browser remotely, say launch a specific website, or do hands free navigation while in the kitchen. This would of course have to be accompanied by a companion Alexa skill, which I guess I could call something like “Browser Voice Control” so as to not use anyone’s trademarked names.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Christopher Ottley</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Ideas" />
+      
+        <category term="Alexa" />
+      
+        <category term="Firefox" />
+      
+
+      
+        <summary type="html">A while ago I bought a Kindle Fire 8 Kids edition for my daughter and of course it had Alexa bundled in. While the Kindle Freetime didn’t really work outside of the US at the time, it really is just an Android tablet with the Amazon app store loaded up.</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">Quindecim</title>
@@ -89,7 +131,7 @@ You:   1, 2, 3, 4
       
 
       
-        <category term="Half-baked Ideas" />
+        <category term="Ideas" />
       
         <category term="Alexa" />
       
@@ -555,7 +597,7 @@ crontab: installing new crontab
       
 
       
-        <category term="Half-baked ideas" />
+        <category term="Ideas" />
       
         <category term="Alexa" />
       
@@ -601,7 +643,7 @@ crontab: installing new crontab
       
 
       
-        <category term="Half-baked ideas" />
+        <category term="Ideas" />
       
         <category term="Android" />
       
@@ -659,7 +701,7 @@ crontab: installing new crontab
       
 
       
-        <category term="Half-baked ideas" />
+        <category term="Ideas" />
       
         <category term="Alexa" />
       
@@ -697,7 +739,7 @@ crontab: installing new crontab
       
 
       
-        <category term="Half-baked ideas" />
+        <category term="Ideas" />
       
         <category term="Alexa" />
       
@@ -745,7 +787,7 @@ crontab: installing new crontab
       
 
       
-        <category term="Half-baked ideas" />
+        <category term="Ideas" />
       
         <category term="Alexa" />
       
@@ -874,44 +916,6 @@ bundle exec jekyll serve
 
       
         <summary type="html">I’ve had a number of websites over the years in one form or the other. Usually the websites were project websites that happened to have a small about section where I wrote something short and unmemorable about myself. Unfortunately I got busy and maintaining those websites got de-prioritized, finally existing in some internet archive somewhere and disappearing from active use. The world has changed a bit since then and I got curious as to the advancements of static site generators like Apache Forest. A static site generator uses dynamic logic to create static websites that load faster and would be easier to maintain for someone working part-time on site maintenace, like me.</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Moruga for simple python text manipulation</title>
-      <link href="https://cottley.github.io/moruga" rel="alternate" type="text/html" title="Moruga for simple python text manipulation" />
-      <published>2018-09-25T14:45:00-04:00</published>
-      <updated>2018-09-25T14:45:00-04:00</updated>
-      <id>https://cottley.github.io/moruga</id>
-      <content type="html" xml:base="https://cottley.github.io/moruga">&lt;p&gt;For Moruga I am the sole developer.&lt;/p&gt;
-
-&lt;p&gt;Most software that provides some sort of input or output process can generate ASCII text files. Sometimes the text files are in a format that is unusable by another application that can use the output as input. Occasionally I encounter this situation and so I created a small framework that will let me convert text files using a specified algorithm via a command line. I named the framework Moruga. It is easy to extend by implementing custom Python functions and then calling the script via a command line switch. You can have a look at the &lt;a href=&quot;https://github.com/cottley/moruga&quot;&gt;source code&lt;/a&gt; and start saving time when converting text file formats in Python.&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>Christopher Ottley</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="Projects" />
-      
-        <category term="moruga" />
-      
-
-      
-        <summary type="html">For Moruga I am the sole developer.</summary>
       
 
       

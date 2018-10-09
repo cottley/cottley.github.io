@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://cottley.github.io/tag/firefox/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://cottley.github.io/" rel="alternate" type="text/html" />
-  <updated>2018-10-08T12:01:21-04:00</updated>
+  <updated>2018-10-09T10:26:33-04:00</updated>
   <id>https://cottley.github.io/tag/firefox/feed.xml</id>
 
   
@@ -30,6 +30,48 @@
   
   
 
+  
+    <entry>
+      <title type="html">Alexa, show me the browser</title>
+      <link href="https://cottley.github.io/Alexa-show-me-the-browser" rel="alternate" type="text/html" title="Alexa, show me the browser" />
+      <published>2018-10-09T04:00:00-04:00</published>
+      <updated>2018-10-09T04:00:00-04:00</updated>
+      <id>https://cottley.github.io/Alexa-show-me-the-browser</id>
+      <content type="html" xml:base="https://cottley.github.io/Alexa-show-me-the-browser">&lt;p&gt;A while ago I bought a &lt;a href=&quot;https://www.amazon.com/gp/product/B01J94SCAM/ref=oh_aui_detailpage_o07_s00?ie=UTF8&amp;amp;psc=1&quot;&gt;Kindle Fire 8 Kids edition&lt;/a&gt; for my daughter and of course it had Alexa bundled in. While the Kindle Freetime didn’t really work outside of the US at the time, it really is just an Android tablet with the Amazon app store loaded up.&lt;/p&gt;
+
+&lt;p&gt;I managed to install Firefox on the tablet, as well as Chrome. While Alexa allows me to do neato home automation stuff, I was a bit disappointed that I couldn’t control the apps on the tablet using Alexa.&lt;/p&gt;
+
+&lt;p&gt;So, the idea I have is to create a customized Firefox extension or Chrome extension that will allow me to control the browser remotely, say launch a specific website, or do hands free navigation while in the kitchen. This would of course have to be accompanied by a companion Alexa skill, which I guess I could call something like “Browser Voice Control” so as to not use anyone’s trademarked names.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Christopher Ottley</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Ideas" />
+      
+        <category term="Alexa" />
+      
+        <category term="Firefox" />
+      
+
+      
+        <summary type="html">A while ago I bought a Kindle Fire 8 Kids edition for my daughter and of course it had Alexa bundled in. While the Kindle Freetime didn’t really work outside of the US at the time, it really is just an Android tablet with the Amazon app store loaded up.</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">Firefox MAF</title>
