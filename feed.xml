@@ -1,4 +1,318 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://cottley.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://cottley.github.io/" rel="alternate" type="text/html" /><updated>2018-10-09T10:26:33-04:00</updated><id>https://cottley.github.io/</id><title type="html">Christopher Ottley</title><subtitle>Efforts and Courage are not enough without Purpose and Direction - John F. Kennedy</subtitle><entry><title type="html">Alexa, show me the browser</title><link href="https://cottley.github.io/Alexa-show-me-the-browser" rel="alternate" type="text/html" title="Alexa, show me the browser" /><published>2018-10-09T04:00:00-04:00</published><updated>2018-10-09T04:00:00-04:00</updated><id>https://cottley.github.io/Alexa-show-me-the-browser</id><content type="html" xml:base="https://cottley.github.io/Alexa-show-me-the-browser">&lt;p&gt;A while ago I bought a &lt;a href=&quot;https://www.amazon.com/gp/product/B01J94SCAM/ref=oh_aui_detailpage_o07_s00?ie=UTF8&amp;amp;psc=1&quot;&gt;Kindle Fire 8 Kids edition&lt;/a&gt; for my daughter and of course it had Alexa bundled in. While the Kindle Freetime didn’t really work outside of the US at the time, it really is just an Android tablet with the Amazon app store loaded up.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://cottley.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://cottley.github.io/" rel="alternate" type="text/html" /><updated>2019-03-03T19:16:36-04:00</updated><id>https://cottley.github.io/</id><title type="html">Christopher Ottley</title><subtitle>Efforts and Courage are not enough without Purpose and Direction - John F. Kennedy</subtitle><entry><title type="html">Alexa, daddy stories</title><link href="https://cottley.github.io/Alexa-daddy-stories" rel="alternate" type="text/html" title="Alexa, daddy stories" /><published>2019-03-03T04:00:00-04:00</published><updated>2019-03-03T04:00:00-04:00</updated><id>https://cottley.github.io/Alexa-daddy-stories</id><content type="html" xml:base="https://cottley.github.io/Alexa-daddy-stories">&lt;p&gt;Work (the kind I get paid for) carried me far and away from my family for 5 weeks recently. It was supposed to be maximum 3, but that’s another story. I was especially missing my wife and 3 year old baby girl during this time. The time zone difference (2 hours) was not that much, but had an impact when I had to work late. Sometimes I would miss bedtime and reading my baby girl stories to go to sleep, but more importantly, she would miss me.&lt;/p&gt;
+
+&lt;p&gt;Since I smart-homerized the house, there’s usually a mobile echo dot (or using the alexa app on the phone can do in a pinch) that can be temporarily placed in my baby girl’s room. I hatched upon a plan. I ordered &lt;a href=&quot;https://www.amazon.com/Disney-Princess-Little-Golden-Library/dp/0736435603/ref=sr_1_3?keywords=disney+princess+6+little+golden+books&amp;amp;qid=1551641408&amp;amp;s=gateway&amp;amp;sr=8-3&quot;&gt;6 little golden princess books&lt;/a&gt; from Amazon, delivered to my remote address, recorded them and created a skill that would play back a story at random when asked for “Daddy Stories”. It worked like a charm and helped my baby girl sleep more soundly than ever.&lt;/p&gt;
+
+&lt;p&gt;Step one was getting the recordings and converting them to an MP3 format that the echo dot (or alexa) could play. Using ffmpeg to convert after recording did the trick.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ffmpeg -y -i &amp;lt;input.wav&amp;gt; -ar 16000 -ab 48k -codec:a libmp3lame -ac 1 &amp;lt;output.mp3&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Then I placed the MP3s in an Internet accessible location on a https webserver. I could have used &lt;a href=&quot;https://aws.amazon.com/s3/&quot;&gt;Amazon’s S3&lt;/a&gt; for this, but since this is only for me (technically for my baby girl) and I have a small server running at home so… Why not use it?&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/alexa-daddy-stories-figure1.png&quot; alt=&quot;alexa-daddy-stories-figure1&quot; title=&quot;Stories recorded to be played back&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Next I created a skill with an invocation name (and skill name) of “Daddy Stories”.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/alexa-daddy-stories-figure2.png&quot; alt=&quot;alexa-daddy-stories-figure2&quot; title=&quot;Skill invocation name&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Then, I added some intents. The hello world intent is not necessary, I just left it there in case I wanted to test something. Judge not. I configured an intent for the can fulfill intent request, but I’m not sure it’s working…&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/alexa-daddy-stories-figure3.png&quot; alt=&quot;alexa-daddy-stories-figure3&quot; title=&quot;Intents&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I still put some sample utterances for the can fulfill intent request though. This is what should allow my baby girl to say “Alexa, daddy stories” instead of “Alexa, open daddy stories”.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/alexa-daddy-stories-figure4.png&quot; alt=&quot;alexa-daddy-stories-figure4&quot; title=&quot;Can fulfill intent request utterances&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The key to getting this to work is to make sure I had the AudioPlayer interface enabled. That’s what got me the ability to stream those recorded MP3s and control how they are streamed.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/alexa-daddy-stories-figure5.png&quot; alt=&quot;alexa-daddy-stories-figure5&quot; title=&quot;AudioPlayer Interface needs to be enabled&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;One thing I have to credit Amazon with is that they provide code samples on how to do lots of stuff. Playing multiple audio streams is no exception and from their github repository I found &lt;a href=&quot;https://github.com/alexa/skill-sample-nodejs-audio-player/tree/mainline/multiple-streams&quot;&gt;a node.js sample of just that&lt;/a&gt;. I didn’t need to follow their deployment instructions, just had a look at the lambda/src directory and the two files constants.js and index.js. Rather than setting up a seperate lambda ARN and execution profile, it turns out Amazon provides a code tab now, letting you edit code easily.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/alexa-daddy-stories-figure6.png&quot; alt=&quot;alexa-daddy-stories-figure6&quot; title=&quot;Code tab&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I modified the structure (and obviously the contents of the constants.js file) to contain information on the story and the URL of the MP3.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;exports.audioData = [
+  {
+    title: 'Beauty And The Beast',
+    url: 'https://this.server.name.is.private/daddystories/audio/Beauty-And-The-Beast.mp3',
+  },
+  {
+    title: 'Brave',
+    url: 'https://this.server.name.is.private/daddystories/audio/Brave.mp3',
+  },
+  {
+    title: 'Cinderella',
+    url: 'https://this.server.name.is.private/daddystories/audio/Cinderella.mp3',
+  },
+  {
+    title: 'Tangled',
+    url: 'https://this.server.name.is.private/daddystories/audio/Tangled.mp3',
+  },
+  {
+    title: 'The Little Mermaid',
+    url: 'https://this.server.name.is.private/daddystories/audio/The-Little-Mermaid.mp3',
+  },
+  {
+    title: 'The Princess And The Frog',
+    url: 'https://this.server.name.is.private/daddystories/audio/The-Princess-And-The-Frog.mp3',
+  },
+
+];
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;I also modified the index.js file to grab a random entry (instead of playing in order) and play that. I left in the code to play next and previous, but I’m not tracking state or last played as I wanted something simple and quick.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// This sample demonstrates handling intents from an Alexa skill using the Alexa Skills Kit SDK (v2).
+// Please visit https://alexa.design/cookbook for additional examples on implementing slots, dialog management,
+// session persistence, api calls, and more.
+const Alexa = require('ask-sdk-core');
+const constants = require('./constants');
+
+function getPlaybackInfo(handlerInput) {
+  var attributes = {};
+  attributes.url = {};
+  
+  var audioindex = Math.floor(Math.random()*constants.audioData.length);
+  var audiometa = constants.audioData[audioindex];
+  var audiourl = audiometa.url;
+  var audiotitle = audiometa.title;
+  
+  var offset = 0;
+  
+  attributes.url.url = audiourl;
+  attributes.url.title = audiotitle;
+  attributes.index = audioindex;
+  attributes.offsetInMilliseconds = offset;
+  
+  return attributes;
+}
+
+
+
+const controller = {
+  async play(handlerInput) {
+    const {
+      attributesManager,
+      responseBuilder
+    } = handlerInput;
+
+    const playbackInfo = getPlaybackInfo(handlerInput);
+    const {
+      url,
+      offsetInMilliseconds,
+      index
+    } = playbackInfo;
+
+    const playBehavior = 'REPLACE_ALL';
+    const podcast = url;
+    const token = url.url;
+    playbackInfo.nextStreamEnqueued = false;
+
+    responseBuilder
+      .speak(`Here is daddy reading ${podcast.title}`)
+      .withShouldEndSession(true)
+      .addAudioPlayerPlayDirective(playBehavior, podcast.url, token, offsetInMilliseconds, null);
+
+    return responseBuilder.getResponse();
+  },
+  stop(handlerInput) {
+    return handlerInput.responseBuilder
+      .addAudioPlayerStopDirective()
+      .getResponse();
+  },
+  async playNext(handlerInput) {
+    const {
+      playbackInfo,
+      playbackSetting,
+    } = await handlerInput.attributesManager.getPersistentAttributes();
+
+    const nextIndex = (playbackInfo.index + 1) % constants.audioData.length;
+
+    if (nextIndex === 0 &amp;amp;&amp;amp; !playbackSetting.loop) {
+      return handlerInput.responseBuilder
+        .speak('You have reached the end of the playlist')
+        .addAudioPlayerStopDirective()
+        .getResponse();
+    }
+
+    playbackInfo.index = nextIndex;
+    playbackInfo.offsetInMilliseconds = 0;
+    playbackInfo.playbackIndexChanged = true;
+
+    return this.play(handlerInput);
+  },
+  async playPrevious(handlerInput) {
+    const {
+      playbackInfo,
+      playbackSetting,
+    } = await handlerInput.attributesManager.getPersistentAttributes();
+
+    let previousIndex = playbackInfo.index - 1;
+
+    if (previousIndex === -1) {
+      if (playbackSetting.loop) {
+        previousIndex += constants.audioData.length;
+      } else {
+        return handlerInput.responseBuilder
+          .speak('You have reached the start of the playlist')
+          .addAudioPlayerStopDirective()
+          .getResponse();
+      }
+    }
+
+    playbackInfo.index = previousIndex;
+    playbackInfo.offsetInMilliseconds = 0;
+    playbackInfo.playbackIndexChanged = true;
+
+    return this.play(handlerInput);
+  },
+};
+
+const LaunchRequestHandler = {
+    canHandle(handlerInput) {
+        return handlerInput.requestEnvelope.request.type === 'LaunchRequest';
+    },
+    handle(handlerInput) {
+        return controller.play(handlerInput);    
+        /*
+        const speechText = 'Welcome, you can say Hello or Help. Which would you like to try?';
+        return handlerInput.responseBuilder
+            .speak(speechText)
+            .reprompt(speechText)
+            .getResponse();
+        */
+    }
+};
+const HelloWorldIntentHandler = {
+    canHandle(handlerInput) {
+        return handlerInput.requestEnvelope.request.type === 'IntentRequest'
+            &amp;amp;&amp;amp; handlerInput.requestEnvelope.request.intent.name === 'HelloWorldIntent';
+    },
+    handle(handlerInput) {
+        const speechText = 'Hello World!';
+        return handlerInput.responseBuilder
+            .speak(speechText)
+            //.reprompt('add a reprompt if you want to keep the session open for the user to respond')
+            .getResponse();
+    }
+};
+const HelpIntentHandler = {
+    canHandle(handlerInput) {
+        return handlerInput.requestEnvelope.request.type === 'IntentRequest'
+            &amp;amp;&amp;amp; handlerInput.requestEnvelope.request.intent.name === 'AMAZON.HelpIntent';
+    },
+    handle(handlerInput) {
+        const speechText = 'You can say hello to me! How can I help?';
+
+        return handlerInput.responseBuilder
+            .speak(speechText)
+            .reprompt(speechText)
+            .getResponse();
+    }
+};
+const CancelAndStopIntentHandler = {
+    canHandle(handlerInput) {
+        return handlerInput.requestEnvelope.request.type === 'IntentRequest'
+            &amp;amp;&amp;amp; (handlerInput.requestEnvelope.request.intent.name === 'AMAZON.CancelIntent'
+                || handlerInput.requestEnvelope.request.intent.name === 'AMAZON.StopIntent');
+    },
+    handle(handlerInput) {
+        const speechText = 'Goodbye!';
+        return handlerInput.responseBuilder
+            .speak(speechText)
+            .getResponse();
+    }
+};
+const SessionEndedRequestHandler = {
+    canHandle(handlerInput) {
+        return handlerInput.requestEnvelope.request.type === 'SessionEndedRequest';
+    },
+    handle(handlerInput) {
+        // Any cleanup logic goes here.
+        return handlerInput.responseBuilder.getResponse();
+    }
+};
+
+const CanFulfillIntentRequestIntentHandler = {
+    canHandle(handlerInput) {
+        return handlerInput.requestEnvelope.request.type === 'IntentRequest'
+            &amp;amp;&amp;amp; (handlerInput.requestEnvelope.request.intent.name === 'CAN_FULFILL_INTENT_REQUEST');
+    },
+    handle(handlerInput) {
+        return controller.play(handlerInput);
+    }
+};
+
+
+const AmazonPauseIntentHandler = {
+    canHandle(handlerInput) {
+        return handlerInput.requestEnvelope.request.type === 'IntentRequest'
+            &amp;amp;&amp;amp; (handlerInput.requestEnvelope.request.intent.name === 'AMAZON.PauseIntent');
+    },
+    handle(handlerInput) {
+        return controller.stop(handlerInput);
+    }
+};
+
+// The intent reflector is used for interaction model testing and debugging.
+// It will simply repeat the intent the user said. You can create custom handlers
+// for your intents by defining them above, then also adding them to the request
+// handler chain below.
+const IntentReflectorHandler = {
+    canHandle(handlerInput) {
+        return handlerInput.requestEnvelope.request.type === 'IntentRequest';
+    },
+    handle(handlerInput) {
+        const intentName = handlerInput.requestEnvelope.request.intent.name;
+        const speechText = `You just triggered ${intentName}`;
+
+        return handlerInput.responseBuilder
+            .speak(speechText)
+            //.reprompt('add a reprompt if you want to keep the session open for the user to respond')
+            .getResponse();
+    }
+};
+
+// Generic error handling to capture any syntax or routing errors. If you receive an error
+// stating the request handler chain is not found, you have not implemented a handler for
+// the intent being invoked or included it in the skill builder below.
+const ErrorHandler = {
+    canHandle() {
+        return true;
+    },
+    handle(handlerInput, error) {
+        console.log(`~~~~ Error handled: ${error.message}`);
+        const speechText = `Sorry, I couldn't understand what you said. Please try again.`;
+
+        return handlerInput.responseBuilder
+            .speak(speechText)
+            .reprompt(speechText)
+            .getResponse();
+    }
+};
+
+// This handler acts as the entry point for your skill, routing all request and response
+// payloads to the handlers above. Make sure any new handlers or interceptors you've
+// defined are included below. The order matters - they're processed top to bottom.
+exports.handler = Alexa.SkillBuilders.custom()
+    .addRequestHandlers(
+        LaunchRequestHandler,
+        HelloWorldIntentHandler,
+        HelpIntentHandler,
+        CancelAndStopIntentHandler,
+        CanFulfillIntentRequestIntentHandler,
+        AmazonPauseIntentHandler,
+        SessionEndedRequestHandler,
+        IntentReflectorHandler) // make sure IntentReflectorHandler is last so it doesn't override your custom intent handlers
+    .addErrorHandlers(
+        ErrorHandler)
+    .lambda();
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;At the end of the day, the recordings, the Alexa skill and one of the mobile echo dots helped my daughter feel closer to me although I was far far away. We still use the skill after we’ve read books and are tired, but the little one somehow has the energy of a thousand suns in her and refuses to go to sleep. She loves her daddy stories and my wife and I, it goes without saying, love her.&lt;/p&gt;</content><author><name>Christopher Ottley</name></author><category term="Alexa" /><summary type="html">Work (the kind I get paid for) carried me far and away from my family for 5 weeks recently. It was supposed to be maximum 3, but that’s another story. I was especially missing my wife and 3 year old baby girl during this time. The time zone difference (2 hours) was not that much, but had an impact when I had to work late. Sometimes I would miss bedtime and reading my baby girl stories to go to sleep, but more importantly, she would miss me.</summary></entry><entry><title type="html">Alexa, show me the browser</title><link href="https://cottley.github.io/Alexa-show-me-the-browser" rel="alternate" type="text/html" title="Alexa, show me the browser" /><published>2018-10-09T04:00:00-04:00</published><updated>2018-10-09T04:00:00-04:00</updated><id>https://cottley.github.io/Alexa-show-me-the-browser</id><content type="html" xml:base="https://cottley.github.io/Alexa-show-me-the-browser">&lt;p&gt;A while ago I bought a &lt;a href=&quot;https://www.amazon.com/gp/product/B01J94SCAM/ref=oh_aui_detailpage_o07_s00?ie=UTF8&amp;amp;psc=1&quot;&gt;Kindle Fire 8 Kids edition&lt;/a&gt; for my daughter and of course it had Alexa bundled in. While the Kindle Freetime didn’t really work outside of the US at the time, it really is just an Android tablet with the Amazon app store loaded up.&lt;/p&gt;
 
 &lt;p&gt;I managed to install Firefox on the tablet, as well as Chrome. While Alexa allows me to do neato home automation stuff, I was a bit disappointed that I couldn’t control the apps on the tablet using Alexa.&lt;/p&gt;
 
@@ -433,90 +747,4 @@ crontab: installing new crontab
 
 &lt;p&gt;Thinking about it a bit more, I shouldn’t even have to say “Alexa, screen on”, I should just have to say “Alexa, screen” and the skill will know the state of the plug. If it’s on it turns it off and if it’s off it turns it on. This should be able to extend to lights as well, “Alexa, lights” should be able to toggle the lights near the device on and off.&lt;/p&gt;
 
-&lt;p&gt;Let’s see if I can get any traction on this when I get my time machine working. :).&lt;/p&gt;</content><author><name>Christopher Ottley</name></author><category term="Ideas" /><category term="Alexa" /><summary type="html">I’ve tricked out the house with Alexa compatible gadgets, a bunch of plugs, a whole set of bulbs and three echo dots in three different rooms. I was watching The First and there are lots of sci-fi type things in the show, which is primarily actually a drama with sci-fi things occassionally going wrong. So they have the standard sci-fi-ish stuff with one of the main characters living in a smart house and another one in a smarter house. Typical future expectation like you walk into a room and lights come on and fireplace starts etc. I saw one of the characters ask for the TV to turn on by saying “screen on” or something similar into the ether and the TV screen turned on with the channel showing what he wanted to see. That got me thinking, I’m pretty sure I should be able to do that with Alexa and Routines and the only real difference is that I would have to say the wakeword, Alexa, first.</summary></entry><entry><title type="html">Website Redesign</title><link href="https://cottley.github.io/website-redesign" rel="alternate" type="text/html" title="Website Redesign" /><published>2018-09-26T10:15:00-04:00</published><updated>2018-09-26T10:15:00-04:00</updated><id>https://cottley.github.io/website-redesign</id><content type="html" xml:base="https://cottley.github.io/website-redesign">&lt;p&gt;I’ve had a number of websites over the years in one form or the other. Usually the websites were project websites that happened to have a small about section where I wrote something short and unmemorable about myself. Unfortunately I got busy and maintaining those websites got de-prioritized, finally existing in some internet archive somewhere and disappearing from active use. The world has changed a bit since then and I got curious as to the advancements of static site generators like &lt;a href=&quot;https://forrest.apache.org/&quot;&gt;Apache Forest&lt;/a&gt;. A static site generator uses dynamic logic to create static websites that load faster and would be easier to maintain for someone working part-time on site maintenace, like me.&lt;/p&gt;
-
-&lt;p&gt;While I generally like &lt;a href=&quot;http://www.apache.org/&quot;&gt;Apache&lt;/a&gt; products, &lt;a href=&quot;https://forrest.apache.org/&quot;&gt;Apache Forest&lt;/a&gt; doesn’t seem to have been updated for a while and I aimed to find the most popular static site generator in use. In open source, high usage usually means that it’s reasonably maintained and fits some minimal use cases very well. After some research I happened upon &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;I don’t know Ruby, but the installation seemed pretty straight forward and seeing as GitHub seems to use it for their GitHub pages service, I figured I couldn’t go too wrong. One of the nice things about &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; is that there are lots of tutorials and instructions all over the Internet on how to make all sorts of websites with it. GitHub has some good instructions as well, but I decided to see if I could find some instructions that were more generic which would allow me to move my site to anywhere without worrying about any kind of GitHub specific pages config (not that I really saw any, but you never know).&lt;/p&gt;
-
-&lt;p&gt;Seeing as a I like to keep things seperated, I fired up a brand spanking new &lt;a href=&quot;https://www.ubuntu.com/&quot;&gt;Ubuntu&lt;/a&gt; 18.04 Desktop VM, did a minimal install, updated everything, installed ssh and I was ready to start.&lt;/p&gt;
-
-&lt;p&gt;At a bash prompt, a quick…&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install ruby ruby-dev build-essential
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;…and I was ready to install Jekyll.&lt;/p&gt;
-
-&lt;p&gt;Following the instructions from the &lt;a href=&quot;https://jekyllrb.com/docs/installation/ubuntu/&quot;&gt;website&lt;/a&gt; and executing at a bash prompt again…&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;echo '# Install Ruby Gems to ~/gems' &amp;gt;&amp;gt; ~/.bashrc
-echo 'export GEM_HOME=$HOME/gems' &amp;gt;&amp;gt; ~/.bashrc
-echo 'export PATH=$HOME/gems/bin:$PATH' &amp;gt;&amp;gt; ~/.bashrc
-source ~/.bashrc
-gem install jekyll bundler
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;…and now Jekyll is installed. It really was painless.&lt;/p&gt;
-
-&lt;p&gt;Time to serve up a site for development…&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jekyll new cottley-site
-cd cottley-site/
-bundle exec jekyll serve
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;…And here we go.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/images/website-redesign-figure1.png&quot; alt=&quot;website-redesign-figure1&quot; title=&quot;First run with default website&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Ugh! I mean &lt;em&gt;yay&lt;/em&gt; (obviously), but also, Ugh!&lt;/p&gt;
-
-&lt;p&gt;Granted, this was about 5 minutes of work (including network downloads), but goshdarnit, first impressions matter. I understand the bare minimalism so you can customize what you want, but, ugh. This was supposed to make my website life easier, not look so, plain. I know I know, there are links to some themes at &lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;Jekyll Themes.org&lt;/a&gt; and &lt;a href=&quot;https://jekyllthemes.io/&quot;&gt;Jekyll Themes.io&lt;/a&gt; are on the website under the resources, but if you at least give me a link to one of them on the very first site I throw up I’ll be more likely to think that even the minimal effort was worth it because changing the theme is easy and possible.&lt;/p&gt;
-
-&lt;p&gt;I found a super nice theme called &lt;a href=&quot;http://jekyllthemes.org/themes/jasper2/&quot;&gt;Jasper2&lt;/a&gt; and spent a few minutes trying to figure out how to get it installed.&lt;/p&gt;
-
-&lt;p&gt;…And you don’t install it, the theme &lt;em&gt;IS&lt;/em&gt; the site and you need to config the site and put the posts in it. Ok, fine. Let’s do a serve in an extracted Jasper2 folder… and it doesn’t work. Of course. At least it tells me I have to install some gems and to run:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle install
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;All seems to be working well until it can’t install nokogiri, whatever that is and suggests that I&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem install nokogiri -v '1.8.4' --source
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;which doesn’t work and so I try&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem install nokogiri -v '1.8.4' --source 'https://rubygems.org/'
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;which still doesn’t work.&lt;/p&gt;
-
-&lt;p&gt;Looking at the error, it can’t find zlib for some reason so I go looking to install some ruby zlib library. I find one and…&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install ruby-zip
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Still doesn’t work. Installing a theme shouldn’t be this hard man! Looking at the error further it seems that Jekyll / Ruby invokes gcc to compile some code and it can’t find the zlib header library. I do a&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install libz-dev
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;and manage to install nokogiri ok now.&lt;/p&gt;
-
-&lt;p&gt;A final&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle install
-bundle exec jekyll serve
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;in the terminal and I finally, FINALLY have the theme site up and running.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/images/website-redesign-figure2.png&quot; alt=&quot;website-redesign-figure2&quot; title=&quot;First run with Jasper2 theme&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I play with some config settings, replace some images, start putting in posts and boom, new website.&lt;/p&gt;
-
-&lt;p&gt;The only thing Jasper2 doesn’t seem to do is generate a nice xml sitemap for me, so I grabbed a &lt;a href=&quot;https://github.com/jekyll/jekyll-sitemap&quot;&gt;Jekyll Sitemap Generator Plugin&lt;/a&gt; and installed it (which is much easier than the theme crazy).&lt;/p&gt;
-
-&lt;p&gt;That’s it, I’m going to try continue consolidating my tech rantings here so if at least, dear reader, you don’t find me entertaining, you at least find me informative.&lt;/p&gt;</content><author><name>Christopher Ottley</name></author><category term="Stuff" /><category term="Projects" /><summary type="html">I’ve had a number of websites over the years in one form or the other. Usually the websites were project websites that happened to have a small about section where I wrote something short and unmemorable about myself. Unfortunately I got busy and maintaining those websites got de-prioritized, finally existing in some internet archive somewhere and disappearing from active use. The world has changed a bit since then and I got curious as to the advancements of static site generators like Apache Forest. A static site generator uses dynamic logic to create static websites that load faster and would be easier to maintain for someone working part-time on site maintenace, like me.</summary></entry></feed>
+&lt;p&gt;Let’s see if I can get any traction on this when I get my time machine working. :).&lt;/p&gt;</content><author><name>Christopher Ottley</name></author><category term="Ideas" /><category term="Alexa" /><summary type="html">I’ve tricked out the house with Alexa compatible gadgets, a bunch of plugs, a whole set of bulbs and three echo dots in three different rooms. I was watching The First and there are lots of sci-fi type things in the show, which is primarily actually a drama with sci-fi things occassionally going wrong. So they have the standard sci-fi-ish stuff with one of the main characters living in a smart house and another one in a smarter house. Typical future expectation like you walk into a room and lights come on and fireplace starts etc. I saw one of the characters ask for the TV to turn on by saying “screen on” or something similar into the ether and the TV screen turned on with the channel showing what he wanted to see. That got me thinking, I’m pretty sure I should be able to do that with Alexa and Routines and the only real difference is that I would have to say the wakeword, Alexa, first.</summary></entry></feed>
